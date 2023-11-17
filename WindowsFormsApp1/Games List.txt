@@ -1,0 +1,150 @@
+﻿/* List of games to do:
+ * 
+ * ---PC---
+ * 
+ * 
+ * 
+ * --Steam:                                       //launch thru Steam
+ * Sonic the Hedgehog CD
+ * Sega Mega Drive & Genesis Classics
+ * Sonic & Sega All Star Racing
+ * Sonic Adventure DX
+ * Sonic Adventure 2 Battle
+ * Sonic Generations
+ * Sonic the Hedgehog 4 Episode 1
+ * Sonic the Hedgehog 4 Episode 2
+ * Sonic & All Stars Racing Transformed
+ * Sonic Lost World
+ * Sonic Mania
+ * Sonic Forces
+ * Team Sonic Racing
+ * Sonic Origins
+ * Sonic Frontiers
+ * Sonic Colors: Ultimate
+ * The Murder of Sonic The Hedgehog
+ * Sonic Superstars
+ * 
+ * --Epic Games:                                 //launch directly?
+ * Sonic Colors: Ultimate
+ * Sonic Mania
+ * Sonic Origins
+ * Sonic Frontiers
+ * Sonic Superstars
+ * 
+ * --DRM Free:                                  //launch directly
+ * Sonic The Hedgehog CD
+ * Sonic & Knuckles Collection
+ * Sonic 3D Blast
+ * Sonic R
+ * Sonic Adventure DX
+ * Sonic Heroes
+ * Sonic Mega Collection Plus
+ * Sonic Riders
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * ---Emulators---
+ * 
+ * 
+ * --Mega Drive:                             //must find way to mess with emulator settings
+ * Sonic The Hedgehog
+ * Sonic The Hedgehog 2
+ * Sonic The Hedgehog CD
+ * Sonic The Hedgehog 3
+ * Sonic & Knuckles
+ * Sonic The Hedgehog 3 & Knuckles
+ * Sonic Spinball
+ * Dr. Robotnik's Mean Bean Machine
+ * Knuckles' Chaotix
+ * Knuckles in Sonic 2
+ * Sonic 3D Blast
+ * Sonic Eraser
+ * Sonic Crackers
+ * 
+ * -- Master System:
+ * Sonic The Hedgehog (8-bit)
+ * Sonic The Hedgehog 2 (8-bit)
+ * Sonic Chaos
+ * Sonic Blast
+ * Sonic Spinball (8-bit)
+ * Dr. Robotnik's Mean Bean Machine (8-bit)
+ * Sonic Edusoft
+ * 
+ * -- Game Gear:
+ * Sonic The Hedgehog (8-bit)
+ * Sonic The Hedgehog 2 (8-bit)
+ * Sonic Chaos
+ * Sonic Blast
+ * Sonic Spinball (8-bit)
+ * Dr. Robotnik's Mean Bean Machine (8-bit)
+ * Sonic Triple Trouble
+ * Sonic Labyrinth
+ * Sonic Drift
+ * Sonic Drift 2
+ * Tails' Adventure
+ * Tails' Skypatrol
+ * 
+ * -- Arcade (MAME):
+ * SegaSonic The Hedgehog
+ * Waku Waku Sonic Patrol Car
+ * SegaSonic Popcorn Shop
+ * SegaSonic Cosmo Fighter
+ * 
+ * -- Saturn:
+ * Sonic R
+ * Sonic Jam
+ * Sonic 3D Blast
+ * 
+ * -- Dreamcast:
+ * Sonic Adventure
+ * Sonic Adventure 2
+ * Sonic Shuffle
+ * 
+ * -- Neo Geo Pocket Color:
+ * Sonic the Hedgehog Pocket Adventure
+ * 
+ * -- Game Boy Advance:
+ * Sonic Advance
+ * Sonic Advance 2
+ * Sonic Advance 3
+ * Sonic Battle
+ * Sonic Pinball Party
+ * Sonic the Hedgehog Genesis
+ * 
+ * -- Nintendo Gamecube:
+ * Sonic Adventure 2 Battle
+ * Sonic Adventure DX
+ * Sonic Heroes
+ * Sonic Riders
+ * Shadow The Hedgehog
+ * Sonic Mega Collection
+ * Sonic Gems Collection
+ * 
+ * -- Sony Playstation 2:
+ * Sonic Heroes
+ * Shadow The Hedgehog
+ * Sonic Mega Collection Plus
+ * Sonic Gems Collection
+ * Sonic Riders: Zero Gravity
+ * Sonic Unleashed
+ * 
+ * -- Original XBox:
+ * Sonic Heroes
+ * Sonic Mega Collection Plus
+ * Shadow The Hedgehog
+ * Sonic Riders
+ * 
+ * -- Nintendo Wii:
+ * Sonic and the Secret Rings
+ * Sonic and the Black Knight
+ * Sonic Riders: Zero Gravity
+ * Sonic Unleashed
+ * Sonic Colors
+ * Sonic & Sega All Star Racing
+ * 
+ * 
+*/

@@ -1,0 +1,13 @@
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\שחר\Visual Studio Projects\LauncherApp\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <Component name="Steam">
+    <path value="F:\Steam" />
+  </Component>
+  <Component name="HMM">
+    <path value="F:\Games\HedgeModManager\HedgeModManager.exe" />
+  </Component>
+  <Component name="SADXMM">
+    <path value="F:\Steam\steamapps\common\Sonic Adventure DX\SADXModManager.exe" />
+  </Component>
+</root>
