@@ -31,8 +31,8 @@ namespace WindowsFormsApp1
             this.assignedGame = assignedGame;
             this.Text = assignedGame.GameName;
             gameOps = new Form3(assignedGame);
-            this.Width = 92;
-            this.Height = 43;
+            this.Width = 100;
+            this.Height = 50;
         }
 
         public new void PerformClick()

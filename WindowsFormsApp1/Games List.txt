@@ -1,5 +1,44 @@
 ﻿/* List of games to do:
  * 
+ * Consoles needed to emulate:
+ * - Mega Drive
+ * - Master System
+ * - Game Gear
+ * - Sega Saturn
+ * - Dreamcast
+ * - Arcade
+ * - GameCube
+ * - Wii
+ * - Wii U
+ * - Switch
+ * - PS2
+ * - PS3
+ * - OG XBox
+ * - XBox 360
+ * - Neo Geo Pocket Color
+ * - Game Boy Advance
+ * - DS
+ * - 3DS
+ * - PSP
+ * - Sega PC Reloaded
+ *
+ * Special programs / mod loaders needed:
+ * - HedgeModManager
+ * - SADX Mod Loader
+ * - SA2 Mod Loader
+ * - Mania Mod Loader
+ * - Sonic CD Steam Mod Loader
+ * - Sonic 4 Mod Loader
+ * - Sonic R Mod Loader
+ * - S&K Collection Mod Loader
+ * - RSDK Mod Manager
+ * - Reloaded 2
+ * - Concursus
+ *
+ *
+ *
+ *
+ *
  * ---PC---
  * 
  * 
