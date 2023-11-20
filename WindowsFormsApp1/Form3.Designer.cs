@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ComponentButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,33 +43,43 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // button1
+            // ComponentButton
             // 
-            this.button1.Location = new System.Drawing.Point(50, 73);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 47);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "launch mod loader";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ComponentButton.Location = new System.Drawing.Point(36, 73);
+            this.ComponentButton.Name = "ComponentButton";
+            this.ComponentButton.Size = new System.Drawing.Size(120, 50);
+            this.ComponentButton.TabIndex = 1;
+            this.ComponentButton.Text = "launch mod loader";
+            this.ComponentButton.UseVisualStyleBackColor = true;
+            this.ComponentButton.Click += new System.EventHandler(this.ComponentButton_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(236, 73);
+            this.button2.Location = new System.Drawing.Point(245, 73);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 47);
+            this.button2.Size = new System.Drawing.Size(120, 50);
             this.button2.TabIndex = 2;
-            this.button2.Text = "launch game";
+            this.button2.Text = "Launch Game";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(140, 150);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 50);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 132);
+            this.ClientSize = new System.Drawing.Size(404, 221);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ComponentButton);
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Form3";
@@ -81,7 +92,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ComponentButton;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -25,9 +25,12 @@ namespace WindowsFormsApp1
 
             }
 
+
+        
             
             doc = new XDocument(
                         new XElement("root",
+
                 new XElement("Component", new XAttribute("name", "Steam"),
                     new XElement("path", new XAttribute("value", LaunchContainer.launcher.SteamLoc))),
 

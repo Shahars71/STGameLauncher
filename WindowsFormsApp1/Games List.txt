@@ -35,6 +35,46 @@
  * - Reloaded 2
  * - Concursus
  *
+            progs[0].Name = "HedgeModManager";
+            progs[1].Name = "SADX Mod Loader";
+            progs[2].Name = "SA2 Mod Loader";
+            progs[3].Name = "Mania Mod Loader";
+            progs[4].Name = "Sonic CD Steam Mod Loader";
+            progs[5].Name = "Sonic 4 Mod Loader";
+            progs[6].Name = "Sonic 4 Mod Loader";
+            progs[7].Name = "Sonic R Mod Loader";
+            progs[8].Name = "S&K Collection Mod Loader";
+            progs[9].Name = "RSDK Mod Manager";
+            progs[10].Name = "Reloaded 2";
+            progs[11].Name = "Concursus";
+
+            type[0] = "Steam";
+            type[1] = "Epic Games Store";
+            type[2] = "DRM Free";
+            type[3] = "Sega Mega Drive";
+            type[4] = "Sega Master System";
+            type[5] = "Sega Game Gear";
+            type[6] = "Sega Saturn";
+            type[7] = "Sega Dreamcast";
+            type[8] = "Arcade (MAME)";
+            type[9] = "Arcade (Sega AM2)";
+            type[10] = "Nintendo GameCube";
+            type[11] = "Nintendo Wii";
+            type[12] = "Nintendo Wii U";
+            type[13] = "Nintendo Switch";
+            type[14] = "Sony PlayStation 2";
+            type[15] = "Sony Playstation 3";
+            type[16] = "Microsoft XBox";
+            type[17] = "Microsoft XBox 360";
+            type[18] = "Neo Geo Pocket Color";
+            type[19] = "Game Boy Advance";
+            type[20] = "Nintendo DS";
+            type[21] = "Nintendo 3DS";
+            type[22] = "PlayStation Portable";
+            type[23] = "Sega PC Reloaded";
+
+
+
  *
  *
  *
@@ -69,6 +109,7 @@
  * Sonic Origins
  * Sonic Frontiers
  * Sonic Superstars
+ com.epicgames.launcher://apps/{BaseGame.EGSID}?action=launch&silent=true
  * 
  * --DRM Free:                                  //launch directly
  * Sonic The Hedgehog CD
