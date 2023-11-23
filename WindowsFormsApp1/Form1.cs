@@ -22,21 +22,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Game[] gameList = LaunchContainer.launcher.Games;
-            
-            for (int i=0;i<gameList.Length;i++)
-            {
-                GameButton b = new GameButton(gameList[i]);
-
-                if (LaunchContainer.launcher.ActiveGames[i])
-                {
-                    flowLayoutPanel1.Controls.Add(b);
-                }
-                
-            }
-
+            handleButtons();
             SaveHandler.Load();
-
         }
 
 
@@ -60,5 +47,52 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void games_Click(object sender, EventArgs e)
+        {
+            using (var newFrm = new Form4())
+            {
+                newFrm.ShowDialog();  // execution of Form1 stops until Form2 is closed
+            }
+
+            this.flowLayoutPanel1.Controls.Clear();
+            handleButtons();
+
+
+            //Form4 gs = new Form4();
+            //gs.Show();
+
+        }
+
+        private void Form1_Enter(object sender, EventArgs e)
+        {
+            handleButtons();
+        }
+
+        private void handleButtons()
+        {
+
+
+            Game[] gameList = LaunchContainer.launcher.Games;
+
+            for (int i = 0; i < gameList.Length; i++)
+            {
+                GameButton b = new GameButton(gameList[i]);
+
+                if (LaunchContainer.launcher.ActiveGames[i])
+                {
+                    flowLayoutPanel1.Controls.Add(b);
+                }
+
+            }
+        }
+
+        /*
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            //handleButtons();
+        }
+        */
     }
 }

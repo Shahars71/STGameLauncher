@@ -25,8 +25,6 @@ namespace WindowsFormsApp1
 
             }
 
-
-        
             
             doc = new XDocument(
                         new XElement("root",

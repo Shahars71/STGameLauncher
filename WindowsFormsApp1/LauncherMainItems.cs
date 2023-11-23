@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         private String emulatorName;
         private String emuArgs;
         private String gameType;
-        private bool isActive;
+        public bool isActive;
         private bool hasModLoader;
         private bool hasEmulator;
 
@@ -64,12 +64,13 @@ namespace WindowsFormsApp1
         public void activate () { isActive = true; }
         public void modLoader() { hasModLoader = true; }
         public void emulator() { hasEmulator = true; }
+        public void deActivate() { isActive = false; Console.WriteLine(this.gameName + " Has been deactovated!"); }
     }
 
     [Serializable]
     public class LauncherMainItems //basic management of set paths and games
     {
-        private const int numOfGames = 100;
+        private const int numOfGames = 30;
         private const int numOfModLoaders = 12;
         private const int numOfEmulators = 21;
         private const int numOfGameTypes = 24;
@@ -165,7 +166,7 @@ namespace WindowsFormsApp1
             games[1].ExeLoc = "steam://rungameid/34270";
             games[1].GameType = gameTypes[0];
 
-            games[1].activate();
+            //games[1].activate();
 
 
             games[2].GameName = "Sonic the Hedgehog CD";
@@ -329,6 +330,7 @@ namespace WindowsFormsApp1
             games[18].modLoader();
             games[18].activate();
 
+
             games[19].GameName = "Sonic Origins";
             games[19].ExeLoc = "com.epicgames.launcher://apps/5070a8e44cf74ba3b9a4ca0c0dce5cf1?action=launch&silent=true";
             games[19].ModLoaderLoc = modLoaders[0].Location;
@@ -338,8 +340,9 @@ namespace WindowsFormsApp1
             games[19].modLoader();
             games[19].activate();
 
+
             games[20].GameName = "Sonic Mania";
-            games[20].ExeLoc = "com.epicgames.launcher://apps/?action=launch&silent=true";
+            games[20].ExeLoc = "com.epicgames.launcher://apps/  ?action=launch&silent=true";
             games[20].ModLoaderLoc = modLoaders[3].Location;
             games[20].ModLoaderName = modLoaders[3].Name;
             games[20].GameType = gameTypes[1];
@@ -348,7 +351,27 @@ namespace WindowsFormsApp1
             games[20].activate();
 
 
+            games[21].GameName = "Sonic Frontiers";
+            games[21].ExeLoc = "com.epicgames.launcher://apps/  ?action=launch&silent=true";
+            games[21].ModLoaderLoc = modLoaders[0].Location;
+            games[21].ModLoaderName = modLoaders[0].Name;
+            games[21].GameType = gameTypes[1];
 
+            games[21].modLoader();
+            games[21].activate();
+
+
+            games[22].GameName = "Sonic Superstars";
+            games[22].ExeLoc = "com.epicgames.launcher://apps/  ?action=launch&silent=true";
+            games[22].ModLoaderLoc = modLoaders[11].Location;
+            games[22].ModLoaderName = modLoaders[11].Name;
+            games[22].GameType = gameTypes[1];
+
+            games[22].modLoader();
+            games[22].activate();
+
+
+            //---DRM FREE---
 
 
 
@@ -381,6 +404,14 @@ namespace WindowsFormsApp1
             for (int i = 0; i < games.Length; i++)
             {
                 activeGames[i] = games[i].IsActive;
+            }
+        }
+
+        public void checkActives()
+        {
+            for(int i = 0;i < games.Length;i++)
+            {
+                activeGames[i] = games[i].isActive;
             }
         }
     }
