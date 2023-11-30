@@ -30,8 +30,10 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.GameName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GameType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsActive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GamePath = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Arguments = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,8 +42,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GameName,
+            this.GameType,
             this.IsActive,
-            this.GamePath});
+            this.GamePath,
+            this.Arguments});
             this.dataGridView1.Location = new System.Drawing.Point(12, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(495, 404);
@@ -57,20 +61,29 @@
             this.GameName.ReadOnly = true;
             this.GameName.Width = 130;
             // 
+            // GameType
+            // 
+            this.GameType.HeaderText = "Platform";
+            this.GameType.Name = "GameType";
+            this.GameType.ReadOnly = true;
+            // 
             // IsActive
             // 
-            this.IsActive.Frozen = true;
             this.IsActive.HeaderText = "Active?";
             this.IsActive.Name = "IsActive";
             this.IsActive.ReadOnly = true;
             // 
             // GamePath
             // 
-            this.GamePath.Frozen = true;
             this.GamePath.HeaderText = "Game Path";
             this.GamePath.Name = "GamePath";
             this.GamePath.ReadOnly = true;
-            this.GamePath.Width = 250;
+            this.GamePath.Width = 200;
+            // 
+            // Arguments
+            // 
+            this.Arguments.HeaderText = "Arguments";
+            this.Arguments.Name = "Arguments";
             // 
             // Form4
             // 
@@ -92,7 +105,9 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn GameName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameType;
         private System.Windows.Forms.DataGridViewTextBoxColumn IsActive;
         private System.Windows.Forms.DataGridViewTextBoxColumn GamePath;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Arguments;
     }
 }

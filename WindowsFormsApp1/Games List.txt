@@ -74,6 +74,29 @@
             type[23] = "Sega PC Reloaded";
 
 
+            emus[0].Name = "Mega Drive";
+            emus[1].Name = "Master System";
+            emus[2].Name = "Game Gear";
+            emus[3].Name = "Sega Saturn";
+            emus[4].Name = "Dreamcast";
+            emus[5].Name = "Arcade (MAME)";
+            emus[6].Name = "GameCube";
+            emus[7].Name = "Wii";
+            emus[8].Name = "Wii U";
+            emus[9].Name = "Switch";
+            emus[10].Name = "PS2";
+            emus[11].Name = "PS3";
+            emus[12].Name = "OG XBox";
+            emus[13].Name = "XBox 360";
+            emus[14].Name = "Neo Geo Pocket Color";
+            emus[15].Name = "Game Boy Advance";
+            emus[16].Name = "DS";
+            emus[17].Name = "3DS";
+            emus[18].Name = "PSP";
+            emus[19].Name = "Sega PC Reloaded";
+            emus[20].Name = "Arcade (Sega)";
+
+
 
  *
  *
@@ -120,10 +143,13 @@
  * Sonic Heroes
  * Sonic Mega Collection Plus
  * Sonic Riders
- * 
- * 
- * 
- * 
+ * Sonic 1 decomp
+ * Sonic 2 decomp
+ * Sonic CD decomp
+ * Sonic Mania decomp
+ *   
+ *   
+ *   
  * 
  * 
  * 
@@ -194,6 +220,7 @@
  * Sonic Battle
  * Sonic Pinball Party
  * Sonic the Hedgehog Genesis
+ * Sonic X: A Super Sonic Hero
  * 
  * -- Nintendo Gamecube:
  * Sonic Adventure 2 Battle
@@ -209,9 +236,13 @@
  * Shadow The Hedgehog
  * Sonic Mega Collection Plus
  * Sonic Gems Collection
+ * Sonic Riders
  * Sonic Riders: Zero Gravity
  * Sonic Unleashed
- * 
+ * Sega Superstars Tennis
+ * Sega Superstars
+ * Sega Genesis Collection
+ *
  * -- Original XBox:
  * Sonic Heroes
  * Sonic Mega Collection Plus
@@ -225,6 +256,165 @@
  * Sonic Unleashed
  * Sonic Colors
  * Sonic & Sega All Star Racing
+ * Sega Superstars Tennis
+ * Sonic the Hedgehog (VC)
+ * Sonic the Hedgehog (8-bit) (VC)
+ * Sonic the Hedgehog 2 (VC)
+ * Sonic the Hedgehog 2 (8-bit) (VC)
+ * Sonic the Hedgehog 3 (VC)
+ * Sonic & Knuckles (VC)
+ * Sonic Spinball (VC)
+ * Sonic 3D Blast (VC)
+ * Sonic Spinball (VC)
+ * Dr. Robotnik's Mean Bean Machine (VC)
+ * Sonic Chaos (VC)
+ * Sonic the Hedgehog 4 Episode 1
+ * Mario & Sonic at the London 2012 Olympic Games
+ * Mario & Sonic at the Olympic Games
+ * Mario & Sonic at the Olympic Winter Games 
+ * 
+ * -- Nintendo Wii U:
+ * Sonic Lost World
+ * Sonic & All-Stars Racing Transformed
+ * Sonic Boom: Rise of Lyric
+ * Sonic Advance (VC)
+ * Sonic Advance 2 (VC)
+ * Sonic Advance 3 (VC)
+ * Mario & Sonic at the Rio 2016 Olympic Games
+ * Mario & Sonic at the Sochi 2014 Olympic Winter Games
+ *
+ * -- Nintendo DS:
+ * Sonic Rush
+ * Sonic Rush Adventure
+ * Sonic Colors
+ * Sonic Chronicles: The Dark Brotherhood
+ * Sega Superstars Tennis
+ * Sonic & Sega All-Stars Racing
+ * Sonic Classic Collection
+ * Mario & Sonic at the Olympic Games
+ * Mario & Sonic at the Olympic Winter Games
+ *
+ * -- Nintendo 3DS:
+ * 3D Sonic the Hedgehog
+ * 3D Sonic the Hedgehog 2
+ * Sonic & All-Stars Racing Transformed
+ * Sonic Generations
+ * Sonic Lost World
+ * Sonic Boom: Shattered Crystal
+ * Sonic Boom: Fire and Ice
+ * Sonic Blast (VC)
+ * Sonic Drift 2 (VC)
+ * Sonic Labyrinth (VC)
+ * Sonic the Hedgehog (8-bit) (VC)
+ * Sonic the Hedgehog 2 (8-bit) (VC)
+ * Sonic the Hedgehog Triple Trouble (VC)
+ * Tails Adventures (VC)
+ * Dr. Robotnik's Mean Bean Machine (8-bit) (VC)
+ * Mario & Sonic - London 2012 Virtual Card Album
+ * Mario & Sonic at the London 2012 Olympic Games
+ * Mario & Sonic at the Rio 2016 Olympic Games
+ * 
+ * 
+ * -- Nintendo Switch
+ * Sega Ages Sonic the Hedgehog
+ * Sega Ages Sonic the Hedgehog 2
+ * Sonic Colours: Ultimate
+ * Sonic Forces
+ * Sonic Frontiers
+ * Sonic Mania Plus
+ * Sonic Origins
+ * Sonic Superstars
+ * Team Sonic Racing
+ * Mario & Sonic at the Olympic Games Tokyo 2020
+ * 
+ * -- Playstation 3
+ * Sega Superstars Tennis
+ * Sonic & All-Stars Racing Transformed
+ * Sonic & Sega All-Stars Racing
+ * Sonic Adventure (2010)
+ * Sonic Adventure 2 (2012)
+ * Sonic Generations
+ * Sonic the Fighters
+ * Sonic the Hedgehog (2006 game)
+ * Sonic the Hedgehog (2011 PlayStation 3)
+ * Sonic the Hedgehog 2 (PlayStation 3)
+ * Sonic the Hedgehog 4
+ * Sonic the Hedgehog 4 Episode I
+ * Sonic the Hedgehog 4 Episode II
+ * Sonic the Hedgehog CD (2011)
+ * Sonic Unleashed
+ * 
+ * - XBox 360
+ * Sega Superstars Tennis
+ * Sonic & All-Stars Racing Transformed
+ * Sonic & Knuckles (Xbox Live Arcade)
+ * Sonic & Sega All-Stars Racing
+ * Sonic Adventure (2010)
+ * Sonic Adventure 2 (2012)
+ * Sonic Free Riders
+ * Sonic Generations
+ * Sonic the Fighters
+ * Sonic the Hedgehog (2006 game)
+ * Sonic the Hedgehog (Xbox Live Arcade)
+ * Sonic the Hedgehog 2 (Xbox Live Arcade)
+ * Sonic the Hedgehog 3 (Xbox Live Arcade)
+ * Sonic the Hedgehog 4 Episode I
+ * Sonic the Hedgehog 4 Episode II
+ * Sonic the Hedgehog CD (2011)
+ * Sonic Unleashed
+ * 
+ * 
+ * - Playstation Portable
+ * Sonic Rivals
+ * Sonic Rivals 2
+ * Sega Genesis Collection
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * 
  * 
 */

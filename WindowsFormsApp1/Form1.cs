@@ -56,11 +56,34 @@ namespace WindowsFormsApp1
             }
 
             this.flowLayoutPanel1.Controls.Clear();
+            this.flowLayoutPanel2.Controls.Clear();
+            this.flowLayoutPanel3.Controls.Clear();
+            this.flowLayoutPanel4.Controls.Clear();
+            this.flowLayoutPanel5.Controls.Clear();
+            this.flowLayoutPanel6.Controls.Clear();
+            this.flowLayoutPanel7.Controls.Clear();
+            this.flowLayoutPanel8.Controls.Clear();
+            this.flowLayoutPanel9.Controls.Clear();
+            this.flowLayoutPanel10.Controls.Clear();
+            this.flowLayoutPanel11.Controls.Clear();
+            this.flowLayoutPanel12.Controls.Clear();
+            this.flowLayoutPanel13.Controls.Clear();
+            this.flowLayoutPanel14.Controls.Clear();
+            this.flowLayoutPanel15.Controls.Clear();
+            this.flowLayoutPanel16.Controls.Clear();
+            this.flowLayoutPanel17.Controls.Clear();
+            this.flowLayoutPanel18.Controls.Clear();
+            this.flowLayoutPanel19.Controls.Clear();
+            this.flowLayoutPanel20.Controls.Clear();
+            this.flowLayoutPanel21.Controls.Clear();
+
+
+
+
+
+
             handleButtons();
 
-
-            //Form4 gs = new Form4();
-            //gs.Show();
 
         }
 
@@ -71,8 +94,6 @@ namespace WindowsFormsApp1
 
         private void handleButtons()
         {
-
-
             Game[] gameList = LaunchContainer.launcher.Games;
 
             for (int i = 0; i < gameList.Length; i++)
@@ -81,10 +102,133 @@ namespace WindowsFormsApp1
 
                 if (LaunchContainer.launcher.ActiveGames[i])
                 {
-                    flowLayoutPanel1.Controls.Add(b);
+                    addButtonToSpecificTab(b);
                 }
 
             }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addButtonToSpecificTab(GameButton b)
+        {
+            var gameType = b.assignedGame.GameType;
+
+            switch (gameType)
+            {
+                case "Steam":
+                    flowLayoutPanel1.Controls.Add(b);
+                    break;
+
+                case "Epic Games Store":
+                    flowLayoutPanel2.Controls.Add(b);
+                    break;
+
+                case "Sega PC Reloaded":
+                case "DRM Free":
+                    flowLayoutPanel3.Controls.Add(b);
+                    break;
+
+                case "Sega Mega Drive":
+                    flowLayoutPanel4.Controls.Add(b);
+                    break;
+
+                case "Sega Master System":
+                    flowLayoutPanel5.Controls.Add(b);
+                    break;
+
+                case "Sega Game Gear":
+                    flowLayoutPanel6.Controls.Add(b);
+                    break;
+
+                case "Sega Saturn":
+                    flowLayoutPanel7.Controls.Add(b);
+                    break;
+
+                case "Sega Dreamcast":
+                    flowLayoutPanel8.Controls.Add(b);
+                    break;
+
+                case "Arcade (MAME)":
+                case "Arcade (Sega AM2)":
+                    flowLayoutPanel9.Controls.Add(b);
+                    break;
+
+                case "Nintendo GameCube":
+                    flowLayoutPanel10.Controls.Add(b);
+                    break;
+
+                case "Nintendo Wii":
+                    flowLayoutPanel11.Controls.Add(b);
+                    break;
+
+                case "Nintendo Wii U":
+                    flowLayoutPanel12.Controls.Add(b);
+                    break;
+
+                case "Nintendo Switch":
+                    flowLayoutPanel13.Controls.Add(b);
+                    break;
+
+                case "Sony PlayStation 2":
+                    flowLayoutPanel14.Controls.Add(b);
+                    break;
+
+                case "Sony Playstation 3":
+                    flowLayoutPanel15.Controls.Add(b);
+                    break;
+
+                case "Microsoft XBox":
+                    flowLayoutPanel16.Controls.Add(b);
+                    break;
+
+                case "Microsoft XBox 360":
+                    flowLayoutPanel17.Controls.Add(b);
+                    break;
+
+                case "Game Boy Advance":
+                    flowLayoutPanel18.Controls.Add(b);
+                    break;
+
+                case "Nintendo DS":
+                    flowLayoutPanel19.Controls.Add(b);
+                    break;
+
+                case "Nintendo 3DS":
+                    flowLayoutPanel20.Controls.Add(b);
+                    break;
+
+                case "Neo Geo Pocket Color":
+                case "PlayStation Portable":
+                    flowLayoutPanel21.Controls.Add(b);
+                    break;
+
+
+                default: break;
+            }
+        }
+
+        private void flowLayoutPanel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabPage9_Click(object sender, EventArgs e)
+        {
+
         }
 
         /*

@@ -1,0 +1,2104 @@
+﻿<!--save data
+-->
+<GameSettings>
+  <Game>
+    <Name>Sonic &amp;&amp; Sega All Star Racing</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/34190</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Mega Drive &amp;&amp; Genesis Classics</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/34270</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog CD</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/200940</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure DX</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/71250</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure 2 Battle</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/213610</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Generations</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/71340</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode 1</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/202530</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode 2</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/203650</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; All Stars Racing Transformed</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/212480</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Lost World</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/329440</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mania</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/584400</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Forces</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/637100</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Team Sonic Racing</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/785260</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Colors: Ultimate</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/2055290</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Origins</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/1794960</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Frontiers</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/1237320</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>The Murder of Sonic The Hedgehog</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/2324650</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Superstars</Name>
+    <Platform>Steam</Platform>
+    <Path>steam://rungameid/2022670</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Colors: Ultimate</Name>
+    <Platform>Epic Games Store</Platform>
+    <Path>com.epicgames.launcher://apps/e5071e19d08c45a6bdda5d92fbd0a03e?action=launch&amp;silent=true</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Origins</Name>
+    <Platform>Epic Games Store</Platform>
+    <Path>com.epicgames.launcher://apps/5070a8e44cf74ba3b9a4ca0c0dce5cf1?action=launch&amp;silent=true</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mania</Name>
+    <Platform>Epic Games Store</Platform>
+    <Path>com.epicgames.launcher://apps/818447bb519b46d48d365d5753362796?action=launch&amp;silent=true</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Frontiers</Name>
+    <Platform>Epic Games Store</Platform>
+    <Path>com.epicgames.launcher://apps/  ?action=launch&amp;silent=true</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Superstars</Name>
+    <Platform>Epic Games Store</Platform>
+    <Path>com.epicgames.launcher://apps/  ?action=launch&amp;silent=true</Path>
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog (Decompilation)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 2 (Decompilation)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog CD</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic CD (Sega PC Reloaded)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog CD (Decompilation)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Knuckles Collection</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Knuckles Collection (Sega PC Reloaded)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic 3D Blast</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic 3D Blast (Sega PC Reloaded)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic R</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure DX</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Heroes</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mega Collection Plus</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Riders</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mania (Decompilation)</Name>
+    <Platform>DRM Free</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen ASDF</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 2</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog CD</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 3</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Knuckles</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 3 &amp;&amp; Knuckles</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Spinball</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Dr. Robotnik's Mean Bean Machine</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Knuckles' Chaotix</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Knuckles in Sonic 2</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic 3D Blast</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Eraser</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Crackers</Name>
+    <Platform>Sega Mega Drive</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog (8-bit)</Name>
+    <Platform>Sega Master System</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 2 (8-bit)</Name>
+    <Platform>Sega Master System</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Chaos</Name>
+    <Platform>Sega Master System</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Blast</Name>
+    <Platform>Sega Master System</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Spinball (8-bit)</Name>
+    <Platform>Sega Master System</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Dr. Robotnik's Mean Bean Machine (8-bit)</Name>
+    <Platform>Sega Master System</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog (8-bit)</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 2 (8-bit)</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Chaos</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Blast</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Spinball (8-bit)</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Dr. Robotnik's Mean Bean Machine (8-bit)</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Triple Trouble</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Labyrinth</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Drift</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Sonic Drift 2</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Tails' Adventure</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>Tails' Skypatrol</Name>
+    <Platform>Sega Game Gear</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments> -gen -auto -fullscreen</Arguments>
+  </Game>
+  <Game>
+    <Name>SegaSonic The Hedgehog</Name>
+    <Platform>Arcade (MAME)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Waku Waku Sonic Patrol Car</Name>
+    <Platform>Arcade (MAME)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>SegaSonic Popcorn Shop</Name>
+    <Platform>Arcade (MAME)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>SegaSonic Cosmo Fighter</Name>
+    <Platform>Arcade (MAME)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog</Name>
+    <Platform>Arcade (MAME)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Hedgehog 2</Name>
+    <Platform>Arcade (MAME)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic The Fighters</Name>
+    <Platform>Arcade (Sega AM2)</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic 3D Blast</Name>
+    <Platform>Sega Saturn</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Jam</Name>
+    <Platform>Sega Saturn</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic R</Name>
+    <Platform>Sega Saturn</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure</Name>
+    <Platform>Sega Dreamcast</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure 2</Name>
+    <Platform>Sega Dreamcast</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Shuffle</Name>
+    <Platform>Sega Dreamcast</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure DX</Name>
+    <Platform>Nintendo GameCube</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure 2 Battle</Name>
+    <Platform>Nintendo GameCube</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Heroes</Name>
+    <Platform>Nintendo GameCube</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Riders</Name>
+    <Platform>Nintendo GameCube</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mega Collection</Name>
+    <Platform>Nintendo GameCube</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Gems Collection</Name>
+    <Platform>Nintendo GameCube</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic and the Secret Rings</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic and the Black Knight</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode 1</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Riders: Zero Gravity</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Unleashed</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Colors</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Sega All Star Racing</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Superstars Tennis</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic at the Olympic Games</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic at the Olympic Winter Games</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic at the London 2012 Olympic Games</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (8-bit) (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 2 (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 2 (8-bit) (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 3 (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp; Knuckles (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Chaos (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic 3D Blast (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Spinball (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Dr. Robotnik's Mean Bean Machine (VC)</Name>
+    <Platform>Nintendo Wii</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Lost World</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; All-Stars Racing Transformed</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Boom: Rise of Lyric</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp; Sonic at the Sochi 2014 Olympic Winter Games</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp; Sonic at the Rio 2016 Olympic Games</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Advance (VC)</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Advance 2 (VC)</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Advance 3 (VC)</Name>
+    <Platform>Nintendo Wii U</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mania</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Forces</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Colours: Ultimate</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Origins</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Frontiers</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Superstars</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Team Sonic Racing</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp; Sonic at the Olympic Games Tokyo 2020</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Ages Sonic the Hedgehog</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Ages Sonic the Hedgehog 2</Name>
+    <Platform>Nintendo Switch</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Heroes</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Shadow The Hedgehog</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Unleashed</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Riders</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Riders: Zero Gravity</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mega Collection Plus</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Gems Collection</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Superstars</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Superstars Tennis</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Genesis Collection</Name>
+    <Platform>Sony PlayStation 2</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (2006)</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Unleashed</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Generations</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode I</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode II</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (Sega Vintage Collection)</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 2 (Sega Vintage Collection)</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog CD (2011)</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Fighters</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure DX</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure 2: Battle</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Sega All-Stars Racing</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; All-Stars Racing Transformed</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Superstars Tennis</Name>
+    <Platform>Sony Playstation 3</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Heroes</Name>
+    <Platform>Microsoft XBox</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Shadow the Hedgehog</Name>
+    <Platform>Microsoft XBox</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Riders</Name>
+    <Platform>Microsoft XBox</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Mega Collection Plus</Name>
+    <Platform>Microsoft XBox</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (2006)</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Unleashed</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Generations</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode I</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 4 Episode II</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Free Riders</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Sega All-Stars Racing</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp; All-Stars Racing Transformed</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Superstars Tennis</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (XBLA)</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 2 (XBLA)</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog CD (2011)</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 3 (XBLA)</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Knuckles (XBLA)</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Fighters</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Adventure 2</Name>
+    <Platform>Microsoft XBox 360</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog Pocket Adventure</Name>
+    <Platform>Neo Geo Pocket Color</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Advance</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Advance 2</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Battle</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Advance 3</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Pinball Party</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Tiny Chao Garden</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic X: A Super Sonic Hero</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog Genesis</Name>
+    <Platform>Game Boy Advance</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Rush</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Rush Adventure</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Colors</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Chronicles: The Dark Brotherhood</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Superstars Tennis</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; Sega All-Stars Racing</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic at the Olympic Games</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic at the Olympic Winter Games</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Classic Collection</Name>
+    <Platform>Nintendo DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Generations</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Lost World</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Boom: Shattered Crystal</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Boom: Fire and Ice</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic &amp;&amp; All-Stars Racing Transformed</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic at the London 2012 Olympic Games</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp;&amp; Sonic - London 2012 Virtual Card Album</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Mario &amp; Sonic at the Rio 2016 Olympic Games</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>3D Sonic the Hedgehog</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>3D Sonic the Hedgehog 2</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog (8-bit) (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog 2 (8-bit) (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic the Hedgehog Triple Trouble (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Blast (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Labyrinth (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Drift 2 (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Dr. Robotnik's Mean Bean Machine (8-bit) (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Tails' Adventures (VC)</Name>
+    <Platform>Nintendo 3DS</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Rivals</Name>
+    <Platform>PlayStation Portable</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sonic Rivals 2</Name>
+    <Platform>PlayStation Portable</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name>Sega Genesis Collection</Name>
+    <Platform>PlayStation Portable</Platform>
+    <Path />
+    <IsActive>True</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+  <Game>
+    <Name />
+    <Platform />
+    <Path />
+    <IsActive>False</IsActive>
+    <Arguments />
+  </Game>
+</GameSettings>

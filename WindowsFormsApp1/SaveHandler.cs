@@ -14,33 +14,74 @@ namespace WindowsFormsApp1
     {
         public static void Save()
         {
-            var doc = new XDocument();
+            string filename = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config1.xml");
 
-            try
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            settings.Encoding = Encoding.UTF8;
+            settings.NewLineOnAttributes = true;
+            settings.OmitXmlDeclaration = true;
+
+            XmlWriter xmlwrite = XmlWriter.Create(filename,settings);
+
+
+            xmlwrite.WriteStartDocument();
+            xmlwrite.WriteComment("save data");
+
+
+            xmlwrite.WriteStartElement("GameSettings");
+
+            for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
             {
-                doc = XDocument.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.xml"));
+                Game g = LaunchContainer.launcher.Games[i];
+
+                xmlwrite.WriteStartElement("Game");
+
+                xmlwrite.WriteElementString("Name", g.GameName);
+                xmlwrite.WriteElementString("Platform", g.GameType);
+                xmlwrite.WriteElementString("Path", g.ExeLoc);
+                xmlwrite.WriteElementString("IsActive",g.isActive.ToString());
+                xmlwrite.WriteElementString("Arguments", g.EmuArgs);
+
+                xmlwrite.WriteEndElement();
             }
-            catch
+
+            xmlwrite.WriteEndElement();
+
+            xmlwrite.WriteStartElement("ProgramSettings");
+
+            for (int i = 0;i < LaunchContainer.launcher.ModLoaders.Length;i++)
             {
+                ProgramInfo prog = LaunchContainer.launcher.ModLoaders[i];
 
+                xmlwrite.WriteStartElement("ModLoader");
+
+                xmlwrite.WriteElementString("Name", prog.Name);
+                xmlwrite.WriteElementString("Path", prog.Location); 
+                xmlwrite.WriteEndElement();
             }
 
-            
-            doc = new XDocument(
-                        new XElement("root",
+            for (int i = 0; i < LaunchContainer.launcher.Emulators.Length; i++) 
+            {
+                ProgramInfo prog = LaunchContainer.launcher.Emulators[i];
+                xmlwrite.WriteStartElement("Emulator");
 
-                new XElement("Component", new XAttribute("name", "Steam"),
-                    new XElement("path", new XAttribute("value", LaunchContainer.launcher.SteamLoc))),
+                xmlwrite.WriteElementString("Name", prog.Name);
+                xmlwrite.WriteElementString("Path", prog.Location);
+                xmlwrite.WriteEndElement();
+            }
 
-                new XElement("Component", new XAttribute("name", "HMM"),
-                    new XElement("path", new XAttribute("value", LaunchContainer.launcher.HmmLoc))),
-
-                new XElement("Component", new XAttribute("name", "SADXMM"),
-                    new XElement("path", new XAttribute("value", LaunchContainer.launcher.SadxMMLoc)))
+            xmlwrite.WriteEndElement();
 
 
-        ));
-            doc.Save(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "config.xml"));
+            xmlwrite.WriteEndDocument();
+            xmlwrite.Flush();
+            xmlwrite.Close();
+
+
+
+
+
             Console.WriteLine("XML Saved");
         }
 
@@ -48,16 +89,32 @@ namespace WindowsFormsApp1
         {
             try
             {
-                XDocument xdoc = XDocument.Load("config.xml");
+                XmlReader read = XmlReader.Create("config1.xml");
 
-                var comps = from c in xdoc.Element("root").Elements("Component")
-                            select c.Element("path").Attribute("value").Value;
+                while (read.Read())
+                {
 
-                LaunchContainer.launcher.SteamLoc = comps.ElementAt(0);
-                LaunchContainer.launcher.HmmLoc = comps.ElementAt(1);
-                LaunchContainer.launcher.SadxMMLoc = comps.ElementAt(2);
+                    switch (read.Name)
+                    {
+                        case "GameSettings":
+                            read.ReadToDescendant("Game");
 
-                LaunchContainer.launcher.manageGames();
+                            read.ReadToDescendant("Name");
+                            string na = read.GetAttribute("Name");
+                            string plat = read.ReadToDescendant("Platform").ToString();
+                            string pat = read.ReadToDescendant("Path").ToString();
+                            string isa = read.ReadToDescendant("IsActive").ToString();
+                            string argu = read.ReadToDescendant("Arguments").ToString();
+
+                            saveGameInfo(na, plat,pat,isa, argu);
+
+                            break;
+                    }
+                }
+
+                
+
+                //LaunchContainer.launcher.manageGames();
             }
             catch
             {
@@ -72,5 +129,31 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        public static void saveGameInfo(string name, string type, string loc, string act, string args)
+        {
+            Game[] gms = LaunchContainer.launcher.Games;
+
+
+            switch (type)
+            {
+                case "Sega Mega Drive":
+                    switch (name)
+                    {
+                        case "Sonic the Hedgehog":
+                            gms[38].ExeLoc = loc;
+
+                            if (act == "True")
+                                gms[38].isActive = true;
+
+                            gms[38].EmuArgs = args;
+                            break;
+                    }
+
+                    break;
+            }
+        }
+
+
     }
 }
