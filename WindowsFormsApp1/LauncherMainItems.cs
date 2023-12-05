@@ -1919,20 +1919,26 @@ namespace WindowsFormsApp1
             games[210].activate();
 
 
+            //Stuff I missed
+
+            games[211].GameName = "Shadow the Hedgehog";
+            games[211].EmulatorName = emulators[6].Name;
+            games[211].EmulatorLoc = emulators[6].Location;
+            games[211].GameType = gameTypes[10];
+            games[211].emulator();
+            games[211].activate();
+
+            games[212].GameName = "Blue Spheres";
+            games[212].EmulatorName = emulators[0].Name;
+            games[212].EmulatorLoc = emulators[0].Location;
+            games[212].GameType = gameTypes[3];
+            games[212].emulator();
+            games[212].activate();
 
 
+            checkActives();
 
 
-
-
-
-
-
-
-            for (int i = 0; i < games.Length; i++)
-            {
-                activeGames[i] = games[i].IsActive;
-            }
         }
 
         public void checkActives()
@@ -1976,12 +1982,12 @@ namespace WindowsFormsApp1
         public static void setModLoaders(ProgramInfo[] progs)
         {
             progs[0].Name = "HedgeModManager";
-            progs[1].Name = "SADX Mod Loader";
+            progs[1].Name = "SA Mod Loader";
             progs[2].Name = "SA2 Mod Loader";
             progs[3].Name = "Mania Mod Loader";
             progs[4].Name = "Sonic CD Steam Mod Loader";
             progs[5].Name = "Sonic 4 Mod Loader";
-            progs[6].Name = "Sonic 4 Mod Loader";
+            progs[6].Name = "Sonic 4 (EP2) Mod Loader";
             progs[7].Name = "Sonic R Mod Loader";
             progs[8].Name = "S&K Collection Mod Loader";
             progs[9].Name = "RSDK Mod Manager";

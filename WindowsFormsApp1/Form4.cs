@@ -42,25 +42,42 @@ namespace WindowsFormsApp1
 
             DataGridViewCell curCell = dataGridView1.CurrentCell;
 
+            int index=0;
+
+            for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
+            {
+                if ((string)LaunchContainer.launcher.Games[i].GameType == (string)dataGridView1.Rows[e.RowIndex].Cells[1].Value
+                    && (string)LaunchContainer.launcher.Games[i].GameName == (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value)
+                    index = i;
+            }
+
+            Console.WriteLine(index);
+
             if (curCell.ColumnIndex.Equals(2) && e.RowIndex != -1)
             {
-                if (LaunchContainer.launcher.Games[curCell.RowIndex].isActive)
+                if (LaunchContainer.launcher.Games[index].isActive)
                 {
-                    LaunchContainer.launcher.Games[curCell.RowIndex].deActivate();
+                    LaunchContainer.launcher.Games[index].deActivate();
                 }
 
                 else
                 {
-                    LaunchContainer.launcher.Games[curCell.RowIndex].activate();
+                    LaunchContainer.launcher.Games[index].activate();
                 }
 
-                dataGridView1.CurrentCell.Value = LaunchContainer.launcher.Games[curCell.RowIndex].isActive;
+                dataGridView1.CurrentCell.Value = LaunchContainer.launcher.Games[index].isActive;
                 LaunchContainer.launcher.checkActives();
             }
 
             if (curCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
             {
-                LaunchContainer.launcher.Games[curCell.RowIndex].ExeLoc = (string)getFilePath(dataGridView1.CurrentRow);
+                try
+                {
+                    LaunchContainer.launcher.Games[index].ExeLoc = (string)getFilePath(dataGridView1.CurrentRow, index);
+                }
+                catch 
+                {
+                }
             }
         }
 
@@ -70,14 +87,42 @@ namespace WindowsFormsApp1
 
             for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
             {
-                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                row.Cells[0].Value = LaunchContainer.launcher.Games[i].GameName;
-                row.Cells[1].Value = LaunchContainer.launcher.Games[i].GameType;
-                row.Cells[2].Value = LaunchContainer.launcher.Games[i].isActive;
-                row.Cells[3].Value = LaunchContainer.launcher.Games[i].ExeLoc;
-                row.Cells[4].Value = LaunchContainer.launcher.Games[i].EmuArgs;
-                dataGridView1.Rows.Add(row);
+                if (LaunchContainer.launcher.Games[i].GameName != "")
+                {
+                    DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
+                    row.Cells[0].Value = LaunchContainer.launcher.Games[i].GameName;
+                    row.Cells[1].Value = LaunchContainer.launcher.Games[i].GameType;
+                    row.Cells[2].Value = LaunchContainer.launcher.Games[i].isActive;
+                    row.Cells[3].Value = LaunchContainer.launcher.Games[i].ExeLoc;
+                    row.Cells[4].Value = LaunchContainer.launcher.Games[i].EmuArgs;
+                    dataGridView1.Rows.Add(row);
+                }
             }
+
+            for (int i = 0; i < LaunchContainer.launcher.ModLoaders.Length; i++)
+            {
+                if (LaunchContainer.launcher.ModLoaders[i].Name != "")
+                {
+                    DataGridViewRow row2 = (DataGridViewRow)dataGridView2.Rows[0].Clone();
+                    row2.Cells[0].Value = "Mod Loader";
+                    row2.Cells[1].Value = LaunchContainer.launcher.ModLoaders[i].Name;
+                    row2.Cells[2].Value = LaunchContainer.launcher.ModLoaders[i].Location;
+                    dataGridView2.Rows.Add(row2);
+                }
+            }
+
+            for (int i = 0; i < LaunchContainer.launcher.Emulators.Length; i++)
+            {
+                if (LaunchContainer.launcher.Emulators[i].Name != "")
+                {
+                    DataGridViewRow row3 = (DataGridViewRow)(dataGridView2.Rows[0].Clone());
+                    row3.Cells[0].Value = "Emulator";
+                    row3.Cells[1].Value = LaunchContainer.launcher.Emulators[i].Name;
+                    row3.Cells[2].Value = LaunchContainer.launcher.Emulators[i].Location;
+                    dataGridView2.Rows.Add(row3);
+                }
+            }
+
 
         }
 
@@ -91,10 +136,10 @@ namespace WindowsFormsApp1
             
         }
 
-        private object getFilePath(DataGridViewRow row)
+        private object getFilePath(DataGridViewRow row, int index)
         {
 
-            switch(LaunchContainer.launcher.Games[row.Index].GameType)
+            switch(LaunchContainer.launcher.Games[index].GameType)
             {
                 case "DRM Free":
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -359,6 +404,104 @@ namespace WindowsFormsApp1
 
             }
             return row.Cells[3].Value;
+        }
+
+        private object getProgFilePath(DataGridViewRow row)
+        {
+            switch (row.Cells[0].Value)
+            {
+                case "Mod Loader":
+                    using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                    {
+                        openFileDialog.InitialDirectory = "c:\\";
+                        openFileDialog.Title = "Select " + row.Cells[1].Value + "'s Executable";
+                        openFileDialog.Filter = "exe file (*.exe)|*.exe";
+                        openFileDialog.RestoreDirectory = true;
+
+                        if (openFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            //Get the path of specified file
+                            row.Cells[2].Value = openFileDialog.FileName;
+                        }
+                    }
+                    break;
+
+                case "Emulator":
+                    using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                    {
+                        openFileDialog.InitialDirectory = "c:\\";
+                        openFileDialog.Title = "Select " + row.Cells[1].Value + " emulator";
+                        openFileDialog.Filter = "exe file (*.exe)|*.exe";
+                        openFileDialog.RestoreDirectory = true;
+
+                        if (openFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            //Get the path of specified file
+                            row.Cells[2].Value = openFileDialog.FileName;
+                        }
+                    }
+                    break;
+            }
+
+            return row.Cells[2].Value;
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell curCell = dataGridView2.CurrentCell;
+
+            int index = 0;
+
+            if ((string)dataGridView2.Rows[e.RowIndex].Cells[0].Value == "Mod Loader")
+            {
+                for (int i = 0; i < LaunchContainer.launcher.ModLoaders.Length; i++)
+                {
+                    if ((string)dataGridView2.Rows[e.RowIndex].Cells[1].Value == (string)LaunchContainer.launcher.ModLoaders[i].Name)
+                    {
+                        index = i; break;
+                    }
+                }
+            }
+
+            if ((string)dataGridView2.Rows[e.RowIndex].Cells[0].Value == "Emulator")
+            {
+                for (int i = 0; i < LaunchContainer.launcher.Emulators.Length; i++)
+                {
+                    if ((string)dataGridView2.Rows[e.RowIndex].Cells[1].Value == (string)LaunchContainer.launcher.Emulators[i].Name)
+                    {
+                        index = i; break;
+                    }
+                }
+            }
+
+            if (curCell.ColumnIndex.Equals(2) && e.RowIndex != -1)
+            {
+                if ((string)dataGridView2.Rows[e.RowIndex].Cells[0].Value == "Mod Loader")
+                {
+                    try
+                    {
+                        LaunchContainer.launcher.ModLoaders[index].Location = (string)getProgFilePath(dataGridView2.CurrentRow);
+                    }
+                    catch 
+                    {
+                        //LaunchContainer.launcher.ModLoaders[index].Location = "";
+                    }
+                }
+
+                if ((string)dataGridView2.Rows[e.RowIndex].Cells[0].Value == "Emulator")
+                {
+                    try 
+                    { 
+                        LaunchContainer.launcher.Emulators[index].Location = (string)getProgFilePath(dataGridView2.CurrentRow);
+                    }
+                    catch
+                    {
+                        //LaunchContainer.launcher.Emulators[index].Location = "";
+                    }
+                }
+
+
+            }
         }
     }
 }

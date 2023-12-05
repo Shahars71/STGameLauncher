@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -18,6 +20,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,6 +58,8 @@ namespace WindowsFormsApp1
                 newFrm.ShowDialog();  // execution of Form1 stops until Form2 is closed
             }
 
+            SaveHandler.Save();
+
             this.flowLayoutPanel1.Controls.Clear();
             this.flowLayoutPanel2.Controls.Clear();
             this.flowLayoutPanel3.Controls.Clear();
@@ -76,10 +81,6 @@ namespace WindowsFormsApp1
             this.flowLayoutPanel19.Controls.Clear();
             this.flowLayoutPanel20.Controls.Clear();
             this.flowLayoutPanel21.Controls.Clear();
-
-
-
-
 
 
             handleButtons();

@@ -88,8 +88,8 @@ namespace WindowsFormsApp1
         private void Form2_Load(object sender, EventArgs e)
         {
             textBox1.Text = LaunchContainer.launcher.SteamLoc;
-            textBox2.Text = LaunchContainer.launcher.HmmLoc;
-            textBox3.Text = LaunchContainer.launcher.SadxMMLoc;
+            textBox2.Text = LaunchContainer.launcher.ModLoaders[0].Location;
+            textBox3.Text = LaunchContainer.launcher.ModLoaders[1].Location;
         }
 
         private void ModLoaderTab_Click(object sender, EventArgs e)
@@ -307,6 +307,41 @@ namespace WindowsFormsApp1
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmulTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
         {
 
         }
