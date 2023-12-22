@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.games = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -68,11 +67,12 @@
             this.tabPage18 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage19 = new System.Windows.Forms.TabPage();
-            this.tabPage20 = new System.Windows.Forms.TabPage();
-            this.tabPage21 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel20 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tabPage21 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel21 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -96,16 +96,6 @@
             this.tabPage20.SuspendLayout();
             this.tabPage21.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(700, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 68);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Options";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -171,10 +161,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flowLayoutPanel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(656, 402);
+            this.tabPage2.Size = new System.Drawing.Size(656, 384);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Epic Games Store";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -191,10 +181,10 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.flowLayoutPanel3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(656, 402);
+            this.tabPage3.Size = new System.Drawing.Size(656, 384);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "DRM Free";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -210,10 +200,10 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.flowLayoutPanel4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 40);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(656, 402);
+            this.tabPage4.Size = new System.Drawing.Size(656, 384);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Mega Drive";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -229,10 +219,10 @@
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.flowLayoutPanel5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 40);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(656, 402);
+            this.tabPage5.Size = new System.Drawing.Size(656, 384);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Master System";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -248,10 +238,10 @@
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.flowLayoutPanel6);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Location = new System.Drawing.Point(4, 40);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(656, 402);
+            this.tabPage6.Size = new System.Drawing.Size(656, 384);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Game Gear";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -268,10 +258,10 @@
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.flowLayoutPanel7);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Location = new System.Drawing.Point(4, 40);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(656, 402);
+            this.tabPage7.Size = new System.Drawing.Size(656, 384);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Saturn";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -287,10 +277,10 @@
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.flowLayoutPanel8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Location = new System.Drawing.Point(4, 40);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(656, 402);
+            this.tabPage8.Size = new System.Drawing.Size(656, 384);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Dreamcast";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -306,10 +296,10 @@
             // tabPage9
             // 
             this.tabPage9.Controls.Add(this.flowLayoutPanel9);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Location = new System.Drawing.Point(4, 40);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(656, 402);
+            this.tabPage9.Size = new System.Drawing.Size(656, 384);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "Arcade";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -326,10 +316,10 @@
             // tabPage10
             // 
             this.tabPage10.Controls.Add(this.flowLayoutPanel10);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Location = new System.Drawing.Point(4, 40);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(656, 402);
+            this.tabPage10.Size = new System.Drawing.Size(656, 384);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "GameCube";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -505,6 +495,14 @@
             this.tabPage19.Text = "DS";
             this.tabPage19.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel19
+            // 
+            this.flowLayoutPanel19.AutoScroll = true;
+            this.flowLayoutPanel19.Location = new System.Drawing.Point(7, 2);
+            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
+            this.flowLayoutPanel19.Size = new System.Drawing.Size(643, 380);
+            this.flowLayoutPanel19.TabIndex = 4;
+            // 
             // tabPage20
             // 
             this.tabPage20.Controls.Add(this.flowLayoutPanel20);
@@ -515,6 +513,14 @@
             this.tabPage20.TabIndex = 19;
             this.tabPage20.Text = "3DS";
             this.tabPage20.UseVisualStyleBackColor = true;
+            // 
+            // flowLayoutPanel20
+            // 
+            this.flowLayoutPanel20.AutoScroll = true;
+            this.flowLayoutPanel20.Location = new System.Drawing.Point(7, 2);
+            this.flowLayoutPanel20.Name = "flowLayoutPanel20";
+            this.flowLayoutPanel20.Size = new System.Drawing.Size(643, 380);
+            this.flowLayoutPanel20.TabIndex = 4;
             // 
             // tabPage21
             // 
@@ -527,22 +533,6 @@
             this.tabPage21.Text = "Other";
             this.tabPage21.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel19
-            // 
-            this.flowLayoutPanel19.AutoScroll = true;
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(7, 2);
-            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(643, 380);
-            this.flowLayoutPanel19.TabIndex = 4;
-            // 
-            // flowLayoutPanel20
-            // 
-            this.flowLayoutPanel20.AutoScroll = true;
-            this.flowLayoutPanel20.Location = new System.Drawing.Point(7, 2);
-            this.flowLayoutPanel20.Name = "flowLayoutPanel20";
-            this.flowLayoutPanel20.Size = new System.Drawing.Size(643, 380);
-            this.flowLayoutPanel20.TabIndex = 4;
-            // 
             // flowLayoutPanel21
             // 
             this.flowLayoutPanel21.AutoScroll = true;
@@ -551,14 +541,24 @@
             this.flowLayoutPanel21.Size = new System.Drawing.Size(643, 380);
             this.flowLayoutPanel21.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(700, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 68);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Special Options";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 452);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.games);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -590,8 +590,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button games;
         private System.Windows.Forms.TabControl tabControl1;
@@ -636,6 +634,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel20;
         private System.Windows.Forms.TabPage tabPage21;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;
+        private System.Windows.Forms.Button button1;
     }
 }
 

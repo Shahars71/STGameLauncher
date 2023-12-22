@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace WindowsFormsApp1
 {
@@ -44,40 +47,63 @@ namespace WindowsFormsApp1
 
             int index=0;
 
-            for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
+            if (e.RowIndex != -1)
             {
-                if ((string)LaunchContainer.launcher.Games[i].GameType == (string)dataGridView1.Rows[e.RowIndex].Cells[1].Value
-                    && (string)LaunchContainer.launcher.Games[i].GameName == (string)dataGridView1.Rows[e.RowIndex].Cells[0].Value)
-                    index = i;
-            }
+                
+                index = getGameIndex(e.RowIndex);
 
-            Console.WriteLine(index);
+                Console.WriteLine(index);
 
-            if (curCell.ColumnIndex.Equals(2) && e.RowIndex != -1)
-            {
-                if (LaunchContainer.launcher.Games[index].isActive)
+                if (curCell.ColumnIndex.Equals(2) && e.RowIndex != -1)
                 {
-                    LaunchContainer.launcher.Games[index].deActivate();
+                    if (LaunchContainer.launcher.Games[index].isActive)
+                    {
+                        LaunchContainer.launcher.Games[index].deActivate();
+                    }
+
+                    else
+                    {
+                        LaunchContainer.launcher.Games[index].activate();
+                        
+                        if (LaunchContainer.launcher.Games[index].GameType == "Sony Playstation 3")
+                        {
+                            using (GameRegionSet setRegion = new GameRegionSet(LaunchContainer.launcher.Games[index]))
+                            {
+                                setRegion.ShowDialog();
+                            }
+                            refreshRowGame(curCell.RowIndex, LaunchContainer.launcher.Games[index]);
+                        }
+                    }
+
+                    dataGridView1.CurrentCell.Value = LaunchContainer.launcher.Games[index].isActive;
+
                 }
 
-                else
+                if (curCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
                 {
-                    LaunchContainer.launcher.Games[index].activate();
+                    try
+                    {
+                        LaunchContainer.launcher.Games[index].ExeLoc = (string)getFilePath(dataGridView1.CurrentRow, index);
+
+                        if (curCell.Value.ToString() == "\n      ")
+                        {
+                            LaunchContainer.launcher.Games[index].ExeLoc = "";
+                        }
+
+                        if (!LaunchContainer.launcher.Games[index].isActive && LaunchContainer.launcher.Games[index].ExeLoc != "")
+                        {
+                            LaunchContainer.launcher.Games[index].activate();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
                 }
 
-                dataGridView1.CurrentCell.Value = LaunchContainer.launcher.Games[index].isActive;
                 LaunchContainer.launcher.checkActives();
-            }
+                refreshRowGame(curCell.RowIndex, LaunchContainer.launcher.Games[index]);
 
-            if (curCell.ColumnIndex.Equals(3) && e.RowIndex != -1)
-            {
-                try
-                {
-                    LaunchContainer.launcher.Games[index].ExeLoc = (string)getFilePath(dataGridView1.CurrentRow, index);
-                }
-                catch 
-                {
-                }
             }
         }
 
@@ -123,6 +149,12 @@ namespace WindowsFormsApp1
                 }
             }
 
+            DataGridViewRow row4 = (DataGridViewRow)(dataGridView2.Rows[0].Clone());
+            row4.Cells[0].Value = "DRM";
+            row4.Cells[1].Value = "Steam";
+            row4.Cells[2].Value = LaunchContainer.launcher.SteamLoc;
+            dataGridView2.Rows.Add(row4);
+
 
         }
 
@@ -145,7 +177,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s Executable";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s Executable";
                         openFileDialog.Filter = "exe file (*.exe)|*.exe";
                         openFileDialog.RestoreDirectory = true;
 
@@ -161,8 +193,8 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
-                        openFileDialog.Filter = "md file (*.md)|*.md";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
+                        openFileDialog.Filter = "md/cue/32x file (*.md;*.cue;*.32x)|*.md;*.cue;*.32x";
                         openFileDialog.RestoreDirectory = true;
 
                         if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -177,7 +209,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "sms file (*.sms)|*.sms";
                         openFileDialog.RestoreDirectory = true;
 
@@ -193,7 +225,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "gg file (*.gg)|*.gg";
                         openFileDialog.RestoreDirectory = true;
 
@@ -209,7 +241,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "cue file (*.cue)|*.cue";
                         openFileDialog.RestoreDirectory = true;
 
@@ -225,14 +257,14 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "gdi file (*.gdi)|*.gdi";
                         openFileDialog.RestoreDirectory = true;
 
                         if (openFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             //Get the path of specified file
-                            row.Cells[3].Value = openFileDialog.FileName;
+                            row.Cells[3].Value = openFileDialog.FileName.ToString();
                         }
                     }
                     break;
@@ -246,7 +278,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ISO file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ISO file";
                         openFileDialog.Filter = "iso file (*.iso)|*.iso";
                         openFileDialog.RestoreDirectory = true;
 
@@ -263,7 +295,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "rpx file (*.rpx)|*.rpx";
                         openFileDialog.RestoreDirectory = true;
 
@@ -280,7 +312,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "nsp file (*.nsp)|*.nsp";
                         openFileDialog.RestoreDirectory = true;
 
@@ -297,7 +329,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "xex file (*.xex)|*.xex";
                         openFileDialog.RestoreDirectory = true;
 
@@ -314,7 +346,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "ngc file (*.ngc)|*.ngc";
                         openFileDialog.RestoreDirectory = true;
 
@@ -331,7 +363,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "gba file (*.gba)|*.gba";
                         openFileDialog.RestoreDirectory = true;
 
@@ -348,7 +380,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "nds file (*.nds)|*.nds";
                         openFileDialog.RestoreDirectory = true;
 
@@ -365,7 +397,7 @@ namespace WindowsFormsApp1
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
                     {
                         openFileDialog.InitialDirectory = "c:\\";
-                        openFileDialog.Title = "Select " + row.Cells[0] + "'s ROM file";
+                        openFileDialog.Title = "Select " + row.Cells[0].Value + "'s ROM file";
                         openFileDialog.Filter = "3ds file (*.3ds)|*.3ds";
                         openFileDialog.RestoreDirectory = true;
 
@@ -377,20 +409,42 @@ namespace WindowsFormsApp1
                     }
                     break;
 
+                case "Sony Playstation 3":
 
+                    using (GameRegionSet setRegion = new GameRegionSet(LaunchContainer.launcher.Games[index]))
+                    {
+                        setRegion.ShowDialog();
+                    }
+                    refreshRowGame(row.Index, LaunchContainer.launcher.Games[index]);
+                    
+                    break;
 
                 case "Steam":
                 case "Epic Games Store":
                 case "Arcade (MAME)":
                 case "Arcade (Sega AM2)":
-                case "Sony Playstation 3":
-                case "Sega PC Reloaded":
+                
+                
 
                     MessageBox.Show("No file path needed!");
                     break;
 
+                case "Sega PC Reloaded":
 
+                    using (CommonOpenFileDialog dial = new CommonOpenFileDialog())
+                    {
+                        dial.InitialDirectory = "c:\\";
+                        dial.IsFolderPicker = true;
+                        dial.Title = "Select "+row.Cells[0].Value+"'s Folder";
+                        dial.RestoreDirectory = true;
 
+                        if (dial.ShowDialog() == CommonFileDialogResult.Ok)
+                        {
+                            //Get the path of specified file
+                            row.Cells[3].Value = dial.FileName;
+                        }
+                    }
+                    break;
 
 
 
@@ -438,6 +492,23 @@ namespace WindowsFormsApp1
                         {
                             //Get the path of specified file
                             row.Cells[2].Value = openFileDialog.FileName;
+                        }
+                    }
+                    break;
+
+                case "DRM":
+
+                    using (CommonOpenFileDialog dial = new CommonOpenFileDialog())
+                    {
+                        dial.InitialDirectory = "c:\\";
+                        dial.IsFolderPicker = true;
+                        dial.Title = "Select Steam Folder";
+                        dial.RestoreDirectory = true;
+
+                        if (dial.ShowDialog() == CommonFileDialogResult.Ok)
+                        {
+                            //Get the path of specified file
+                            row.Cells[2].Value = dial.FileName;
                         }
                     }
                     break;
@@ -493,6 +564,8 @@ namespace WindowsFormsApp1
                     try 
                     { 
                         LaunchContainer.launcher.Emulators[index].Location = (string)getProgFilePath(dataGridView2.CurrentRow);
+                        
+                        LaunchContainer.launcher.updateEmuls();
                     }
                     catch
                     {
@@ -500,8 +573,102 @@ namespace WindowsFormsApp1
                     }
                 }
 
+                if ((string)dataGridView2.Rows[e.RowIndex].Cells[0].Value == "DRM")
+                {
+                    try
+                    {
+                        LaunchContainer.launcher.SteamLoc = (string)getProgFilePath(dataGridView2.CurrentRow);
+                        
+                        SaveHandler.steamDetect();
+                        LaunchContainer.launcher.checkActives();
+                        refreshGrid();
+                    }
+                    catch { }
+                }
+
 
             }
+        }
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell curCell = dataGridView1.CurrentCell;
+            int index = getGameIndex(curCell.RowIndex);
+
+
+            if (curCell != null && curCell.RowIndex != -1)
+            {
+                if (curCell.ColumnIndex == 4)
+                {
+                    try
+                    {
+                        if (curCell.Value != null)
+                        {
+                            LaunchContainer.launcher.Games[index].EmuArgs = curCell.Value.ToString();
+
+                            if (curCell.Value.ToString() == "\n    ")
+                            {
+                                LaunchContainer.launcher.Games[index].EmuArgs = "";
+                            }
+                        }
+                        else LaunchContainer.launcher.Games[index].EmuArgs = "";
+                    }
+                    catch
+                    {
+                        LaunchContainer.launcher.Games[index].EmuArgs = "";
+                    }
+                }
+            }
+        }
+
+        private int getGameIndex(int rowIndex)
+        {
+            int gameI = 0;
+            for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
+            {
+                if ((string)LaunchContainer.launcher.Games[i].GameType == (string)dataGridView1.Rows[rowIndex].Cells[1].Value
+                    && (string)LaunchContainer.launcher.Games[i].GameName == (string)dataGridView1.Rows[rowIndex].Cells[0].Value)
+                { 
+                    gameI = i;
+                    break;
+                }
+                    
+            }
+
+            return gameI;
+        }
+
+        private void refreshRowGame(int rowIndex, Game g)
+        {
+            DataGridViewRow row = dataGridView1.Rows[rowIndex];
+
+            row.Cells[2].Value = g.isActive;
+            row.Cells[3].Value = g.ExeLoc;
+            row.Cells[4].Value = g.EmuArgs;
+        }
+
+        private void dataGridView1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void refreshGrid()
+        {
+            int gameIndex = 0;
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                gameIndex = getGameIndex(i);
+
+                refreshRowGame(i, LaunchContainer.launcher.Games[gameIndex]);
+
+            }
+            Console.WriteLine("grid refreshed");
+        }
+
+        private void Form4_Enter(object sender, EventArgs e)
+        {
+            //refreshGrid();
         }
     }
 }

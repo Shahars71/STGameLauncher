@@ -73,7 +73,23 @@ namespace WindowsFormsApp1
             //string gamePath = Path.Combine(new[] { LaunchContainer.launcher.SteamLoc, CurGame.ExeLoc });
             if (CurGame.HasEmulator)
             {
-                start_EmulatedGame();
+                if (CurGame.EmulatorName == "Sega PC Reloaded") 
+                    start_GameSPCR();
+                else
+                {
+                    ProgramInfo emu = LaunchContainer.launcher.getEmulFromGame(CurGame.GameName, CurGame.GameType);
+
+                    if (emu.SpecFlag)
+                    {
+                        start_SpecEmulatedGame();
+                    }
+                    else
+                    {
+                        start_EmulatedGame();
+                    }
+
+                }
+
             }
             else
             {
@@ -83,26 +99,108 @@ namespace WindowsFormsApp1
 
         private void start_ModLoader()
         {
-            System.Diagnostics.Process.Start(CurGame.ModLoaderLoc);
+            try
+            {
+                System.Diagnostics.Process.Start(CurGame.ModLoaderLoc);
+            }
+            catch
+            {
+                MessageBox.Show("Mod Loader not found!\nMake sure you put the right file path!");
+            }
+
         }
 
         private void start_Emulator()
         {
-            System.Diagnostics.Process.Start(CurGame.EmulatorLoc);
+            try
+            {
+                System.Diagnostics.Process.Start(CurGame.EmulatorLoc);
+            }
+            catch
+            {
+                MessageBox.Show("Emulator not found!\nMake sure you put the right file path!");
+            }
         }
 
         private void start_EmulatedGame()
         {
-            ProcessStartInfo proc = new ProcessStartInfo();
-            proc.Arguments = "\"" + CurGame.ExeLoc + "\"" + CurGame.EmuArgs;
-            proc.FileName = CurGame.EmulatorLoc;
+            try
+            {
+                ProcessStartInfo proc = new ProcessStartInfo();
+                proc.Arguments = " \"" + CurGame.ExeLoc + "\" " + CurGame.EmuArgs;
+                proc.FileName = CurGame.EmulatorLoc;
+                proc.WorkingDirectory = CurGame.EmulatorLoc;
 
-            Process.Start(proc);
+                Process.Start(proc);
+            }
+            catch
+            {
+                if (CurGame.EmulatorLoc == "")
+                {
+                    MessageBox.Show(CurGame.EmulatorName+" Emulator not found!");
+                }
+            }
+
+        }
+
+        private void start_GameSPCR()
+        {
+            try
+            {
+                ProcessStartInfo proc = new ProcessStartInfo();
+
+                proc.Arguments = CurGame.EmuArgs;
+                proc.FileName = CurGame.EmulatorLoc;
+                proc.WorkingDirectory = CurGame.ExeLoc;
+
+                Process.Start(proc);
+            }
+            catch
+            {
+                if (CurGame.EmulatorLoc == "")
+                {
+                    MessageBox.Show("Sega PC Reloaded not found!");
+                }
+            }
+
         }
 
         private void start_GameStdExe()
         {
-            System.Diagnostics.Process.Start(CurGame.ExeLoc);
+            try
+            {
+                ProcessStartInfo proc = new ProcessStartInfo();
+                proc.Arguments = CurGame.EmuArgs;
+                proc.FileName = CurGame.ExeLoc;
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.ExeLoc);
+
+                System.Diagnostics.Process.Start(proc);
+            }
+            catch
+            {
+                MessageBox.Show("Can't find exe file!");
+            }
+        }
+
+        private void start_SpecEmulatedGame()
+        {
+            try
+            {
+
+                ProgramInfo emul = LaunchContainer.launcher.getEmulFromGame(CurGame.GameName, CurGame.GameType);
+
+
+                ProcessStartInfo proc = new ProcessStartInfo();
+                proc.Arguments = " " + emul.SpecArgs + " \"" + CurGame.ExeLoc + "\" " + CurGame.EmuArgs;
+                proc.FileName = CurGame.EmulatorLoc;
+                proc.WorkingDirectory = CurGame.EmulatorLoc;
+
+                Process.Start(proc);
+            }
+            catch
+            {
+                MessageBox.Show("Emulator not found!");
+            }
         }
 
         private void ComponentButton_Click(object sender, EventArgs e)

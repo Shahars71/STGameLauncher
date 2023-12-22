@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
+using static Microsoft.WindowsAPICodePack.Shell.PropertySystem.SystemProperties.System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1
 {
@@ -23,77 +25,83 @@ namespace WindowsFormsApp1
             settings.NewLineOnAttributes = true;
             settings.OmitXmlDeclaration = true;
 
-            XmlWriter xmlwrite = XmlWriter.Create(filename,settings);
-
-
-            xmlwrite.WriteStartDocument();
-            xmlwrite.WriteComment("save data");
-
-            xmlwrite.WriteStartElement("root");
-
-            xmlwrite.WriteStartElement("GameSettings");
-
-            for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
+            using (XmlWriter xmlwrite = XmlWriter.Create(filename, settings))
             {
-                Game g = LaunchContainer.launcher.Games[i];
 
-                if (g.GameName != "")
+
+                xmlwrite.WriteStartDocument();
+                xmlwrite.WriteComment("save data");
+
+                xmlwrite.WriteStartElement("root");
+
+                xmlwrite.WriteStartElement("GameSettings");
+
+                for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
                 {
-                    xmlwrite.WriteStartElement("Game");
+                    Game g = LaunchContainer.launcher.Games[i];
 
-                    xmlwrite.WriteElementString("Name", g.GameName);
-                    xmlwrite.WriteElementString("Platform", g.GameType);
-                    xmlwrite.WriteElementString("Path", g.ExeLoc);
-                    xmlwrite.WriteElementString("IsActive", g.isActive.ToString());
-                    xmlwrite.WriteElementString("Arguments", g.EmuArgs);
+                    if (g.GameName != "")
+                    {
+                        xmlwrite.WriteStartElement("Game");
 
-                    xmlwrite.WriteEndElement();
+                        xmlwrite.WriteElementString("Name", g.GameName);
+                        xmlwrite.WriteElementString("Platform", g.GameType);
+                        xmlwrite.WriteElementString("Path", g.ExeLoc.ToString());
+                        xmlwrite.WriteElementString("IsActive", g.isActive.ToString());
+                        xmlwrite.WriteElementString("Arguments", g.EmuArgs.ToString());
+
+                        xmlwrite.WriteEndElement();
+                    }
                 }
-            }
 
-            xmlwrite.WriteEndElement();
+                xmlwrite.WriteEndElement();
 
-            xmlwrite.WriteStartElement("ProgramSettings");
+                xmlwrite.WriteStartElement("ProgramSettings");
 
-            for (int i = 0;i < LaunchContainer.launcher.ModLoaders.Length;i++)
-            {
-                ProgramInfo prog = LaunchContainer.launcher.ModLoaders[i];
-
-
-                if (prog.Name != "")
+                for (int i = 0; i < LaunchContainer.launcher.ModLoaders.Length; i++)
                 {
-                    xmlwrite.WriteStartElement("ModLoader");
+                    ProgramInfo prog = LaunchContainer.launcher.ModLoaders[i];
 
-                    xmlwrite.WriteElementString("Name", prog.Name);
-                    xmlwrite.WriteElementString("Path", prog.Location);
-                    xmlwrite.WriteEndElement();
+
+                    if (prog.Name != "")
+                    {
+                        xmlwrite.WriteStartElement("ModLoader");
+
+                        xmlwrite.WriteElementString("Name", prog.Name);
+                        xmlwrite.WriteElementString("Path", prog.Location);
+                        xmlwrite.WriteEndElement();
+                    }
                 }
-            }
 
-            for (int i = 0; i < LaunchContainer.launcher.Emulators.Length; i++) 
-            {
-                ProgramInfo prog = LaunchContainer.launcher.Emulators[i];
-
-
-                if (prog.Name != "")
+                for (int i = 0; i < LaunchContainer.launcher.Emulators.Length; i++)
                 {
-                    xmlwrite.WriteStartElement("Emulator");
+                    ProgramInfo prog = LaunchContainer.launcher.Emulators[i];
 
-                    xmlwrite.WriteElementString("Name", prog.Name);
-                    xmlwrite.WriteElementString("Path", prog.Location);
-                    xmlwrite.WriteEndElement();
+
+                    if (prog.Name != "")
+                    {
+                        xmlwrite.WriteStartElement("Emulator");
+
+                        xmlwrite.WriteElementString("Name", prog.Name);
+                        xmlwrite.WriteElementString("Path", prog.Location);
+                        xmlwrite.WriteEndElement();
+                    }
                 }
+
+                xmlwrite.WriteStartElement("DRM");
+                xmlwrite.WriteElementString("Name", "Steam");
+                xmlwrite.WriteElementString("Path", LaunchContainer.launcher.SteamLoc);
+                xmlwrite.WriteEndElement();
+
+                xmlwrite.WriteEndElement();
+
+                xmlwrite.WriteEndElement();
+
+
+                xmlwrite.WriteEndDocument();
+                xmlwrite.Flush();
+                xmlwrite.Close();
             }
-
-            xmlwrite.WriteEndElement();
-
-            xmlwrite.WriteEndElement();
-
-
-            xmlwrite.WriteEndDocument();
-            xmlwrite.Flush();
-            xmlwrite.Close();
-
 
 
             
@@ -103,92 +111,142 @@ namespace WindowsFormsApp1
 
         public static void Load()
         {
+
+            string[] charactersToReplace = new string[] { "\t", "\n", "\r", " " };
+
             try
             {
-                XmlReader read = XmlReader.Create("config.xml");
-
-                while (read.Read())
+                using (XmlReader read = XmlReader.Create("config.xml"))
                 {
 
-                    switch (read.Name)
+                    while (read.Read())
                     {
-                        case "GameSettings":
+                        switch (read.Name)
+                        {
+                            case "Game":
+                                {
+                                    if (read.NodeType == XmlNodeType.EndElement) { break; }
 
-                            while (read.Name != "GameSettings" && read.Read())
-                            {
-                                read.ReadToFollowing("Game");
+                                    read.ReadToFollowing("Name");
+                                    read.Read();
+                                    string na4 = read.Value;
+
+                                    read.ReadToFollowing("Platform");
+                                    read.Read();
+                                    string plat4 = read.Value;
+
+                                    read.ReadToFollowing("Path");
+                                    read.Read();
+
+                                    string pat4;
+
+                                    if (read.Value[0] != ' ' && read.Value[0] != '\n')
+                                    {
+                                        pat4 = read.Value;
+                                    }
+                                    else
+                                    {
+                                        string text = read.Value;
+                                        foreach (string s in charactersToReplace)
+                                        {
+                                            
+                                            text = text.Replace(s, "");
+                                        }
+
+                                        pat4 = text;
+                                    }
+                                    
+
+                                    read.ReadToFollowing("IsActive");
+                                    read.Read();
+                                    string isa4 = read.Value;
+
+                                    read.ReadToFollowing("Arguments");
+                                    read.Read();
+
+
+                                    string argu4;
+
+                                    if (read.Value[0] != ' ' && read.Value[0] != '\n')
+                                    {
+                                        argu4 = read.Value;
+                                    }
+                                    else
+                                    {
+                                        string text = read.Value;
+                                        foreach (string s in charactersToReplace)
+                                        {
+
+                                            text = text.Replace(s, "");
+                                        }
+
+                                        argu4 = text;
+                                    }
+
+                                    saveGameInfo(na4, plat4, pat4, isa4, argu4);
+                                }
+                                break;
+                            
+                            case "ModLoader":
+
+                                string typ = read.Name;
+
+                                if (read.NodeType == XmlNodeType.EndElement)
+                                    break;
 
                                 read.ReadToFollowing("Name");
                                 read.Read();
                                 string na = read.Value;
 
-                                read.ReadToFollowing("Platform");
-                                read.Read();
-                                string plat = read.Value;
-
                                 read.ReadToFollowing("Path");
                                 read.Read();
                                 string pat = read.Value;
 
-                                read.ReadToFollowing("IsActive");
+                                saveProgInfo(na, typ, pat);
+                                break;
+
+                            case "Emulator":
+                                string typ1 = read.Name;
+
+                                if (read.NodeType == XmlNodeType.EndElement)
+                                    break;
+
+                                read.ReadToFollowing("Name");
                                 read.Read();
-                                string isa = read.Value;
+                                string na1 = read.Value;
 
-                                read.ReadToFollowing("Arguments");
+                                read.ReadToFollowing("Path");
                                 read.Read();
-                                string argu = read.Value;
+                                string pat1 = read.Value;
 
-                                saveGameInfo(na, plat, pat, isa, argu);
-                            }
+                                saveProgInfo(na1, typ1, pat1);
 
-                            break;
+                                LaunchContainer.launcher.updateEmuls();
 
-                        case "ProgramSettings":
+                                break;
 
-                            read.Read();
-                            while (read.Name != "ProgramSettings" && read.Read())
-                            {
-                                switch (read.Name)
-                                {
-                                    case "ModLoader":
+                            case "DRM":
+                                string typ2 = read.Name;
 
-                                        string typ = read.Name;
+                                if (read.NodeType == XmlNodeType.EndElement)
+                                    break;
 
-                                        read.ReadToFollowing("Name");
-                                        read.Read();
-                                        string na = read.Value;
+                                read.ReadToFollowing("Name");
+                                read.Read();
+                                string na2 = read.Value;
 
-                                        read.ReadToFollowing("Path");
-                                        read.Read();
-                                        string pat = read.Value;
+                                read.ReadToFollowing("Path");
+                                read.Read();
+                                string pat2 = read.Value;
 
-                                        saveProgInfo(na, typ, pat);
-
-                                        break;
-
-                                    case "Emulator":
-                                        string typ1 = read.Value;
-
-                                        read.ReadToFollowing("Name");
-                                        read.Read();
-                                        string na1 = read.Value;
-
-                                        read.ReadToFollowing("Path");
-                                        read.Read();
-                                        string pat1 = read.Value;
-
-                                        saveProgInfo(na1, typ1, pat1);
-
-                                        break;
-                                }
-                            }
-
-                            break;
+                                saveProgInfo(na2, typ2, pat2);
+                                break;
+                        }
                     }
-                }
 
-                
-                read.Close();
+
+                    read.Close();
+                }
                 //LaunchContainer.launcher.manageGames();
             }
             catch
@@ -199,10 +257,12 @@ namespace WindowsFormsApp1
                 DialogResult result = MessageBox.Show(ftMess, ftTit, butts);
                 if (result == DialogResult.OK)
                 {
-                    Form2 options = new Form2();
-                    options.Show();
+                    using (Form4 options = new Form4())
+                    {
+                        options.ShowDialog();
+                    }
                 }
-
+                
                 Save();
             }
         }
@@ -212,6 +272,119 @@ namespace WindowsFormsApp1
             Game[] gms = LaunchContainer.launcher.Games;
             switch (type)
             {
+                case "Steam":
+                    switch (name)
+                    {
+                        case "Sonic && Sega All Star Racing":
+                            if (act == "True")
+                                gms[0].isActive = true;
+                            gms[0].EmuArgs = args;
+                            break;
+
+                        case "Sega Mega Drive && Genesis Classics":
+                            if (act == "True")
+                                gms[1].isActive = true;
+                            gms[1].EmuArgs = args;
+                            break;
+
+                        case "Sonic the Hedgehog CD":
+                            if (act == "True")
+                                gms[2].isActive = true;
+                            gms[2].EmuArgs = args;
+                            break;
+
+                        case "Sonic Adventure DX":
+                            if (act == "True")
+                                gms[3].isActive = true;
+                            gms[3].EmuArgs = args;
+                            break;
+
+                        case "Sonic Adventure 2 Battle":
+                            if (act == "True")
+                                gms[4].isActive = true;
+                            gms[4].EmuArgs = args;
+                            break;
+
+                        case "Sonic Generations":
+                            if (act == "True")
+                                gms[5].isActive = true;
+                            gms[5].EmuArgs = args;
+                            break;
+
+                        case "Sonic the Hedgehog 4 Episode 1":
+                            if (act == "True")
+                                gms[6].isActive = true;
+                            gms[6].EmuArgs = args;
+                            break;
+
+                        case "Sonic the Hedgehog 4 Episode 2":
+                            if (act == "True")
+                                gms[7].isActive = true;
+                            gms[7].EmuArgs = args;
+                            break;
+
+                        case "Sonic && All Stars Racing Transformed":
+                            if (act == "True")
+                                gms[8].isActive = true;
+                            gms[8].EmuArgs = args;
+                            break;
+
+                        case "Sonic Lost World":
+                            if (act == "True")
+                                gms[9].isActive = true;
+                            gms[9].EmuArgs = args;
+                            break;
+
+                        case "Sonic Mania":
+                            if (act == "True")
+                                gms[10].isActive = true;
+                            gms[10].EmuArgs = args;
+                            break;
+
+                        case "Sonic Forces":
+                            if (act == "True")
+                                gms[11].isActive = true;
+                            gms[11].EmuArgs = args;
+                            break;
+
+                        case "Team Sonic Racing":
+                            if (act == "True")
+                                gms[12].isActive = true;
+                            gms[12].EmuArgs = args;
+                            break;
+
+                        case "Sonic Colors: Ultimate":
+                            if (act == "True")
+                                gms[13].isActive = true;
+                            gms[13].EmuArgs = args;
+                            break;
+
+                        case "Sonic Origins":
+                            if (act == "True")
+                                gms[14].isActive = true;
+                            gms[14].EmuArgs = args;
+                            break;
+
+                        case "Sonic Frontiers":
+                            if (act == "True")
+                                gms[15].isActive = true;
+                            gms[15].EmuArgs = args;
+                            break;
+
+                        case "The Murder of Sonic The Hedgehog":
+                            if (act == "True")
+                                gms[16].isActive = true;
+                            gms[16].EmuArgs = args;
+                            break;
+
+                        case "Sonic Superstars":
+                            if (act == "True")
+                                gms[17].isActive = true;
+                            gms[17].EmuArgs = args;
+                            break;
+                    }
+                    break;
+
                 case "Sega Mega Drive":
                     switch (name)
                     {
@@ -1916,7 +2089,134 @@ namespace WindowsFormsApp1
 
                     }
                     break;
+
+                case "DRM Free":
+                    switch (name)
+                    {
+                        case "Sonic The Hedgehog (Decompilation)":
+                            gms[23].ExeLoc = loc;
+                            gms[23].EmuArgs = args;
+                            if (act == "True")
+                                gms[23].isActive = true;
+
+                            break;
+
+                        case "Sonic The Hedgehog 2 (Decompilation)":
+                            gms[24].ExeLoc = loc;
+                            gms[24].EmuArgs = args;
+
+                            if (act == "True")
+                                gms[24].isActive = true;
+
+                            break;
+
+                        case "Sonic The Hedgehog CD":
+                            gms[25].ExeLoc = loc;
+                            gms[25].EmuArgs = args;
+                            if ( act == "True")
+                                gms[25].isActive = true;
+                            break;
+
+                        
+
+                        case "Sonic The Hedgehog CD (Decompilation)":
+                            gms[27].ExeLoc = loc;
+                            gms[27].EmuArgs = args;
+                            if (act == "True")
+                                gms[27].isActive = true;
+                            break;
+
+                        case "Sonic && Knuckles Collection":
+                            gms[28].ExeLoc = loc;
+                            gms[28].EmuArgs = args;
+                            if (act == "True")
+                                gms[28].isActive = true;
+                            break;
+
+                        
+
+                        case "Sonic 3D Blast":
+                            gms[30].ExeLoc = loc;
+                            gms[30].EmuArgs = args;
+                            if (act == "True")
+                                gms[30].isActive = true;
+                            break;
+
+                        
+
+                        case "Sonic R":
+                            gms[32].ExeLoc = loc; 
+                            gms[32].EmuArgs = args;
+                            if ( act == "True")
+                                gms[32].isActive = true;
+                            break;
+
+                        case "Sonic Adventure DX":
+                            gms[33].ExeLoc = loc;
+                            gms[33].EmuArgs = args;
+                            if (act == "True")
+                                gms[33].isActive = true;
+                            break;
+
+                        case "Sonic Heroes":
+                            gms[34].ExeLoc = loc;
+                            gms[34].EmuArgs = args;
+                            if (act == "True")
+                                gms[34].isActive=true;
+                            break;
+
+                        case "Sonic Mega Collection Plus":
+                            gms[35].ExeLoc=loc;
+                            gms[35].EmuArgs=args;
+                            if (act == "True")
+                                gms[35].isActive = true;
+                            break;
+
+                        case "Sonic Riders":
+                            gms[36].ExeLoc = loc;
+                            gms[36].EmuArgs = args;
+                            if (act == "True")
+                                gms[36].isActive = true;
+                            break;
+
+                        case "Sonic Mania (Decompilation)":
+                            gms[37].ExeLoc = loc;
+                            gms[37].EmuArgs = args;
+                            if (act == "True")
+                                gms[37].isActive = true;
+                            break;
+                    }
+                    break;
+
+                case "Sega PC Reloaded":
+                    switch (name)
+                    {
+                        case "Sonic CD (Sega PC Reloaded)":
+                            gms[26].ExeLoc = loc;
+                            gms[26].EmuArgs = args;
+                            if (act == "True")
+                                gms[26].isActive = true;
+                            break;
+
+                        case "Sonic && Knuckles Collection (Sega PC Reloaded)":
+                            gms[29].ExeLoc = loc;
+                            gms[29].EmuArgs = args;
+                            if (act == "True")
+                                gms[29].isActive = true;
+                            break;
+
+                        case "Sonic 3D Blast (Sega PC Reloaded)":
+                            gms[31].ExeLoc = loc;
+                            gms[31].EmuArgs = args;
+                            if (act == "True")
+                                gms[31].isActive = true;
+                            break;
+                    }
+                    break;
+
             }
+
+            LaunchContainer.launcher.checkActives();
         }
 
         public static void saveProgInfo(string name, string type, string loc)
@@ -2104,9 +2404,132 @@ namespace WindowsFormsApp1
                             break;
                     }
                     break;
+
+                case "DRM":
+                    switch (name)
+                    {
+                        case "Steam":
+                            LaunchContainer.launcher.SteamLoc = loc; 
+                            break;
+                    }
+                    break;
             }
         }
 
+        public static void steamDetect()
+        {
+            if (LaunchContainer.launcher.SteamLoc != "")
+            {
 
+                //Sonic & Sega All Star Racing
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic and SEGA All Stars Racing\\Sonic & SEGA All-Stars Racing.exe")))
+                {
+                    LaunchContainer.launcher.Games[0].activate();
+                }
+
+
+                //Sega Mega Drive & Genesis Classics 
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sega Classics\\SEGAGameRoom.exe")))
+                {
+                    LaunchContainer.launcher.Games[1].activate();
+                }
+
+                //Sonic the Hedgehog CD  
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic CD\\soniccd.exe")))
+                {
+                    LaunchContainer.launcher.Games[2].activate();
+                }
+
+                //Sonic Adventure DX    
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic Adventure DX\\sonic.exe")))
+                {
+                    LaunchContainer.launcher.Games[3].activate();
+                }
+
+                //Sonic Adventure 2 Battle 
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic Adventure 2\\sonic2app.exe")))
+                {
+                    LaunchContainer.launcher.Games[4].activate();
+                }
+
+                //Sonic Generations
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic Generations\\SonicGenerations.exe")))
+                {
+                    LaunchContainer.launcher.Games[5].activate();
+                }
+
+                //Sonic the Hedgehog 4 Episode 1 
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic the Hedgehog 4 EP 1\\SonicLauncher.exe")))
+                {
+                    LaunchContainer.launcher.Games[6].activate();
+                }
+
+                //Sonic the Hedgehog 4 Episode 2
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic the Hedgehog 4 - EP 2\\Launcher.exe")))
+                {
+                    LaunchContainer.launcher.Games[7].activate();
+                }
+
+            
+                //Sonic & All Stars Racing Transformed
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic & All - Stars Racing Transformed\\Launcher.exe")))
+                {
+                    LaunchContainer.launcher.Games[8].activate();
+                }
+
+                //Sonic Lost World
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic Lost World\\slw.exe")))
+                {
+                    LaunchContainer.launcher.Games[9].activate();
+                }
+
+                //Sonic Mania
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Sonic Mania\\SonicMania.exe")))
+                {
+                    LaunchContainer.launcher.Games[10].activate();
+                }
+
+                //Sonic Forces
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\SonicForces\\build\\main\\projects\\exec\\Sonic Forces.exe")))
+                {
+                    LaunchContainer.launcher.Games[11].activate();
+                }
+
+                //Team Sonic Racing
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Team Sonic Racing\\GameApp_PcDx11_x64Final.exe")))
+                {
+                    LaunchContainer.launcher.Games[12].activate();
+                }
+
+                //Sonic Origins  
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\SonicOrigins\\build\\main\\projects\\exec\\SonicOrigins.exe")))
+                {
+                    LaunchContainer.launcher.Games[14].activate();
+                }
+
+                //The Murder of Sonic The Hedgehog
+
+                if (File.Exists(Path.Combine(LaunchContainer.launcher.SteamLoc, "steamapps\\common\\Themurderofsonicthehedgehog\\The Murder of Sonic The Hedgehog\\The Murder of Sonic The Hedgehog.exe")))
+                {
+                    LaunchContainer.launcher.Games[16].activate();
+                }
+            }
+        }
+
+        
     }
 }

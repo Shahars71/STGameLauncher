@@ -36,17 +36,19 @@
  * - Concursus
  *
             progs[0].Name = "HedgeModManager";
-            progs[1].Name = "SADX Mod Loader";
+            progs[1].Name = "SA Mod Loader";
             progs[2].Name = "SA2 Mod Loader";
             progs[3].Name = "Mania Mod Loader";
             progs[4].Name = "Sonic CD Steam Mod Loader";
             progs[5].Name = "Sonic 4 Mod Loader";
-            progs[6].Name = "Sonic 4 Mod Loader";
+            progs[6].Name = "Sonic 4 (EP2) Mod Loader";
             progs[7].Name = "Sonic R Mod Loader";
             progs[8].Name = "S&K Collection Mod Loader";
             progs[9].Name = "RSDK Mod Manager";
             progs[10].Name = "Reloaded 2";
             progs[11].Name = "Concursus";
+            progs[12].Name = "Sonic '06 Mod Loader";
+            progs[13].Name = "Sonic Unleashed Mod Manager";
 
             type[0] = "Steam";
             type[1] = "Epic Games Store";
@@ -96,7 +98,7 @@
             emus[19].Name = "Sega PC Reloaded";
             emus[20].Name = "Arcade (Sega)";
 
-
+////////////////////////////////////////////////////////
 
  *
  *
@@ -107,24 +109,24 @@
  * 
  * 
  * --Steam:                                       //launch thru Steam
- * Sonic the Hedgehog CD
- * Sega Mega Drive & Genesis Classics
- * Sonic & Sega All Star Racing
- * Sonic Adventure DX
- * Sonic Adventure 2 Battle
- * Sonic Generations
- * Sonic the Hedgehog 4 Episode 1
- * Sonic the Hedgehog 4 Episode 2
- * Sonic & All Stars Racing Transformed
- * Sonic Lost World
- * Sonic Mania
- * Sonic Forces
- * Team Sonic Racing
- * Sonic Origins
- * Sonic Frontiers
- * Sonic Colors: Ultimate
- * The Murder of Sonic The Hedgehog
- * Sonic Superstars
+ * Sonic the Hedgehog CD                games[2]
+ * Sega Mega Drive & Genesis Classics   games[1]
+ * Sonic & Sega All Star Racing         games[0]
+ * Sonic Adventure DX                   games[3]
+ * Sonic Adventure 2 Battle             games[4]
+ * Sonic Generations                    games[5]
+ * Sonic the Hedgehog 4 Episode 1       games[6]
+ * Sonic the Hedgehog 4 Episode 2       games[7]
+ * Sonic & All Stars Racing Transformed games[8]
+ * Sonic Lost World                     games[9]
+ * Sonic Mania                          games[10]
+ * Sonic Forces                         games[11]
+ * Team Sonic Racing                    games[12]
+ * Sonic Origins                        games[14]
+ * Sonic Frontiers                      games[15]
+ * Sonic Colors: Ultimate               games[13]
+ * The Murder of Sonic The Hedgehog     games[16]
+ * Sonic Superstars                     games[17]
  * 
  * --Epic Games:                                 //launch directly?
  * Sonic Colors: Ultimate
@@ -135,18 +137,18 @@
  com.epicgames.launcher://apps/{BaseGame.EGSID}?action=launch&silent=true
  * 
  * --DRM Free:                                  //launch directly
- * Sonic The Hedgehog CD
- * Sonic & Knuckles Collection
- * Sonic 3D Blast
- * Sonic R
- * Sonic Adventure DX
- * Sonic Heroes
- * Sonic Mega Collection Plus
- * Sonic Riders
- * Sonic 1 decomp
- * Sonic 2 decomp
- * Sonic CD decomp
- * Sonic Mania decomp
+ * Sonic The Hedgehog CD            games[25] games[26]
+ * Sonic & Knuckles Collection      games[28] games[29]
+ * Sonic 3D Blast                   games[30] games[31]
+ * Sonic R                          games[32]
+ * Sonic Adventure DX               games[33]
+ * Sonic Heroes                     games[34]
+ * Sonic Mega Collection Plus       games[35]
+ * Sonic Riders                     games[36]
+ * Sonic 1 decomp                   games[23]
+ * Sonic 2 decomp                   games[24]
+ * Sonic CD decomp                  games[27]
+ * Sonic Mania decomp               games[37]
  *   
  *   
  *   
