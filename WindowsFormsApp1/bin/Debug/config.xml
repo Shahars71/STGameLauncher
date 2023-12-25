@@ -487,42 +487,42 @@
     <Game>
       <Name>SegaSonic The Hedgehog</Name>
       <Platform>Arcade (MAME)</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>sonic</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Waku Waku Sonic Patrol Car</Name>
       <Platform>Arcade (MAME)</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>soniccar</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>SegaSonic Popcorn Shop</Name>
       <Platform>Arcade (MAME)</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>sonicpop</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>SegaSonic Cosmo Fighter</Name>
       <Platform>Arcade (MAME)</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>sonicfgt</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
-      <Name>Sonic The Hedgehog</Name>
+      <Name>Sonic The Hedgehog (Mega Play)</Name>
       <Platform>Arcade (MAME)</Platform>
       <Path />
-      <IsActive>False</IsActive>
-      <Arguments />
+      <IsActive>True</IsActive>
+      <Arguments>mp_sonic</Arguments>
     </Game>
     <Game>
-      <Name>Sonic The Hedgehog 2</Name>
+      <Name>Sonic The Hedgehog 2 (Mega Play)</Name>
       <Platform>Arcade (MAME)</Platform>
-      <Path />
+      <Path>mp_soni2</Path>
       <IsActive>False</IsActive>
       <Arguments />
     </Game>
@@ -536,8 +536,8 @@
     <Game>
       <Name>Sonic 3D Blast</Name>
       <Platform>Sega Saturn</Platform>
-      <Path>F:\Games\Emulated Games\Roms\Consoles\Sega Saturn\125 Sonic 3D Blast (U).cue</Path>
-      <IsActive>True</IsActive>
+      <Path />
+      <IsActive>False</IsActive>
       <Arguments>-a</Arguments>
     </Game>
     <Game>
@@ -571,8 +571,8 @@
     <Game>
       <Name>Sonic Shuffle</Name>
       <Platform>Sega Dreamcast</Platform>
-      <Path>F:\Games\Emulated Games\Roms\Consoles\Dreamcast\Sonic Shuffle\Sonic Shuffle v1.000 (2000)(Sega)(NTSC)(US)[!].gdi</Path>
-      <IsActive>True</IsActive>
+      <Path />
+      <IsActive>False</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -586,7 +586,7 @@
       <Name>Sonic Adventure 2 Battle</Name>
       <Platform>Nintendo GameCube</Platform>
       <Path />
-      <IsActive>True</IsActive>
+      <IsActive>False</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -781,8 +781,8 @@
     <Game>
       <Name>Sonic Boom: Rise of Lyric</Name>
       <Platform>Nintendo Wii U</Platform>
-      <Path>F:\Games\Emulated Games\Roms\Consoles\Wii U\Sonic Boom Rise of Lyric [BSSE8P]\code\WiiULauncher.rpx</Path>
-      <IsActive>True</IsActive>
+      <Path />
+      <IsActive>False</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1271,8 +1271,8 @@
     <Game>
       <Name>Sonic Rush</Name>
       <Platform>Nintendo DS</Platform>
-      <Path>F:\Games\Emulated Games\Roms\Consoles\DS\Sonic Rush.nds</Path>
-      <IsActive>True</IsActive>
+      <Path />
+      <IsActive>False</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1461,7 +1461,7 @@
       <Name>Sonic Rivals</Name>
       <Platform>PlayStation Portable</Platform>
       <Path />
-      <IsActive>False</IsActive>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1564,28 +1564,32 @@
     </ModLoader>
     <Emulator>
       <Name>Mega Drive</Name>
-      <Path>F:\Games\Emulated Games\Emulators\Fusion364\Fusion.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Master System</Name>
-      <Path>F:\Games\Emulated Games\Emulators\Fusion364\Fusion.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Game Gear</Name>
-      <Path>F:\Games\Emulated Games\Emulators\Fusion364\Fusion.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Sega Saturn</Name>
-      <Path>F:\Games\Emulated Games\Emulators\Yabause\yabause.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Dreamcast</Name>
-      <Path>F:\Games\Emulated Games\Emulators\Redream\redream.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Arcade (MAME)</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\MAME\mame64.exe</Path>
     </Emulator>
     <Emulator>
       <Name>GameCube</Name>
@@ -1599,7 +1603,8 @@
     </Emulator>
     <Emulator>
       <Name>Wii U</Name>
-      <Path>F:\Games\Emulated Games\Emulators\Cemu\Cemu.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Switch</Name>
@@ -1638,7 +1643,8 @@
     </Emulator>
     <Emulator>
       <Name>DS</Name>
-      <Path>F:\Games\Emulated Games\Emulators\DeSmuME\DeSmuME-VS2019-x64-Release.exe</Path>
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>3DS</Name>
@@ -1662,7 +1668,8 @@
     </Emulator>
     <DRM>
       <Name>Steam</Name>
-      <Path>F:\Steam</Path>
+      <Path>
+    </Path>
     </DRM>
   </ProgramSettings>
 </root>

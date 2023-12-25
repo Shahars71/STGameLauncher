@@ -727,7 +727,7 @@ namespace WindowsFormsApp1
                             gms[72].EmuArgs = args;
                             break;
 
-                        case "Sonic The Hedgehog":
+                        case "Sonic The Hedgehog (Mega Play)":
                             gms[73].ExeLoc = loc;
 
                             if (act == "True")
@@ -736,7 +736,7 @@ namespace WindowsFormsApp1
                             gms[73].EmuArgs = args;
                             break;
 
-                        case "Sonic The Hedgehog 2":
+                        case "Sonic The Hedgehog 2 (Mega Play)":
                             gms[74].ExeLoc = loc;
 
                             if (act == "True")

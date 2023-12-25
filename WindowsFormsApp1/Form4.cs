@@ -64,8 +64,8 @@ namespace WindowsFormsApp1
                     else
                     {
                         LaunchContainer.launcher.Games[index].activate();
-                        
-                        if (LaunchContainer.launcher.Games[index].GameType == "Sony Playstation 3")
+
+                        if (LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[15]) //PS3
                         {
                             using (GameRegionSet setRegion = new GameRegionSet(LaunchContainer.launcher.Games[index]))
                             {
@@ -73,6 +73,9 @@ namespace WindowsFormsApp1
                             }
                             refreshRowGame(curCell.RowIndex, LaunchContainer.launcher.Games[index]);
                         }
+
+
+
                     }
 
                     dataGridView1.CurrentCell.Value = LaunchContainer.launcher.Games[index].isActive;
@@ -90,9 +93,18 @@ namespace WindowsFormsApp1
                             LaunchContainer.launcher.Games[index].ExeLoc = "";
                         }
 
+
+
                         if (!LaunchContainer.launcher.Games[index].isActive && LaunchContainer.launcher.Games[index].ExeLoc != "")
                         {
-                            LaunchContainer.launcher.Games[index].activate();
+
+                            if (!(LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[8] ||
+                                LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[16])) //Arcade (Mame) or PS3
+                            {
+                                LaunchContainer.launcher.Games[index].activate();
+                            }
+
+
                         }
                     }
                     catch

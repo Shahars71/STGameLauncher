@@ -17,14 +17,26 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
 
+        private int[] showFlags;
+        private TabPage[] pages;
+
         public Form1()
         {
             InitializeComponent();
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");
+            showFlags = new int[tabControl1.TabCount];
+            pages = new TabPage[tabControl1.TabCount];
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            for (int i = 0; i < tabControl1.TabCount; i++)
+            {
+                pages[i] = tabControl1.TabPages[i];
+            }
+
             SaveHandler.Load();
             handleButtons();
         }
@@ -90,12 +102,17 @@ namespace WindowsFormsApp1
 
         private void Form1_Enter(object sender, EventArgs e)
         {
+            LaunchContainer.launcher.checkActives();
             handleButtons();
         }
 
         private void handleButtons()
         {
             Game[] gameList = LaunchContainer.launcher.Games;
+
+            refreshPageCounts();
+            LaunchContainer.incrementGameTypes();
+            gameTypesToTabs();
 
             for (int i = 0; i < gameList.Length; i++)
             {
@@ -105,7 +122,34 @@ namespace WindowsFormsApp1
                 {
                     addButtonToSpecificTab(b);
                 }
+            }
 
+
+
+            if (pages != null)
+            {
+
+                for (int i = showFlags.Length-1; i >= 0 ;i--)
+                {
+                    if (showFlags[i] <= 0 && tabControl1.Contains(pages[i]))
+                    {
+                        tabControl1.Controls.Remove(pages[i]);
+                    }
+                    if (showFlags[i] > 0)
+                    {
+                        if (!tabControl1.Controls.Contains(pages[i]))
+                        {
+                            tabControl1.Controls.Add(pages[i]);
+                        }
+                    }
+                }
+            }
+        }
+        private void refreshPageCounts()
+        {
+            for (int i = 0; i < showFlags.Length;i++)
+            {
+                showFlags[i] = 0;
             }
         }
 
@@ -221,6 +265,201 @@ namespace WindowsFormsApp1
                 default: break;
             }
         }
+        
+        private void buttonTickPos(GameButton b)
+        {
+            var gameType = b.assignedGame.GameType;
+
+            switch (gameType)
+            {
+                case "Steam":
+                    showFlags[0]++;
+                    break;
+
+                case "Epic Games Store":
+                    showFlags[1]++;
+                    break;
+
+                case "Sega PC Reloaded":
+                case "DRM Free":
+                    showFlags[2]++;
+                    break;
+
+                case "Sega Mega Drive":
+                    showFlags[3]++;
+                    break;
+
+                case "Sega Master System":
+                    showFlags[4]++;
+                    break;
+
+                case "Sega Game Gear":
+                    showFlags[5]++;
+                    break;
+
+                case "Sega Saturn":
+                    showFlags[6]++;
+                    break;
+
+                case "Sega Dreamcast":
+                    showFlags[7]++;
+                    break;
+
+                case "Arcade (MAME)":
+                case "Arcade (Sega AM2)":
+                    showFlags[8]++;
+                    break;
+
+                case "Nintendo GameCube":
+                    showFlags[9]++;
+                    break;
+
+                case "Nintendo Wii":
+                    showFlags[10]++;
+                    break;
+
+                case "Nintendo Wii U":
+                    showFlags[11]++;
+                    break;
+
+                case "Nintendo Switch":
+                    showFlags[12]++;
+                    break;
+
+                case "Sony PlayStation 2":
+                    showFlags[13]++;
+                    break;
+
+                case "Sony Playstation 3":
+                    showFlags[14]++;
+                    break;
+
+                case "Microsoft XBox":
+                    showFlags[15]++;
+                    break;
+
+                case "Microsoft XBox 360":
+                    showFlags[16]++;
+                    break;
+
+                case "Game Boy Advance":
+                    showFlags[17]++;
+                    break;
+
+                case "Nintendo DS":
+                    showFlags[18]++;
+                    break;
+
+                case "Nintendo 3DS":
+                    showFlags[19]++;
+                    break;
+
+                case "Neo Geo Pocket Color":
+                case "PlayStation Portable":
+                    showFlags[20]++;
+                    break;
+
+
+                default: break;
+            }
+        }
+        private void buttonTickNeg(GameButton b)
+        {
+            var gameType = b.assignedGame.GameType;
+
+            switch (gameType)
+            {
+                case "Steam":
+                    showFlags[0]--;
+                    break;
+
+                case "Epic Games Store":
+                    showFlags[1]--;
+                    break;
+
+                case "Sega PC Reloaded":
+                case "DRM Free":
+                    showFlags[2]--;
+                    break;
+
+                case "Sega Mega Drive":
+                    showFlags[3]--;
+                    break;
+
+                case "Sega Master System":
+                    showFlags[4]--;
+                    break;
+
+                case "Sega Game Gear":
+                    showFlags[5]--;
+                    break;
+
+                case "Sega Saturn":
+                    showFlags[6]--;
+                    break;
+
+                case "Sega Dreamcast":
+                    showFlags[7]--;
+                    break;
+
+                case "Arcade (MAME)":
+                case "Arcade (Sega AM2)":
+                    showFlags[8]--;
+                    break;
+
+                case "Nintendo GameCube":
+                    showFlags[9]--;
+                    break;
+
+                case "Nintendo Wii":
+                    showFlags[10]--;
+                    break;
+
+                case "Nintendo Wii U":
+                    showFlags[11]--;
+                    break;
+
+                case "Nintendo Switch":
+                    showFlags[12]--;
+                    break;
+
+                case "Sony PlayStation 2":
+                    showFlags[13]--;
+                    break;
+
+                case "Sony Playstation 3":
+                    showFlags[14]--;
+                    break;
+
+                case "Microsoft XBox":
+                    showFlags[15]--;
+                    break;
+
+                case "Microsoft XBox 360":
+                    showFlags[16]--;
+                    break;
+
+                case "Game Boy Advance":
+                    showFlags[17]--;
+                    break;
+
+                case "Nintendo DS":
+                    showFlags[18]--;
+                    break;
+
+                case "Nintendo 3DS":
+                    showFlags[19]--;
+                    break;
+
+                case "Neo Geo Pocket Color":
+                case "PlayStation Portable":
+                    showFlags[20]--;
+                    break;
+
+
+                default: break;
+            }
+        }
 
         private void flowLayoutPanel6_Paint(object sender, PaintEventArgs e)
         {
@@ -239,6 +478,135 @@ namespace WindowsFormsApp1
                 specOps.ShowDialog();
             }
             SaveHandler.Save();
+        }
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gameTypesToTabs()
+        {
+            int[] gt = LaunchContainer.activeGameTypes;
+
+            for (int i = 0; i < LaunchContainer.activeGameTypes.Length;i++)
+            {
+                switch (i)
+                {
+                    case 0:
+                        if (gt[i] > 0)
+                            showFlags[0]++;
+                        break;
+
+                    case 1:
+                        if (gt[i] > 0)
+                            showFlags[1]++;
+                        break;
+
+                    case 23:
+                    case 2:
+                        if (gt[i] > 0)
+                            showFlags[2]++;
+                        break;
+
+                    case 3:
+                        if (gt[i] > 0)
+                            showFlags[3]++;
+                        break;
+
+                    case 4:
+                        if (gt[i] > 0)
+                            showFlags[4]++;
+                        break;
+
+                    case 5:
+                        if (gt[i] > 0)
+                            showFlags[5]++;
+                        break;
+
+                    case 6:
+                        if (gt[i] > 0)
+                            showFlags[6]++;
+                        break;
+
+                    case 7:
+                        if (gt[i] > 0)
+                            showFlags[7]++;
+                        break;
+
+                    case 8:
+                    case 9:
+                        if (gt[i] > 0)
+                            showFlags[8]++;
+                        break;
+
+                    case 10:
+                        if (gt[i] > 0)
+                            showFlags[9]++;
+                        break;
+
+                    case 11:
+                        if (gt[i] > 0)
+                            showFlags[10]++;
+                        break;
+
+                    case 12:
+                        if (gt[i] > 0)
+                            showFlags[11]++;
+                        break;
+
+                    case 13:
+                        if (gt[i] > 0)
+                            showFlags[12]++;
+                        break;
+
+                    case 14:
+                        if (gt[i] > 0)
+                            showFlags[13]++;
+                        break;
+
+                    case 15:
+                        if (gt[i] > 0)
+                            showFlags[14]++;
+                        break;
+
+                    case 16:
+                        if (gt[i] > 0)
+                            showFlags[15]++;
+                        break;
+
+                    case 17:
+                        if (gt[i] > 0)
+                            showFlags[16]++;
+                        break;
+
+                    case 19:
+                        if (gt[i] > 0)
+                            showFlags[17]++;
+                        break;
+
+                    case 20:
+                        if (gt[i] > 0)
+                            showFlags[18]++;
+                        break;
+
+                    case 21:
+                        if (gt[i] > 0)
+                            showFlags[19]++;
+                        break;
+
+                    case 18:
+                    case 22:
+                        if (gt[i] > 0)
+                            showFlags[20]++;
+                        break;
+
+
+                    default: break;
+                }
+            }
+
+            
         }
 
         /*

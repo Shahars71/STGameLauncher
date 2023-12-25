@@ -737,6 +737,7 @@ namespace WindowsFormsApp1
             games[69].EmulatorName = emulators[5].Name;
             games[69].EmulatorLoc = emulators[5].Location;
             games[69].GameType = gameTypes[8];
+            games[69].ExeLoc = "sonic";
             games[69].emulator();
             
 
@@ -744,6 +745,7 @@ namespace WindowsFormsApp1
             games[70].EmulatorName = emulators[5].Name;
             games[70].EmulatorLoc = emulators[5].Location;
             games[70].GameType = gameTypes[8];
+            games[70].ExeLoc = "soniccar";
             games[70].emulator();
             
 
@@ -751,6 +753,7 @@ namespace WindowsFormsApp1
             games[71].EmulatorName = emulators[5].Name;
             games[71].EmulatorLoc = emulators[5].Location;
             games[71].GameType = gameTypes[8];
+            games[71].ExeLoc = "sonicpop";
             games[71].emulator();
             
 
@@ -758,22 +761,24 @@ namespace WindowsFormsApp1
             games[72].EmulatorName = emulators[5].Name;
             games[72].EmulatorLoc = emulators[5].Location;
             games[72].GameType = gameTypes[8];
+            games[72].ExeLoc = "sonicfgt";
             games[72].emulator();
-            
+ 
 
-
-            games[73].GameName = "Sonic The Hedgehog";
+            games[73].GameName = "Sonic The Hedgehog (Mega Play)";
             games[73].EmulatorName = emulators[5].Name;
             games[73].EmulatorLoc = emulators[5].Location;
             games[73].GameType = gameTypes[8];
+            //games[73].ExeLoc = "mp_sonic";
             games[73].emulator();
             
 
 
-            games[74].GameName = "Sonic The Hedgehog 2";
+            games[74].GameName = "Sonic The Hedgehog 2 (Mega Play)";
             games[74].EmulatorName = emulators[5].Name;
             games[74].EmulatorLoc = emulators[5].Location;
             games[74].GameType = gameTypes[8];
+            games[74].ExeLoc = "mp_soni2";
             games[74].emulator();
             
 
@@ -1928,7 +1933,7 @@ namespace WindowsFormsApp1
             games[212].EmulatorLoc = emulators[0].Location;
             games[212].GameType = gameTypes[3];
             games[212].emulator();
-            
+
 
 
             checkActives();
@@ -2073,8 +2078,46 @@ namespace WindowsFormsApp1
     public static class LaunchContainer //Static version
     {
         public static LauncherMainItems launcher;
+        public static int[] activeGameTypes;
 
-        static LaunchContainer() { launcher = new LauncherMainItems(); }
+        static LaunchContainer() 
+        { 
+            launcher = new LauncherMainItems(); 
+            activeGameTypes = new int[launcher.GameTypes.Length];
+            
+            for (int i = 0; i < activeGameTypes.Length; i++)
+            {
+                activeGameTypes[i] = 0;
+            }
+        }
+
+        public static void incrementGameTypes()
+        {
+            int spot=0;
+
+            for (int i = 0; i < activeGameTypes.Length; i++)
+            {
+                activeGameTypes[i] = 0;
+            }
+
+            for (int i = 0;i <launcher.Games.Length;i++)
+            {
+                if (launcher.Games[i].IsActive)
+                {
+                    for (int j = 0; j < launcher.GameTypes.Length; j++)
+                    {
+                        if (launcher.GameTypes[j] == launcher.Games[i].GameType)
+                        {
+                            spot = j;
+                            break;
+                        }
+                    }
+
+                    activeGameTypes[spot]++;
+                }
+
+            }
+        }
     }
 
     [Serializable]
@@ -2141,6 +2184,8 @@ namespace WindowsFormsApp1
 
 
             emus[5].Name = "Arcade (MAME)";
+            emus[5].SpecFlag = true;
+            emus[5].SpecArgs = "-bios megaplay ";
 
 
             emus[6].Name = "GameCube";

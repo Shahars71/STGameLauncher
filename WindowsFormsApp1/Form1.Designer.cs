@@ -561,6 +561,7 @@
             this.Controls.Add(this.games);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Enter += new System.EventHandler(this.Form1_Enter);
             this.tabControl1.ResumeLayout(false);
