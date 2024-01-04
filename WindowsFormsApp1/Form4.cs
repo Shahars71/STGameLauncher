@@ -98,8 +98,11 @@ namespace WindowsFormsApp1
                         if (!LaunchContainer.launcher.Games[index].isActive && LaunchContainer.launcher.Games[index].ExeLoc != "")
                         {
 
+
+
+
                             if (!(LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[8] ||
-                                LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[16])) //Arcade (Mame) or PS3
+                                LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[15])) //Arcade (Mame) or PS3
                             {
                                 LaunchContainer.launcher.Games[index].activate();
                             }
@@ -190,7 +193,7 @@ namespace WindowsFormsApp1
                     {
                         openFileDialog.InitialDirectory = "c:\\";
                         openFileDialog.Title = "Select " + row.Cells[0].Value + "'s Executable";
-                        openFileDialog.Filter = "exe file (*.exe)|*.exe";
+                        openFileDialog.Filter = "exe/lnk file (*.exe;*.lnk)|*.exe;*.lnk";
                         openFileDialog.RestoreDirectory = true;
 
                         if (openFileDialog.ShowDialog() == DialogResult.OK)

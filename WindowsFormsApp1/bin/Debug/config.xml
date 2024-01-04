@@ -165,15 +165,15 @@
     <Game>
       <Name>Sonic The Hedgehog (Decompilation)</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Retro Engine games\Sonic 1\RSDKv4.exe</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic The Hedgehog 2 (Decompilation)</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Retro Engine games\Sonic 2\RSDKv4.exe</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -186,50 +186,50 @@
     <Game>
       <Name>Sonic CD (Sega PC Reloaded)</Name>
       <Platform>Sega PC Reloaded</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic CD</Path>
+      <IsActive>True</IsActive>
       <Arguments>/launch 2 "SONICCD.EXE"</Arguments>
     </Game>
     <Game>
       <Name>Sonic The Hedgehog CD (Decompilation)</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Retro Engine games\Sonic CD\RSDKv3.exe</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic &amp;&amp; Knuckles Collection</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic &amp; Knuckles Collection\SONIC3K.EXE</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic &amp;&amp; Knuckles Collection (Sega PC Reloaded)</Name>
       <Platform>Sega PC Reloaded</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic &amp; Knuckles Collection</Path>
+      <IsActive>True</IsActive>
       <Arguments>/launch 3 "SONIC3K.EXE"</Arguments>
     </Game>
     <Game>
       <Name>Sonic 3D Blast</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic 3D Blast\PCSONIC.EXE</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic 3D Blast (Sega PC Reloaded)</Name>
       <Platform>Sega PC Reloaded</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic 3D Blast</Path>
+      <IsActive>True</IsActive>
       <Arguments>/launch 4 "PCSONIC.EXE"</Arguments>
     </Game>
     <Game>
       <Name>Sonic R</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic R\SonicR.exe</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -242,29 +242,29 @@
     <Game>
       <Name>Sonic Heroes</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Sonic Heroes\Tsonic_win.exe</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic Mega Collection Plus</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
-      <Arguments />
+      <Path>F:\Games\Sega\Sonic Mega Collection Plus\SONIC MEGA COLLECTION PLUS\MegaCollectionPlus.exe</Path>
+      <IsActive>True</IsActive>
+      <Arguments>SonicMegaCollectionExecFromConfig</Arguments>
     </Game>
     <Game>
       <Name>Sonic Riders</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Mod Loaders\Reloaded II\Mods\Sonic Riders (Reloaded).lnk</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic Mania (Decompilation)</Name>
       <Platform>DRM Free</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Sega\Retro Engine games\Sonic Mania\RSDKv5U_x64.exe</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -361,8 +361,8 @@
     <Game>
       <Name>Sonic The Hedgehog (8-bit)</Name>
       <Platform>Sega Master System</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Master System\Sonic The Hedgehog (USA, Europe).sms</Path>
+      <IsActive>True</IsActive>
       <Arguments>-gen-auto-fullscreen</Arguments>
     </Game>
     <Game>
@@ -403,8 +403,8 @@
     <Game>
       <Name>Sonic The Hedgehog (8-bit)</Name>
       <Platform>Sega Game Gear</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Game Gear\Sonic The Hedgehog (World) (v1.1).gg</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -515,9 +515,9 @@
     <Game>
       <Name>Sonic The Hedgehog (Mega Play)</Name>
       <Platform>Arcade (MAME)</Platform>
-      <Path />
+      <Path>-bios megaplay  mp_sonic</Path>
       <IsActive>True</IsActive>
-      <Arguments>mp_sonic</Arguments>
+      <Arguments>-v &gt; log.txt</Arguments>
     </Game>
     <Game>
       <Name>Sonic The Hedgehog 2 (Mega Play)</Name>
@@ -571,8 +571,8 @@
     <Game>
       <Name>Sonic Shuffle</Name>
       <Platform>Sega Dreamcast</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Dreamcast\Sonic Shuffle\Sonic Shuffle v1.000 (2000)(Sega)(NTSC)(US)[!].gdi</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -613,15 +613,15 @@
     <Game>
       <Name>Sonic Gems Collection</Name>
       <Platform>Nintendo GameCube</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\GameCube\Sonic Gems Collection.iso</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic and the Secret Rings</Name>
       <Platform>Nintendo Wii</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Wii\Sonic and the Secret Rings.iso</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -781,8 +781,8 @@
     <Game>
       <Name>Sonic Boom: Rise of Lyric</Name>
       <Platform>Nintendo Wii U</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Wii U\Sonic Boom Rise of Lyric [BSSE8P]\code\WiiULauncher.rpx</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -823,8 +823,8 @@
     <Game>
       <Name>Sonic Mania</Name>
       <Platform>Nintendo Switch</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Switch\Tsukihime -A piece of blue glass moon- [01001DC01486A000][v0][JP](ROMSLAB).nsp</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -907,8 +907,8 @@
     <Game>
       <Name>Sonic Unleashed</Name>
       <Platform>Sony PlayStation 2</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\PS2\Sonic Unleashed (Europe, Australia) (En,Fr,De,Es,It).iso</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1019,8 +1019,8 @@
     <Game>
       <Name>Sonic the Fighters</Name>
       <Platform>Sony Playstation 3</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>%RPCS3_GAMEID%:NPUB30927</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1061,21 +1061,21 @@
     <Game>
       <Name>Sonic Heroes</Name>
       <Platform>Microsoft XBox</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\XBox\Jet Set Radio Future.iso</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Shadow the Hedgehog</Name>
       <Platform>Microsoft XBox</Platform>
-      <Path />
+      <Path>F:\Games\Emulated Games\Roms\Consoles\XBox\Dead or Alive.iso</Path>
       <IsActive>False</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic Riders</Name>
       <Platform>Microsoft XBox</Platform>
-      <Path />
+      <Path>F:\Games\Emulated Games\Roms\Consoles\XBox\Sneak King (USA).iso</Path>
       <IsActive>False</IsActive>
       <Arguments />
     </Game>
@@ -1124,8 +1124,8 @@
     <Game>
       <Name>Sonic Free Riders</Name>
       <Platform>Microsoft XBox 360</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\XBox 360\Sonic Free Riders\XBox 360\default.xex</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1208,15 +1208,15 @@
     <Game>
       <Name>Sonic the Hedgehog Pocket Adventure</Name>
       <Platform>Neo Geo Pocket Color</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\Neo Geo Pocket\Sonic The Hedgehog - Pocket Adventure (World).ngc</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
       <Name>Sonic Advance</Name>
       <Platform>Game Boy Advance</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\GBA\Sonic Advance.gba</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1334,8 +1334,8 @@
     <Game>
       <Name>Sonic Generations</Name>
       <Platform>Nintendo 3DS</Platform>
-      <Path />
-      <IsActive>False</IsActive>
+      <Path>F:\Games\Emulated Games\Roms\Consoles\3DS\Sonic Generations (USA) (En,Fr,Es).3ds</Path>
+      <IsActive>True</IsActive>
       <Arguments />
     </Game>
     <Game>
@@ -1460,7 +1460,7 @@
     <Game>
       <Name>Sonic Rivals</Name>
       <Platform>PlayStation Portable</Platform>
-      <Path />
+      <Path>F:\Games\Emulated Games\Roms\Consoles\PSP\psy-sonriv.iso</Path>
       <IsActive>True</IsActive>
       <Arguments />
     </Game>
@@ -1546,8 +1546,7 @@
     </ModLoader>
     <ModLoader>
       <Name>Reloaded 2</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Mod Loaders\Reloaded II\Reloaded-II.exe</Path>
     </ModLoader>
     <ModLoader>
       <Name>Concursus</Name>
@@ -1569,13 +1568,11 @@
     </Emulator>
     <Emulator>
       <Name>Master System</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Fusion364\Fusion.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Game Gear</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Fusion364\Fusion.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Sega Saturn</Name>
@@ -1584,8 +1581,7 @@
     </Emulator>
     <Emulator>
       <Name>Dreamcast</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Redream\redream.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Arcade (MAME)</Name>
@@ -1593,53 +1589,43 @@
     </Emulator>
     <Emulator>
       <Name>GameCube</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Dolphin\Dolphin.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Wii</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Dolphin\Dolphin.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Wii U</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Cemu\Cemu.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Switch</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Yuzu\yuzu.exe</Path>
     </Emulator>
     <Emulator>
       <Name>PS2</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\PCSX2 1.4.0\pcsx2.exe</Path>
     </Emulator>
     <Emulator>
       <Name>PS3</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\RPCS3\rpcs3.exe</Path>
     </Emulator>
     <Emulator>
       <Name>XBox</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Xemu\xemu.exe</Path>
     </Emulator>
     <Emulator>
       <Name>XBox 360</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Xenia\xenia_canary.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Neo Geo Pocket Color</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Ares\ares.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Game Boy Advance</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\mGBA\mGBA.exe</Path>
     </Emulator>
     <Emulator>
       <Name>DS</Name>
@@ -1648,18 +1634,15 @@
     </Emulator>
     <Emulator>
       <Name>3DS</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\Citra\nightly\citra-qt.exe</Path>
     </Emulator>
     <Emulator>
       <Name>PSP</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Emulated Games\Emulators\PPSSPP\PPSSPPWindows64.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Sega PC Reloaded</Name>
-      <Path>
-    </Path>
+      <Path>F:\Games\Sega\segapcreloaded.exe</Path>
     </Emulator>
     <Emulator>
       <Name>Sega AM2</Name>

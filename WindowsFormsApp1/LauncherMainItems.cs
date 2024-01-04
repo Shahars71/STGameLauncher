@@ -769,7 +769,7 @@ namespace WindowsFormsApp1
             games[73].EmulatorName = emulators[5].Name;
             games[73].EmulatorLoc = emulators[5].Location;
             games[73].GameType = gameTypes[8];
-            //games[73].ExeLoc = "mp_sonic";
+            games[73].ExeLoc = "megaplay mp_sonic";
             games[73].emulator();
             
 
@@ -2184,8 +2184,6 @@ namespace WindowsFormsApp1
 
 
             emus[5].Name = "Arcade (MAME)";
-            emus[5].SpecFlag = true;
-            emus[5].SpecArgs = "-bios megaplay ";
 
 
             emus[6].Name = "GameCube";
@@ -2195,6 +2193,8 @@ namespace WindowsFormsApp1
 
 
             emus[8].Name = "Wii U";
+            emus[8].SpecFlag = true;
+            emus[8].SpecArgs = "-f -g ";
 
 
             emus[9].Name = "Switch";
