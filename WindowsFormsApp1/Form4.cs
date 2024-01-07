@@ -425,6 +425,7 @@ namespace WindowsFormsApp1
                     break;
 
                 case "Sony Playstation 3":
+                case "Arcade (Sega AM2)":
 
                     using (GameRegionSet setRegion = new GameRegionSet(LaunchContainer.launcher.Games[index]))
                     {
@@ -437,7 +438,7 @@ namespace WindowsFormsApp1
                 case "Steam":
                 case "Epic Games Store":
                 case "Arcade (MAME)":
-                case "Arcade (Sega AM2)":
+
                 
                 
 

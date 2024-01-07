@@ -783,7 +783,7 @@ namespace WindowsFormsApp1
             
 
 
-            games[75].GameName = "Sonic The Fighters";
+            games[75].GameName = "Sonic the Fighters";
             games[75].EmulatorName = emulators[20].Name;
             games[75].EmulatorLoc = emulators[20].Location;
             games[75].GameType = gameTypes[9];

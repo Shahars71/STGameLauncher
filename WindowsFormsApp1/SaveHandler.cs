@@ -750,7 +750,7 @@ namespace WindowsFormsApp1
                 case "Arcade (Sega AM2)":
                     switch(name)
                     {
-                        case "Sonic The Fighters":
+                        case "Sonic the Fighters":
                             gms[75].ExeLoc = loc;
 
                             if (act == "True")

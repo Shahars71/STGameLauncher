@@ -75,6 +75,7 @@ namespace WindowsFormsApp1
             {
                 switch (CurGame.EmulatorName)
                 {
+                    case "Sega AM2":
                     case "Arcade (MAME)":
                         start_EmulatedGameMame();
                         break;
@@ -82,6 +83,8 @@ namespace WindowsFormsApp1
                     case "Sega PC Reloaded":
                         start_GameSPCR();
                         break;
+
+
 
 
                     default:
@@ -136,8 +139,8 @@ namespace WindowsFormsApp1
             {
                 ProcessStartInfo proc = new ProcessStartInfo();
                 proc.Arguments = " \"" + CurGame.ExeLoc + "\" " + CurGame.EmuArgs;
-                proc.FileName = CurGame.EmulatorLoc;
-                proc.WorkingDirectory = CurGame.EmulatorLoc;
+                proc.FileName = Path.GetFileName(CurGame.EmulatorLoc);
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.EmulatorLoc);
 
                 Process.Start(proc);
             }
@@ -159,7 +162,7 @@ namespace WindowsFormsApp1
 
                 proc.Arguments = CurGame.EmuArgs;
                 proc.FileName = CurGame.EmulatorLoc;
-                proc.WorkingDirectory = CurGame.ExeLoc;
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.ExeLoc);
 
                 Process.Start(proc);
             }
@@ -200,8 +203,8 @@ namespace WindowsFormsApp1
 
                 ProcessStartInfo proc = new ProcessStartInfo();
                 proc.Arguments = " " + emul.SpecArgs + " \"" + CurGame.ExeLoc + "\" " + CurGame.EmuArgs;
-                proc.FileName = CurGame.EmulatorLoc;
-                proc.WorkingDirectory = CurGame.EmulatorLoc;
+                proc.FileName = Path.GetFileName(CurGame.EmulatorLoc);
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.EmulatorLoc);
 
                 Process.Start(proc);
             }
@@ -217,8 +220,8 @@ namespace WindowsFormsApp1
             {
                 ProcessStartInfo proc = new ProcessStartInfo();
                 proc.Arguments = /* "\"" + */ CurGame.ExeLoc /* + "\" "*/ + CurGame.EmuArgs;
-                proc.FileName = CurGame.EmulatorLoc;
-                proc.WorkingDirectory = CurGame.EmulatorLoc;
+                proc.FileName = Path.GetFileName(CurGame.EmulatorLoc);
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.EmulatorLoc);
 
                 Process.Start(proc);
             }

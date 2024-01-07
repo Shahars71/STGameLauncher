@@ -128,6 +128,14 @@ namespace WindowsFormsApp1
                     break;
 
                 case "Sonic the Fighters":
+
+                    if (CurGame.GameType == LaunchContainer.launcher.GameTypes[9])
+                    {
+                        physUS.Enabled= true;
+                        physJP.Enabled= true;
+                        break;
+                    }
+
                     labDig.Enabled = true;
 
 
@@ -240,6 +248,9 @@ namespace WindowsFormsApp1
                             case "Sega Superstars Tennis":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:BLUS30123";
                                 break;
+                            case "Sonic the Fighters":
+                                CurGame.ExeLoc = "sfight";
+                                break;
                         }
                         break;
 
@@ -275,6 +286,9 @@ namespace WindowsFormsApp1
                                 break;
                             case "Sonic Unleashed":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:BLJM60112";
+                                break;
+                            case "Sonic the Fighters":
+                                CurGame.ExeLoc = "schamp";
                                 break;
                         }
                         break;
