@@ -73,9 +73,9 @@ namespace WindowsFormsApp1
             //string gamePath = Path.Combine(new[] { LaunchContainer.launcher.SteamLoc, CurGame.ExeLoc });
             if (CurGame.HasEmulator)
             {
-                switch (CurGame.EmulatorName)
+                switch (CurGame.Meta.GameType)
                 {
-                    case "Sega AM2":
+                    case "Arcade (Sega AM2)":
                     case "Arcade (MAME)":
                         start_EmulatedGameMame();
                         break;
@@ -84,11 +84,8 @@ namespace WindowsFormsApp1
                         start_GameSPCR();
                         break;
 
-
-
-
                     default:
-                        ProgramInfo emu = LaunchContainer.launcher.getEmulFromGame(CurGame.GameName, CurGame.GameType);
+                        ProgramInfo emu = LaunchContainer.launcher.getEmulFromGame(CurGame.Meta.Name, CurGame.Meta.GameType);
 
                         if (emu.SpecFlag)
                         {
@@ -125,7 +122,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                System.Diagnostics.Process.Start(CurGame.EmulatorLoc);
+                System.Diagnostics.Process.Start(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
             }
             catch
             {
@@ -139,16 +136,16 @@ namespace WindowsFormsApp1
             {
                 ProcessStartInfo proc = new ProcessStartInfo();
                 proc.Arguments = " \"" + CurGame.ExeLoc + "\" " + CurGame.EmuArgs;
-                proc.FileName = Path.GetFileName(CurGame.EmulatorLoc);
-                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.EmulatorLoc);
+                proc.FileName = Path.GetFileName(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
 
                 Process.Start(proc);
             }
             catch
             {
-                if (CurGame.EmulatorLoc == "")
+                if (CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location == "")
                 {
-                    MessageBox.Show(CurGame.EmulatorName+" Emulator not found!");
+                    MessageBox.Show(CurGame.Meta.GameType + " Emulator not found!");
                 }
             }
 
@@ -161,14 +158,14 @@ namespace WindowsFormsApp1
                 ProcessStartInfo proc = new ProcessStartInfo();
 
                 proc.Arguments = CurGame.EmuArgs;
-                proc.FileName = CurGame.EmulatorLoc;
+                proc.FileName = CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location;
                 proc.WorkingDirectory = Path.GetDirectoryName(CurGame.ExeLoc);
 
                 Process.Start(proc);
             }
             catch
             {
-                if (CurGame.EmulatorLoc == "")
+                if (CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location == "")
                 {
                     MessageBox.Show("Sega PC Reloaded not found!");
                 }
@@ -198,13 +195,13 @@ namespace WindowsFormsApp1
             try
             {
 
-                ProgramInfo emul = LaunchContainer.launcher.getEmulFromGame(CurGame.GameName, CurGame.GameType);
+                ProgramInfo emul = LaunchContainer.launcher.getEmulFromGame(CurGame.Meta.Name, CurGame.Meta.Name);
 
 
                 ProcessStartInfo proc = new ProcessStartInfo();
                 proc.Arguments = " " + emul.SpecArgs + " \"" + CurGame.ExeLoc + "\" " + CurGame.EmuArgs;
-                proc.FileName = Path.GetFileName(CurGame.EmulatorLoc);
-                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.EmulatorLoc);
+                proc.FileName = Path.GetFileName(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
 
                 Process.Start(proc);
             }
@@ -220,16 +217,16 @@ namespace WindowsFormsApp1
             {
                 ProcessStartInfo proc = new ProcessStartInfo();
                 proc.Arguments = /* "\"" + */ CurGame.ExeLoc /* + "\" "*/ + CurGame.EmuArgs;
-                proc.FileName = Path.GetFileName(CurGame.EmulatorLoc);
-                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.EmulatorLoc);
+                proc.FileName = Path.GetFileName(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
+                proc.WorkingDirectory = Path.GetDirectoryName(CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location);
 
                 Process.Start(proc);
             }
             catch
             {
-                if (CurGame.EmulatorLoc == "")
+                if (CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Location == "")
                 {
-                    MessageBox.Show(CurGame.EmulatorName + " Emulator not found!");
+                    MessageBox.Show(CurGame.Meta.GameType + " Emulator not found!");
                 }
             }
         }

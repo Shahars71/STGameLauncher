@@ -58,6 +58,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Metadata.cs" />
     <Compile Include="Form5.cs">
       <SubType>Form</SubType>
     </Compile>
