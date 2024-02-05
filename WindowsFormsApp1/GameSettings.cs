@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             path = new TextBox();
 
 
-            name.Text = game.GameName;
+            name.Text = game.Meta.Name;
             active.Checked = game.IsActive;
         }
     }

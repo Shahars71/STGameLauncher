@@ -76,27 +76,76 @@
   type[23] = "Sega PC Reloaded";
 
 
-  emus[0].Name = "Mega Drive";
-  emus[1].Name = "Master System";
-  emus[2].Name = "Game Gear";
-  emus[3].Name = "Sega Saturn";
-  emus[4].Name = "Dreamcast";
-  emus[5].Name = "Arcade (MAME)";
-  emus[6].Name = "GameCube";
-  emus[7].Name = "Wii";
-  emus[8].Name = "Wii U";
-  emus[9].Name = "Switch";
-  emus[10].Name = "PS2";
-  emus[11].Name = "PS3";
-  emus[12].Name = "OG XBox";
-  emus[13].Name = "XBox 360";
-  emus[14].Name = "Neo Geo Pocket Color";
-  emus[15].Name = "Game Boy Advance";
-  emus[16].Name = "DS";
-  emus[17].Name = "3DS";
-  emus[18].Name = "PSP";
-  emus[19].Name = "Sega PC Reloaded";
-  emus[20].Name = "Arcade (Sega)";
+  lic static void setEmulators(ProgramInfo[] emus)
+  
+   //Mega Drive
+   emus[0].Name = "Kega Fusion";
+  
+   emus[1].Name = "Genesis Plus GX";
+  
+   emus[2].Name = "PicoDrive";
+  
+   emus[3].Name = "ares";
+  
+   //Master System / Game Gear
+   emus[4].Name = "Emulicious";
+  
+   //Saturn
+   emus[5].Name = "Yabause";
+   emus[5].SpecFlag = true;
+   emus[5].SpecArgs = "-i ";
+  
+   emus[6].Name = "Mednafen";
+   emus[7].Name = "Kronos";
+  
+   //Dreamcast
+   emus[8].Name = "Flycast";
+   emus[9].Name = "Redream";
+  
+   //Arcade
+   emus[10].Name = "MAME";
+   emus[11].Name = "Model 2 Emulator";
+  
+   //Gamecube / Wii / Wii U
+   emus[12].Name = "Dolphin";
+  
+   emus[13].Name = "Cemu";
+   emus[13].SpecFlag = true;
+   emus[13].SpecArgs = "-f -g ";
+  
+   //Switch
+   emus[14].Name = "Yuzu";
+   emus[15].Name = "Ryujinx";
+  
+   //PS2
+   emus[16].Name = "PCSX2";
+  
+   //PS3
+   emus[17].Name = "RPCS3";
+  
+   //XBox
+   emus[18].Name = "Xemu";
+  
+   //XBox 360
+   emus[19].Name = "Xenia";
+  
+   //Game Boy Advance
+   emus[20].Name = "mGBA";
+   emus[21].Name = "Visual Boy Advance";
+  
+   //DS
+   emus[22].Name = "DeSmuMe";
+   emus[23].Name = "melonDS";
+  
+   //3DS
+   emus[24].Name = "Citra";
+  
+   //PSP
+   emus[25].Name = "PPSSPP";
+  
+   emus[26].Name = "Sega PC Reloaded";
+
+
 
 ////////////////////////////////////////////////////////
 

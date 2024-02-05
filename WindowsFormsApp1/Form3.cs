@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             CurGame = curGame;
-            label1.Text = curGame.GameName;
+            label1.Text = curGame.Meta.Name;
 
             if (!(curGame.HasEmulator && curGame.HasModLoader))
             {
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
             if (curGame.HasEmulator)
             {
-                ComponentButton.Text = "Launch " + curGame.EmulatorName + " Emulator";
+                ComponentButton.Text = "Launch " + CurGame.Meta.Emus[CurGame.Meta.SelectedIndex].Name + " Emulator";
             }
 
             if (curGame.HasModLoader)

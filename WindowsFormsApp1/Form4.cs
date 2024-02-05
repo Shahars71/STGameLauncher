@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
                     {
                         LaunchContainer.launcher.Games[index].activate();
 
-                        if (LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[15]) //PS3
+                        if (LaunchContainer.launcher.Games[index].Meta.GameType == LaunchContainer.launcher.GameTypes[15]) //PS3
                         {
                             using (GameRegionSet setRegion = new GameRegionSet(LaunchContainer.launcher.Games[index]))
                             {
@@ -101,8 +101,8 @@ namespace WindowsFormsApp1
 
 
 
-                            if (!(LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[8] ||
-                                LaunchContainer.launcher.Games[index].GameType == LaunchContainer.launcher.GameTypes[15])) //Arcade (Mame) or PS3
+                            if (!(LaunchContainer.launcher.Games[index].Meta.GameType == LaunchContainer.launcher.GameTypes[8] ||
+                                LaunchContainer.launcher.Games[index].Meta.GameType == LaunchContainer.launcher.GameTypes[15])) //Arcade (Mame) or PS3
                             {
                                 LaunchContainer.launcher.Games[index].activate();
                             }
@@ -128,11 +128,11 @@ namespace WindowsFormsApp1
 
             for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
             {
-                if (LaunchContainer.launcher.Games[i].GameName != "")
+                if (LaunchContainer.launcher.Games[i].Meta.Name != "")
                 {
                     DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[0].Clone();
-                    row.Cells[0].Value = LaunchContainer.launcher.Games[i].GameName;
-                    row.Cells[1].Value = LaunchContainer.launcher.Games[i].GameType;
+                    row.Cells[0].Value = LaunchContainer.launcher.Games[i].Meta.Name;
+                    row.Cells[1].Value = LaunchContainer.launcher.Games[i].Meta.GameType;
                     row.Cells[2].Value = LaunchContainer.launcher.Games[i].isActive;
                     row.Cells[3].Value = LaunchContainer.launcher.Games[i].ExeLoc;
                     row.Cells[4].Value = LaunchContainer.launcher.Games[i].EmuArgs;
@@ -186,7 +186,7 @@ namespace WindowsFormsApp1
         private object getFilePath(DataGridViewRow row, int index)
         {
 
-            switch(LaunchContainer.launcher.Games[index].GameType)
+            switch(LaunchContainer.launcher.Games[index].Meta.GameType)
             {
                 case "DRM Free":
                     using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -642,8 +642,8 @@ namespace WindowsFormsApp1
             int gameI = 0;
             for (int i = 0; i < LaunchContainer.launcher.Games.Length; i++)
             {
-                if ((string)LaunchContainer.launcher.Games[i].GameType == (string)dataGridView1.Rows[rowIndex].Cells[1].Value
-                    && (string)LaunchContainer.launcher.Games[i].GameName == (string)dataGridView1.Rows[rowIndex].Cells[0].Value)
+                if ((string)LaunchContainer.launcher.Games[i].Meta.GameType == (string)dataGridView1.Rows[rowIndex].Cells[1].Value
+                    && (string)LaunchContainer.launcher.Games[i].Meta.Name == (string)dataGridView1.Rows[rowIndex].Cells[0].Value)
                 { 
                     gameI = i;
                     break;

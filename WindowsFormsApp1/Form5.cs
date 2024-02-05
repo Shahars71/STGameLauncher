@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
 
         public void regionSelectButtonShow()
         {
-            switch(CurGame.GameName) 
+            switch(CurGame.Meta.Name) 
             {
 
                 case "Sonic the Hedgehog (2006)":
@@ -129,7 +129,7 @@ namespace WindowsFormsApp1
 
                 case "Sonic the Fighters":
 
-                    if (CurGame.GameType == LaunchContainer.launcher.GameTypes[9])
+                    if (CurGame.Meta.GameType == LaunchContainer.launcher.GameTypes[9])
                     {
                         physUS.Enabled= true;
                         physJP.Enabled= true;
@@ -228,7 +228,7 @@ namespace WindowsFormsApp1
                 switch (buttStatus)
                 {
                     case "physUS":
-                        switch (CurGame.GameName)
+                        switch (CurGame.Meta.Name)
                         {
                             case "Sonic the Hedgehog (2006)":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:BLUS30008";
@@ -255,7 +255,7 @@ namespace WindowsFormsApp1
                         break;
 
                     case "physEU":
-                        switch (CurGame.GameName)
+                        switch (CurGame.Meta.Name)
                         {
                             case "Sonic the Hedgehog (2006)":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:BLES00028";
@@ -279,7 +279,7 @@ namespace WindowsFormsApp1
                         break;
 
                     case "physJP":
-                        switch (CurGame.GameName)
+                        switch (CurGame.Meta.Name)
                         {
                             case "Sonic the Hedgehog (2006)":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:BLJM60006";
@@ -294,7 +294,7 @@ namespace WindowsFormsApp1
                         break;
 
                     case "digUS":
-                        switch (CurGame.GameName)
+                        switch (CurGame.Meta.Name)
                         {
                             case "Sonic Unleashed":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:NPUB31204";
@@ -324,7 +324,7 @@ namespace WindowsFormsApp1
                         break;
 
                     case "digEU":
-                        switch (CurGame.GameName)
+                        switch (CurGame.Meta.Name)
                         {
                             case "Sonic Unleashed":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:NPEB01347";
@@ -361,7 +361,7 @@ namespace WindowsFormsApp1
                         break;
 
                     case "digJP":
-                        switch(CurGame.GameName)
+                        switch(CurGame.Meta.Name)
                         {
                             case "Sonic the Hedgehog 4 Episode I":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:NPJB00035";
@@ -373,7 +373,7 @@ namespace WindowsFormsApp1
                         break;
 
                     case "digTW":
-                        switch(CurGame.GameName)
+                        switch(CurGame.Meta.Name)
                         {
                             case "Sonic the Hedgehog 4 Episode I":
                                 CurGame.ExeLoc = "%RPCS3_GAMEID%:NPHB00187";

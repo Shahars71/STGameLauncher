@@ -51,5 +51,14 @@ namespace WindowsFormsApp1
             this.emus[lastIndex] = emu;
             lastIndex++;
         }
+
+        public void resetEmu()
+        {
+            for (int i = 0; i < this.emus.Length; i++)
+            {
+                this.emus[i] = new ProgramInfo();
+            }
+            lastIndex = 0;
+        }
     }
 }

@@ -40,12 +40,12 @@ namespace WindowsFormsApp1
                 {
                     Game g = LaunchContainer.launcher.Games[i];
 
-                    if (g.GameName != "")
+                    if (g.Meta.Name != "")
                     {
                         xmlwrite.WriteStartElement("Game");
 
-                        xmlwrite.WriteElementString("Name", g.GameName);
-                        xmlwrite.WriteElementString("Platform", g.GameType);
+                        xmlwrite.WriteElementString("Name", g.Meta.Name);
+                        xmlwrite.WriteElementString("Platform", g.Meta.GameType);
                         xmlwrite.WriteElementString("Path", g.ExeLoc.ToString());
                         xmlwrite.WriteElementString("IsActive", g.isActive.ToString());
                         xmlwrite.WriteElementString("Arguments", g.EmuArgs.ToString());
@@ -247,7 +247,6 @@ namespace WindowsFormsApp1
 
                     read.Close();
                 }
-                //LaunchContainer.launcher.manageGames();
             }
             catch
             {
@@ -2299,108 +2298,132 @@ namespace WindowsFormsApp1
                     
                     switch (name)
                     {
-                        case "Mega Drive":
+                        case "Kega Fusion":
                             emul[0].Location = loc;
                             break;
 
 
-                        case "Master System":
+                        case "Genesis Plus GX":
                             emul[1].Location = loc;
                             break;
 
 
-                        case "Game Gear":
+                        case "PicoDrive":
                             emul[2].Location = loc;
                             break;
 
 
-                        case "Sega Saturn":
+                        case "ares":
                             emul[3].Location = loc;
                             break;
 
 
-                        case "Dreamcast":
+                        case "Emulicious":
                             emul[4].Location = loc;
                             break;
 
 
-                        case "Arcade (MAME)":
+                        case "Yabause":
                             emul[5].Location = loc;
                             break;
 
 
-                        case "GameCube":
+                        case "Mednafen":
                             emul[6].Location = loc;
                             break;
 
 
-                        case "Wii":
+                        case "Kronos":
                             emul[7].Location = loc;
                             break;
 
 
-                        case "Wii U":
+                        case "Flycast":
                             emul[8].Location = loc;
                             break;
 
 
-                        case "Switch":
+                        case "Redream":
                             emul[9].Location = loc;
                             break;
 
 
-                        case "PS2":
+                        case "MAME":
                             emul[10].Location = loc;
                             break;
 
 
-                        case "PS3":
+                        case "Model 2 Emulator":
                             emul[11].Location = loc;
                             break;
 
 
-                        case "XBox":
+                        case "Dolphin":
                             emul[12].Location = loc;
                             break;
 
 
-                        case "XBox 360":
+                        case "Cemu":
                             emul[13].Location = loc;
                             break;
 
 
-                        case "Neo Geo Pocket Color":
+                        case "Yuzu":
                             emul[14].Location = loc;
                             break;
 
 
-                        case "Game Boy Advance":
+                        case "Ryujinx":
                             emul[15].Location = loc;
                             break;
 
 
-                        case "DS":
+                        case "PCSX2":
                             emul[16].Location = loc;
                             break;
 
 
-                        case "3DS":
+                        case "RPCS3":
                             emul[17].Location = loc;
                             break;
 
 
-                        case "PSP":
+                        case "Xemu":
                             emul[18].Location = loc;
                             break;
 
 
-                        case "Sega PC Reloaded":
+                        case "Xenia":
                             emul[19].Location = loc;
                             break;
 
 
-                        case "Sega AM2":
+                        case "mGBA":
                             emul[20].Location = loc;
+                            break;
+
+                        case "Visual Boy Advance":
+                            emul[21].Location = loc;
+                            break;
+
+                        case "DeSmuMe":
+                            emul[22].Location = loc;
+                            break;
+
+                        case "melonDS":
+                            emul[23].Location = loc;
+                            break;
+
+                        case "Citra":
+                            emul[24].Location = loc;
+                            break;
+
+                        case "PPSSPP":
+                            emul[25].Location = loc;
+                            break;
+
+                        case "Sega PC Reloaded":
+                            emul[26].Location = loc;
                             break;
                     }
                     break;

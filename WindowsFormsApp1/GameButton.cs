@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         public GameButton(Game assignedGame)
         {
             this.assignedGame = assignedGame;
-            this.Text = assignedGame.GameName;
+            this.Text = assignedGame.Meta.Name;
             gameOps = new Form3(assignedGame);
             this.Width = 100;
             this.Height = 50;

@@ -170,7 +170,7 @@ namespace WindowsFormsApp1
 
         private void addButtonToSpecificTab(GameButton b)
         {
-            var gameType = b.assignedGame.GameType;
+            var gameType = b.assignedGame.Meta.GameType;
 
             switch (gameType)
             {
@@ -268,7 +268,7 @@ namespace WindowsFormsApp1
         
         private void buttonTickPos(GameButton b)
         {
-            var gameType = b.assignedGame.GameType;
+            var gameType = b.assignedGame.Meta.GameType;
 
             switch (gameType)
             {
@@ -365,7 +365,7 @@ namespace WindowsFormsApp1
         }
         private void buttonTickNeg(GameButton b)
         {
-            var gameType = b.assignedGame.GameType;
+            var gameType = b.assignedGame.Meta.GameType;
 
             switch (gameType)
             {

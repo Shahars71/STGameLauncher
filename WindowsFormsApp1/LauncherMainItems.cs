@@ -43,6 +43,11 @@ namespace WindowsFormsApp1
 
         public Game(Metadata meta = null, string exeLoc = "", string modLoaderLoc = "", string modLoaderName = "", string emuArgs = "", bool isActive = false, bool hasModLoader = false, bool hasEmulator = false)
         {
+            if (meta == null)
+            {
+                meta = new Metadata();
+            }
+
             this.meta = meta;
             this.exeLoc = exeLoc;
             this.modLoaderLoc = modLoaderLoc;
@@ -118,8 +123,7 @@ namespace WindowsFormsApp1
             ProgramManager.setEmulators(emulators);   //names emulated console (for emulators)
             ProgramManager.setGameTypes(gameTypes);   //names types of games (emulated are per console)
             manageGames();
-
-
+            addEmus();
         }
 
         public Game[] Games { get => games; set => games = value; }
@@ -352,8 +356,6 @@ namespace WindowsFormsApp1
 
             games[26].Meta.Name = "Sonic CD (Sega PC Reloaded)";
             games[26].Meta.GameType = gameTypes[23];
-            games[26].EmulatorName = emulators[19].Name;
-            games[26].EmulatorLoc = emulators[19].Location;
             games[26].EmuArgs = "/launch 2 \"SONICCD.EXE\"";
             games[26].emulator();
             
@@ -375,8 +377,6 @@ namespace WindowsFormsApp1
             games[29].Meta.GameType = gameTypes[23];
             games[29].ModLoaderName = modLoaders[8].Name;
             games[29].ModLoaderLoc = modLoaders[8].Location;
-            games[29].EmulatorName = emulators[19].Name;
-            games[29].EmulatorLoc = emulators[19].Location;
             games[29].EmuArgs = "/launch 3 \"SONIC3K.EXE\"";
             games[29].modLoader();
             games[29].emulator();
@@ -390,8 +390,6 @@ namespace WindowsFormsApp1
 
             games[31].Meta.Name = "Sonic 3D Blast (Sega PC Reloaded)";
             games[31].Meta.GameType = gameTypes[23];
-            games[31].EmulatorName = emulators[19].Name;
-            games[31].EmulatorLoc = emulators[19].Location;
             games[31].EmuArgs = "/launch 4 \"PCSONIC.EXE\"";
             games[31].emulator();
             
@@ -448,104 +446,78 @@ namespace WindowsFormsApp1
             //---MEGA DRIVE---
 
             games[38].Meta.Name = "Sonic the Hedgehog";             
-            games[38].EmulatorName = emulators[0].Name;
-            games[38].EmulatorLoc = emulators[0].Location;
             games[38].Meta.GameType = gameTypes[3];
             games[38].emulator();
             
 
 
             games[39].Meta.Name = "Sonic the Hedgehog 2";
-            games[39].EmulatorName = emulators[0].Name;
-            games[39].EmulatorLoc = emulators[0].Location;
             games[39].Meta.GameType = gameTypes[3];
             games[39].emulator();
             
 
 
             games[40].Meta.Name = "Sonic the Hedgehog CD";
-            games[40].EmulatorName = emulators[0].Name;
-            games[40].EmulatorLoc = emulators[0].Location;
             games[40].Meta.GameType = gameTypes[3];
             games[40].emulator();
             
 
 
             games[41].Meta.Name = "Sonic the Hedgehog 3";
-            games[41].EmulatorName = emulators[0].Name;
-            games[41].EmulatorLoc = emulators[0].Location;
             games[41].Meta.GameType = gameTypes[3];
             games[41].emulator();
             
 
 
             games[42].Meta.Name = "Sonic && Knuckles";
-            games[42].EmulatorName = emulators[0].Name;
-            games[42].EmulatorLoc = emulators[0].Location;
             games[42].Meta.GameType = gameTypes[3];
             games[42].emulator();
             
 
 
             games[43].Meta.Name = "Sonic the Hedgehog 3 && Knuckles";
-            games[43].EmulatorName = emulators[0].Name;
-            games[43].EmulatorLoc = emulators[0].Location;
             games[43].Meta.GameType = gameTypes[3];
             games[43].emulator();
             
 
 
             games[44].Meta.Name = "Sonic Spinball";
-            games[44].EmulatorName = emulators[0].Name;
-            games[44].EmulatorLoc = emulators[0].Location;
             games[44].Meta.GameType = gameTypes[3];
             games[44].emulator();
             
 
 
             games[45].Meta.Name = "Dr. Robotnik's Mean Bean Machine";
-            games[45].EmulatorName = emulators[0].Name;
-            games[45].EmulatorLoc = emulators[0].Location;
             games[45].Meta.GameType = gameTypes[3];
             games[45].emulator();
             
 
 
             games[46].Meta.Name = "Knuckles' Chaotix";
-            games[46].EmulatorName = emulators[0].Name;
-            games[46].EmulatorLoc = emulators[0].Location;
             games[46].Meta.GameType = gameTypes[3];
             games[46].emulator();
             
 
 
             games[47].Meta.Name = "Knuckles in Sonic 2";
-            games[47].EmulatorName = emulators[0].Name;
-            games[47].EmulatorLoc = emulators[0].Location;
             games[47].Meta.GameType = gameTypes[3];
             games[47].emulator();
             
 
 
             games[48].Meta.Name = "Sonic 3D Blast";
-            games[48].EmulatorName = emulators[0].Name;
-            games[48].EmulatorLoc = emulators[0].Location;
             games[48].Meta.GameType = gameTypes[3];
             games[48].emulator();
             
 
 
             games[49].Meta.Name = "Sonic Eraser";
-            games[49].EmulatorName = emulators[0].Name;
-            games[49].EmulatorLoc = emulators[0].Location;
             games[49].Meta.GameType = gameTypes[3];
             games[49].emulator();
             
 
 
             games[50].Meta.Name = "Sonic Crackers";
-            games[50].EmulatorName = emulators[0].Name;
-            games[50].EmulatorLoc = emulators[0].Location;
             games[50].Meta.GameType = gameTypes[3];
             games[50].emulator();
             
@@ -555,56 +527,42 @@ namespace WindowsFormsApp1
             //---Sega Master System---
 
             games[51].Meta.Name = "Sonic The Hedgehog (8-bit)";
-            games[51].EmulatorName = emulators[1].Name;
-            games[51].EmulatorLoc = emulators[1].Location;
             games[51].Meta.GameType = gameTypes[4];
             games[51].emulator();
             
 
 
             games[52].Meta.Name = "Sonic The Hedgehog 2 (8-bit)";
-            games[52].EmulatorName = emulators[1].Name;
-            games[52].EmulatorLoc = emulators[1].Location;
             games[52].Meta.GameType = gameTypes[4];
             games[52].emulator();
             
 
 
             games[53].Meta.Name = "Sonic Chaos";
-            games[53].EmulatorName = emulators[1].Name;
-            games[53].EmulatorLoc = emulators[1].Location;
             games[53].Meta.GameType = gameTypes[4];
             games[53].emulator();
             
 
 
             games[54].Meta.Name = "Sonic Blast";
-            games[54].EmulatorName = emulators[1].Name;
-            games[54].EmulatorLoc = emulators[1].Location;
             games[54].Meta.GameType = gameTypes[4];
             games[54].emulator();
             
 
 
             games[55].Meta.Name = "Sonic Spinball (8-bit)";
-            games[55].EmulatorName = emulators[1].Name;
-            games[55].EmulatorLoc = emulators[1].Location;
             games[55].Meta.GameType = gameTypes[4];
             games[55].emulator();
             
 
 
             games[56].Meta.Name = "Dr. Robotnik's Mean Bean Machine (8-bit)";
-            games[56].EmulatorName = emulators[1].Name;
-            games[56].EmulatorLoc = emulators[1].Location;
             games[56].Meta.GameType = gameTypes[4];
             games[56].emulator();
             
 
 
             games[57].Meta.Name = "Sonic Edusoft";
-            games[57].EmulatorName = emulators[1].Name;
-            games[57].EmulatorLoc = emulators[1].Location;
             games[57].Meta.GameType = gameTypes[4];
             games[57].emulator();
             
@@ -614,96 +572,72 @@ namespace WindowsFormsApp1
             //---GAME GEAR---
 
             games[57].Meta.Name = "Sonic The Hedgehog (8-bit)";
-            games[57].EmulatorName = emulators[2].Name;
-            games[57].EmulatorLoc = emulators[2].Location;
             games[57].Meta.GameType = gameTypes[5];
             games[57].emulator();
             
 
 
             games[58].Meta.Name = "Sonic The Hedgehog 2 (8-bit)";
-            games[58].EmulatorName = emulators[2].Name;
-            games[58].EmulatorLoc = emulators[2].Location;
             games[58].Meta.GameType = gameTypes[5];
             games[58].emulator();
             
 
 
             games[59].Meta.Name = "Sonic Chaos";
-            games[59].EmulatorName = emulators[2].Name;
-            games[59].EmulatorLoc = emulators[2].Location;
             games[59].Meta.GameType = gameTypes[5];
             games[59].emulator();
             
 
 
             games[60].Meta.Name = "Sonic Blast";
-            games[60].EmulatorName = emulators[2].Name;
-            games[60].EmulatorLoc = emulators[2].Location;
             games[60].Meta.GameType = gameTypes[5];
             games[60].emulator();
             
 
 
             games[61].Meta.Name = "Sonic Spinball (8-bit)";
-            games[61].EmulatorName = emulators[2].Name;
-            games[61].EmulatorLoc = emulators[2].Location;
             games[61].Meta.GameType = gameTypes[5];
             games[61].emulator();
             
 
 
             games[62].Meta.Name = "Dr. Robotnik's Mean Bean Machine (8-bit)";
-            games[62].EmulatorName = emulators[2].Name;
-            games[62].EmulatorLoc = emulators[2].Location;
             games[62].Meta.GameType = gameTypes[5];
             games[62].emulator();
             
 
 
             games[63].Meta.Name = "Sonic Triple Trouble";
-            games[63].EmulatorName = emulators[2].Name;
-            games[63].EmulatorLoc = emulators[2].Location;
             games[63].Meta.GameType = gameTypes[5];
             games[63].emulator();
             
 
 
             games[64].Meta.Name = "Sonic Labyrinth";
-            games[64].EmulatorName = emulators[2].Name;
-            games[64].EmulatorLoc = emulators[2].Location;
             games[64].Meta.GameType = gameTypes[5];
             games[64].emulator();
             
 
 
             games[65].Meta.Name = "Sonic Drift";
-            games[65].EmulatorName = emulators[2].Name;
-            games[65].EmulatorLoc = emulators[2].Location;
             games[65].Meta.GameType = gameTypes[5];
             games[65].emulator();
             
 
 
             games[66].Meta.Name = "Sonic Drift 2";
-            games[66].EmulatorName = emulators[2].Name;
-            games[66].EmulatorLoc = emulators[2].Location;
             games[66].Meta.GameType = gameTypes[5];
             games[66].emulator();
             
 
 
             games[67].Meta.Name = "Tails' Adventure";
-            games[67].EmulatorName = emulators[2].Name;
-            games[67].EmulatorLoc = emulators[2].Location;
             games[67].Meta.GameType = gameTypes[5];
             games[67].emulator();
             
 
 
             games[68].Meta.Name = "Tails' Skypatrol";
-            games[68].EmulatorName = emulators[2].Name;
-            games[68].EmulatorLoc = emulators[2].Location;
             games[68].Meta.GameType = gameTypes[5];
             games[68].emulator();
             
@@ -712,40 +646,30 @@ namespace WindowsFormsApp1
             //---ARCADE---
 
             games[69].Meta.Name = "SegaSonic The Hedgehog";
-            games[69].EmulatorName = emulators[5].Name;
-            games[69].EmulatorLoc = emulators[5].Location;
             games[69].Meta.GameType = gameTypes[8];
             games[69].ExeLoc = "sonic";
             games[69].emulator();
             
 
             games[70].Meta.Name = "Waku Waku Sonic Patrol Car";
-            games[70].EmulatorName = emulators[5].Name;
-            games[70].EmulatorLoc = emulators[5].Location;
             games[70].Meta.GameType = gameTypes[8];
             games[70].ExeLoc = "soniccar";
             games[70].emulator();
             
 
             games[71].Meta.Name = "SegaSonic Popcorn Shop";
-            games[71].EmulatorName = emulators[5].Name;
-            games[71].EmulatorLoc = emulators[5].Location;
             games[71].Meta.GameType = gameTypes[8];
             games[71].ExeLoc = "sonicpop";
             games[71].emulator();
             
 
             games[72].Meta.Name = "SegaSonic Cosmo Fighter";
-            games[72].EmulatorName = emulators[5].Name;
-            games[72].EmulatorLoc = emulators[5].Location;
             games[72].Meta.GameType = gameTypes[8];
             games[72].ExeLoc = "sonicfgt";
             games[72].emulator();
  
 
             games[73].Meta.Name = "Sonic The Hedgehog (Mega Play)";
-            games[73].EmulatorName = emulators[5].Name;
-            games[73].EmulatorLoc = emulators[5].Location;
             games[73].Meta.GameType = gameTypes[8];
             games[73].ExeLoc = "megaplay mp_sonic";
             games[73].emulator();
@@ -753,8 +677,6 @@ namespace WindowsFormsApp1
 
 
             games[74].Meta.Name = "Sonic The Hedgehog 2 (Mega Play)";
-            games[74].EmulatorName = emulators[5].Name;
-            games[74].EmulatorLoc = emulators[5].Location;
             games[74].Meta.GameType = gameTypes[8];
             games[74].ExeLoc = "mp_soni2";
             games[74].emulator();
@@ -762,8 +684,6 @@ namespace WindowsFormsApp1
 
 
             games[75].Meta.Name = "Sonic the Fighters";
-            games[75].EmulatorName = emulators[20].Name;
-            games[75].EmulatorLoc = emulators[20].Location;
             games[75].Meta.GameType = gameTypes[9];
             games[75].emulator();
             
@@ -772,8 +692,6 @@ namespace WindowsFormsApp1
             //---SATURN---
 
             games[76].Meta.Name = "Sonic 3D Blast";
-            games[76].EmulatorName = emulators[3].Name;
-            games[76].EmulatorLoc = emulators[3].Location;
             games[76].Meta.GameType = gameTypes[6];
             games[76].EmuArgs = "-a";
             games[76].emulator();
@@ -781,8 +699,6 @@ namespace WindowsFormsApp1
 
 
             games[77].Meta.Name = "Sonic Jam";
-            games[77].EmulatorName = emulators[3].Name;
-            games[77].EmulatorLoc = emulators[3].Location;
             games[77].Meta.GameType = gameTypes[6];
             games[77].EmuArgs = "-a";
             games[77].emulator();
@@ -790,8 +706,6 @@ namespace WindowsFormsApp1
 
 
             games[78].Meta.Name = "Sonic R";
-            games[78].EmulatorName = emulators[3].Name;
-            games[78].EmulatorLoc = emulators[3].Location;
             games[78].Meta.GameType = gameTypes[6];
             games[78].EmuArgs = "-a";
             games[78].emulator();
@@ -802,24 +716,18 @@ namespace WindowsFormsApp1
 
 
             games[79].Meta.Name = "Sonic Adventure";
-            games[79].EmulatorName = emulators[4].Name;
-            games[79].EmulatorLoc = emulators[4].Location;
             games[79].Meta.GameType = gameTypes[7];
             games[79].emulator();
             
 
 
             games[80].Meta.Name = "Sonic Adventure 2";
-            games[80].EmulatorName = emulators[4].Name;
-            games[80].EmulatorLoc = emulators[4].Location;
             games[80].Meta.GameType = gameTypes[7];
             games[80].emulator();
             
 
 
             games[81].Meta.Name = "Sonic Shuffle";
-            games[81].EmulatorName = emulators[4].Name;
-            games[81].EmulatorLoc = emulators[4].Location;
             games[81].Meta.GameType = gameTypes[7];
             games[81].emulator();
             
@@ -829,48 +737,36 @@ namespace WindowsFormsApp1
 
 
             games[82].Meta.Name = "Sonic Adventure DX";
-            games[82].EmulatorName = emulators[6].Name;
-            games[82].EmulatorLoc = emulators[6].Location;
             games[82].Meta.GameType = gameTypes[10];
             games[82].emulator();
             
 
 
             games[83].Meta.Name = "Sonic Adventure 2 Battle";
-            games[83].EmulatorName = emulators[6].Name;
-            games[83].EmulatorLoc = emulators[6].Location;
             games[83].Meta.GameType = gameTypes[10];
             games[83].emulator();
             
 
 
             games[84].Meta.Name = "Sonic Heroes";
-            games[84].EmulatorName = emulators[6].Name;
-            games[84].EmulatorLoc = emulators[6].Location;
             games[84].Meta.GameType = gameTypes[10];
             games[84].emulator();
             
 
 
             games[85].Meta.Name = "Sonic Riders";
-            games[85].EmulatorName = emulators[6].Name;
-            games[85].EmulatorLoc = emulators[6].Location;
             games[85].Meta.GameType = gameTypes[10];
             games[85].emulator();
             
 
 
             games[86].Meta.Name = "Sonic Mega Collection";
-            games[86].EmulatorName = emulators[6].Name;
-            games[86].EmulatorLoc = emulators[6].Location;
             games[86].Meta.GameType = gameTypes[10];
             games[86].emulator();
             
 
 
             games[87].Meta.Name = "Sonic Gems Collection";
-            games[87].EmulatorName = emulators[6].Name;
-            games[87].EmulatorLoc = emulators[6].Location;
             games[87].Meta.GameType = gameTypes[10];
             games[87].emulator();
             
@@ -880,167 +776,125 @@ namespace WindowsFormsApp1
 
 
             games[88].Meta.Name = "Sonic and the Secret Rings";
-            games[88].EmulatorName = emulators[7].Name;
-            games[88].EmulatorLoc = emulators[7].Location;
             games[88].Meta.GameType = gameTypes[11];
             games[88].emulator();
             
 
 
             games[89].Meta.Name = "Sonic and the Black Knight";
-            games[89].EmulatorName = emulators[7].Name;
-            games[89].EmulatorLoc = emulators[7].Location;
             games[89].Meta.GameType = gameTypes[11];
             games[89].emulator();
             
 
             games[90].Meta.Name = "Sonic the Hedgehog 4 Episode 1";
-            games[90].EmulatorName = emulators[7].Name;
-            games[90].EmulatorLoc = emulators[7].Location;
             games[90].Meta.GameType = gameTypes[11];
             games[90].emulator();
             
 
 
             games[91].Meta.Name = "Sonic Riders: Zero Gravity";
-            games[91].EmulatorName = emulators[7].Name;
-            games[91].EmulatorLoc = emulators[7].Location;
             games[91].Meta.GameType = gameTypes[11];
             games[91].emulator();
             
 
 
             games[92].Meta.Name = "Sonic Unleashed";
-            games[92].EmulatorName = emulators[7].Name;
-            games[92].EmulatorLoc = emulators[7].Location;
             games[92].Meta.GameType = gameTypes[11];
             games[92].emulator();
             
 
 
             games[93].Meta.Name = "Sonic Colors";
-            games[93].EmulatorName = emulators[7].Name;
-            games[93].EmulatorLoc = emulators[7].Location;
             games[93].Meta.GameType = gameTypes[11];
             games[93].emulator();
             
 
 
             games[94].Meta.Name = "Sonic && Sega All Star Racing";
-            games[94].EmulatorName = emulators[7].Name;
-            games[94].EmulatorLoc = emulators[7].Location;
             games[94].Meta.GameType = gameTypes[11];
             games[94].emulator();
             
 
 
             games[95].Meta.Name = "Sega Superstars Tennis";
-            games[95].EmulatorName = emulators[7].Name;
-            games[95].EmulatorLoc = emulators[7].Location;
             games[95].Meta.GameType = gameTypes[11];
             games[95].emulator();
             
 
 
             games[96].Meta.Name = "Mario && Sonic at the Olympic Games";
-            games[96].EmulatorName = emulators[7].Name;
-            games[96].EmulatorLoc = emulators[7].Location;
             games[96].Meta.GameType = gameTypes[11];
             games[96].emulator();
             
 
 
             games[97].Meta.Name = "Mario && Sonic at the Olympic Winter Games";
-            games[97].EmulatorName = emulators[7].Name;
-            games[97].EmulatorLoc = emulators[7].Location;
             games[97].Meta.GameType = gameTypes[11];
             games[97].emulator();
             
 
 
             games[98].Meta.Name = "Mario && Sonic at the London 2012 Olympic Games";
-            games[98].EmulatorName = emulators[7].Name;
-            games[98].EmulatorLoc = emulators[7].Location;
             games[98].Meta.GameType = gameTypes[11];
             games[98].emulator();
             
 
 
             games[99].Meta.Name = "Sonic the Hedgehog (VC)";
-            games[99].EmulatorName = emulators[7].Name;
-            games[99].EmulatorLoc = emulators[7].Location;
             games[99].Meta.GameType = gameTypes[11];
             games[99].emulator();
             
 
 
             games[100].Meta.Name = "Sonic the Hedgehog (8-bit) (VC)";
-            games[100].EmulatorName = emulators[7].Name;
-            games[100].EmulatorLoc = emulators[7].Location;
             games[100].Meta.GameType = gameTypes[11];
             games[100].emulator();
             
 
 
             games[101].Meta.Name = "Sonic the Hedgehog 2 (VC)";
-            games[101].EmulatorName = emulators[7].Name;
-            games[101].EmulatorLoc = emulators[7 ].Location;
             games[101].Meta.GameType = gameTypes[11];
             games[101].emulator();
             
 
 
             games[102].Meta.Name = "Sonic the Hedgehog 2 (8-bit) (VC)";
-            games[102].EmulatorName = emulators[7].Name;
-            games[102].EmulatorLoc = emulators[7].Location;
             games[102].Meta.GameType = gameTypes[11];
             games[102].emulator();
             
 
 
             games[103].Meta.Name = "Sonic the Hedgehog 3 (VC)";
-            games[103].EmulatorName = emulators[7].Name;
-            games[103].EmulatorLoc = emulators[7].Location;
             games[103].Meta.GameType = gameTypes[11];
             games[103].emulator();
             
 
 
             games[104].Meta.Name = "Sonic & Knuckles (VC)";
-            games[104].EmulatorName = emulators[7].Name;
-            games[104].EmulatorLoc = emulators[7].Location;
             games[104].Meta.GameType = gameTypes[11];
             games[104].emulator();
             
 
 
             games[105].Meta.Name = "Sonic Chaos (VC)";
-            games[105].EmulatorName = emulators[7].Name;
-            games[105].EmulatorLoc = emulators[7].Location;
             games[105].Meta.GameType = gameTypes[11];
             games[105].emulator();
             
 
 
             games[106].Meta.Name = "Sonic 3D Blast (VC)";
-            games[106].EmulatorName = emulators[7].Name;
-            games[106].EmulatorLoc = emulators[7].Location;
             games[106].Meta.GameType = gameTypes[11];
             games[106].emulator();
             
 
 
             games[107].Meta.Name = "Sonic Spinball (VC)";
-            games[107].EmulatorName = emulators[7].Name;
-            games[107].EmulatorLoc = emulators[7].Location;
             games[107].Meta.GameType = gameTypes[11];
             games[107].emulator();
             
 
 
             games[108].Meta.Name = "Dr. Robotnik's Mean Bean Machine (VC)";
-            games[108].EmulatorName = emulators[7].Name;
-            games[108].EmulatorLoc = emulators[7].Location;
             games[108].Meta.GameType = gameTypes[11];
             games[108].emulator();
             
@@ -1049,64 +903,48 @@ namespace WindowsFormsApp1
             //---WII U---
 
             games[109].Meta.Name = "Sonic Lost World";
-            games[109].EmulatorName = emulators[8].Name;
-            games[109].EmulatorLoc = emulators[8].Location;
             games[109].Meta.GameType = gameTypes[12];
             games[109].emulator();
             
 
 
             games[110].Meta.Name = "Sonic && All-Stars Racing Transformed";
-            games[110].EmulatorName = emulators[8].Name;
-            games[110].EmulatorLoc = emulators[8].Location;
             games[110].Meta.GameType = gameTypes[12];
             games[110].emulator();
             
 
 
             games[111].Meta.Name = "Sonic Boom: Rise of Lyric";
-            games[111].EmulatorName = emulators[8].Name;
-            games[111].EmulatorLoc = emulators[8].Location;
             games[111].Meta.GameType = gameTypes[12];
             games[111].emulator();
             
 
 
             games[112].Meta.Name = "Mario & Sonic at the Sochi 2014 Olympic Winter Games";
-            games[112].EmulatorName = emulators[8].Name;
-            games[112].EmulatorLoc = emulators[8].Location;
             games[112].Meta.GameType = gameTypes[12];
             games[112].emulator();
             
 
 
             games[113].Meta.Name = "Mario & Sonic at the Rio 2016 Olympic Games";
-            games[113].EmulatorName = emulators[8].Name;
-            games[113].EmulatorLoc = emulators[8].Location;
             games[113].Meta.GameType = gameTypes[12];
             games[113].emulator();
             
 
 
             games[114].Meta.Name = "Sonic Advance (VC)";
-            games[114].EmulatorName = emulators[8].Name;
-            games[114].EmulatorLoc = emulators[8].Location;
             games[114].Meta.GameType = gameTypes[12];
             games[114].emulator();
             
 
 
             games[115].Meta.Name = "Sonic Advance 2 (VC)";
-            games[115].EmulatorName = emulators[8].Name;
-            games[115].EmulatorLoc = emulators[8].Location;
             games[115].Meta.GameType = gameTypes[12];
             games[115].emulator();
             
 
 
             games[116].Meta.Name = "Sonic Advance 3 (VC)";
-            games[116].EmulatorName = emulators[8].Name;
-            games[116].EmulatorLoc = emulators[8].Location;
             games[116].Meta.GameType = gameTypes[12];
             games[116].emulator();
             
@@ -1115,80 +953,60 @@ namespace WindowsFormsApp1
             //---SWITCH---
 
             games[117].Meta.Name = "Sonic Mania";
-            games[117].EmulatorName = emulators[9].Name;
-            games[117].EmulatorLoc = emulators[9].Location;
             games[117].Meta.GameType = gameTypes[13];
             games[117].emulator();
             
 
 
             games[118].Meta.Name = "Sonic Forces";
-            games[118].EmulatorName = emulators[9].Name;
-            games[118].EmulatorLoc = emulators[9].Location;
             games[118].Meta.GameType = gameTypes[13];
             games[118].emulator();
             
 
 
             games[119].Meta.Name = "Sonic Colours: Ultimate";
-            games[119].EmulatorName = emulators[9].Name;
-            games[119].EmulatorLoc = emulators[9].Location;
             games[119].Meta.GameType = gameTypes[13];
             games[119].emulator();
             
 
 
             games[120].Meta.Name = "Sonic Origins";
-            games[120].EmulatorName = emulators[9].Name;
-            games[120].EmulatorLoc = emulators[9].Location;
             games[120].Meta.GameType = gameTypes[13];
             games[120].emulator();
             
 
 
             games[121].Meta.Name = "Sonic Frontiers";
-            games[121].EmulatorName = emulators[9].Name;
-            games[121].EmulatorLoc = emulators[9].Location;
             games[121].Meta.GameType = gameTypes[13];
             games[121].emulator();
             
 
 
             games[122].Meta.Name = "Sonic Superstars";
-            games[122].EmulatorName = emulators[9].Name;
-            games[122].EmulatorLoc = emulators[9].Location;
             games[122].Meta.GameType = gameTypes[13];
             games[122].emulator();
             
 
 
             games[123].Meta.Name = "Team Sonic Racing";
-            games[123].EmulatorName = emulators[9].Name;
-            games[123].EmulatorLoc = emulators[9].Location;
             games[123].Meta.GameType = gameTypes[13];
             games[123].emulator();
             
 
 
             games[124].Meta.Name = "Mario & Sonic at the Olympic Games Tokyo 2020";
-            games[124].EmulatorName = emulators[9].Name;
-            games[124].EmulatorLoc = emulators[9].Location;
             games[124].Meta.GameType = gameTypes[13];
             games[124].emulator();
             
 
 
             games[125].Meta.Name = "Sega Ages Sonic the Hedgehog";
-            games[125].EmulatorName = emulators[9].Name;
-            games[125].EmulatorLoc = emulators[9].Location;
             games[125].Meta.GameType = gameTypes[13];
             games[125].emulator();
             
 
 
             games[126].Meta.Name = "Sega Ages Sonic the Hedgehog 2";
-            games[126].EmulatorName = emulators[9].Name;
-            games[126].EmulatorLoc = emulators[9].Location;
             games[126].Meta.GameType = gameTypes[13];
             games[126].emulator();
             
@@ -1197,80 +1015,60 @@ namespace WindowsFormsApp1
             //---PS2---
 
             games[127].Meta.Name = "Sonic Heroes";
-            games[127].EmulatorName = emulators[10].Name;
-            games[127].EmulatorLoc = emulators[10].Location;
             games[127].Meta.GameType = gameTypes[14];
             games[127].emulator();
             
 
 
             games[128].Meta.Name = "Shadow The Hedgehog";
-            games[128].EmulatorName = emulators[10].Name;
-            games[128].EmulatorLoc = emulators[10].Location;
             games[128].Meta.GameType = gameTypes[14];
             games[128].emulator();
             
 
 
             games[129].Meta.Name = "Sonic Unleashed";
-            games[129].EmulatorName = emulators[10].Name;
-            games[129].EmulatorLoc = emulators[10].Location;
             games[129].Meta.GameType = gameTypes[14];
             games[129].emulator();
             
 
 
             games[130].Meta.Name = "Sonic Riders";
-            games[130].EmulatorName = emulators[10].Name;
-            games[130].EmulatorLoc = emulators[10].Location;
             games[130].Meta.GameType = gameTypes[14];
             games[130].emulator();
             
 
 
             games[131].Meta.Name = "Sonic Riders: Zero Gravity";
-            games[131].EmulatorName = emulators[10].Name;
-            games[131].EmulatorLoc = emulators[10].Location;
             games[131].Meta.GameType = gameTypes[14];
             games[131].emulator();
             
 
 
             games[132].Meta.Name = "Sonic Mega Collection Plus";
-            games[132].EmulatorName = emulators[10].Name;
-            games[132].EmulatorLoc = emulators[10].Location;
             games[132].Meta.GameType = gameTypes[14];
             games[132].emulator();
             
 
 
             games[133].Meta.Name = "Sonic Gems Collection";
-            games[133].EmulatorName = emulators[10].Name;
-            games[133].EmulatorLoc = emulators[10].Location;
             games[133].Meta.GameType = gameTypes[14];
             games[133].emulator();
             
 
 
             games[134].Meta.Name = "Sega Superstars";
-            games[134].EmulatorName = emulators[10].Name;
-            games[134].EmulatorLoc = emulators[10].Location;
             games[134].Meta.GameType = gameTypes[14];
             games[134].emulator();
             
 
 
             games[135].Meta.Name = "Sega Superstars Tennis";
-            games[135].EmulatorName = emulators[10].Name;
-            games[135].EmulatorLoc = emulators[10].Location;
             games[135].Meta.GameType = gameTypes[14];
             games[135].emulator();
             
 
 
             games[136].Meta.Name = "Sega Genesis Collection";
-            games[136].EmulatorName = emulators[10].Name;
-            games[136].EmulatorLoc = emulators[10].Location;
             games[136].Meta.GameType = gameTypes[14];
             games[136].emulator();
             
@@ -1278,8 +1076,6 @@ namespace WindowsFormsApp1
 
             //---PS3---
             games[137].Meta.Name = "Sonic the Hedgehog (2006)";
-            games[137].EmulatorName = emulators[11].Name;
-            games[137].EmulatorLoc = emulators[11].Location;
             games[137].ModLoaderName = ModLoaders[12].Name;
             games[137].ModLoaderLoc = ModLoaders[12].Location;
             games[137].Meta.GameType = gameTypes[15];
@@ -1289,8 +1085,6 @@ namespace WindowsFormsApp1
 
 
             games[138].Meta.Name = "Sonic Unleashed";
-            games[138].EmulatorName = emulators[11].Name;
-            games[138].EmulatorLoc = emulators[11].Location;
             games[138].ModLoaderName = ModLoaders[13].Name;
             games[138].ModLoaderLoc= ModLoaders[13].Location;
             games[138].Meta.GameType = gameTypes[15];
@@ -1300,96 +1094,72 @@ namespace WindowsFormsApp1
 
 
             games[139].Meta.Name = "Sonic Generations";
-            games[139].EmulatorName = emulators[11].Name;
-            games[139].EmulatorLoc = emulators[11].Location;
             games[139].Meta.GameType = gameTypes[15];
             games[139].emulator();
             
 
 
             games[140].Meta.Name = "Sonic the Hedgehog 4 Episode I";
-            games[140].EmulatorName = emulators[11].Name;
-            games[140].EmulatorLoc = emulators[11].Location;
             games[140].Meta.GameType = gameTypes[15];
             games[140].emulator();
             
 
 
             games[141].Meta.Name = "Sonic the Hedgehog 4 Episode II";
-            games[141].EmulatorName = emulators[11].Name;
-            games[141].EmulatorLoc = emulators[11].Location;
             games[141].Meta.GameType = gameTypes[15];
             games[141].emulator();
             
 
 
             games[142].Meta.Name = "Sonic the Hedgehog (Sega Vintage Collection)";
-            games[142].EmulatorName = emulators[11].Name;
-            games[142].EmulatorLoc = emulators[11].Location;
             games[142].Meta.GameType = gameTypes[15];
             games[142].emulator();
             
 
 
             games[143].Meta.Name = "Sonic the Hedgehog 2 (Sega Vintage Collection)";
-            games[143].EmulatorName = emulators[11].Name;
-            games[143].EmulatorLoc = emulators[11].Location;
             games[143].Meta.GameType = gameTypes[15];
             games[143].emulator();
             
 
 
             games[144].Meta.Name = "Sonic the Hedgehog CD (2011)";
-            games[144].EmulatorName = emulators[11].Name;
-            games[144].EmulatorLoc = emulators[11].Location;
             games[144].Meta.GameType = gameTypes[15];
             games[144].emulator();
             
 
 
             games[145].Meta.Name = "Sonic the Fighters";
-            games[145].EmulatorName = emulators[11].Name;
-            games[145].EmulatorLoc = emulators[11].Location;
             games[145].Meta.GameType = gameTypes[15];
             games[145].emulator();
             
 
 
             games[146].Meta.Name = "Sonic Adventure DX";
-            games[146].EmulatorName = emulators[11].Name;
-            games[146].EmulatorLoc = emulators[11].Location;
             games[146].Meta.GameType = gameTypes[15];
             games[146].emulator();
             
 
 
             games[147].Meta.Name = "Sonic Adventure 2: Battle";
-            games[147].EmulatorName = emulators[11].Name;
-            games[147].EmulatorLoc = emulators[11].Location;
             games[147].Meta.GameType = gameTypes[15];
             games[147].emulator();
             
 
 
             games[148].Meta.Name = "Sonic && Sega All-Stars Racing";
-            games[148].EmulatorName = emulators[11].Name;
-            games[148].EmulatorLoc = emulators[11].Location;
             games[148].Meta.GameType = gameTypes[15];
             games[148].emulator();
             
 
 
             games[149].Meta.Name = "Sonic && All-Stars Racing Transformed";
-            games[149].EmulatorName = emulators[11].Name;
-            games[149].EmulatorLoc = emulators[11].Location;
             games[149].Meta.GameType = gameTypes[15];
             games[149].emulator();
             
 
 
             games[150].Meta.Name = "Sega Superstars Tennis";
-            games[150].EmulatorName = emulators[11].Name;
-            games[150].EmulatorLoc = emulators[11].Location;
             games[150].Meta.GameType = gameTypes[15];
             games[150].emulator();
             
@@ -1398,32 +1168,24 @@ namespace WindowsFormsApp1
             //---XBOX---
 
             games[151].Meta.Name = "Sonic Heroes";
-            games[151].EmulatorName = emulators[12].Name;
-            games[151].EmulatorLoc = emulators[12].Location;
             games[151].Meta.GameType = gameTypes[16];
             games[151].emulator();
             
 
 
             games[152].Meta.Name = "Shadow the Hedgehog";
-            games[152].EmulatorName = emulators[12].Name;
-            games[152].EmulatorLoc = emulators[12].Location;
             games[152].Meta.GameType = gameTypes[16];
             games[152].emulator();
             
 
 
             games[153].Meta.Name = "Sonic Riders";
-            games[153].EmulatorName = emulators[12].Name;
-            games[153].EmulatorLoc = emulators[12].Location;
             games[153].Meta.GameType = gameTypes[16];
             games[153].emulator();
             
 
 
             games[154].Meta.Name = "Sonic Mega Collection Plus";
-            games[154].EmulatorName = emulators[12].Name;
-            games[154].EmulatorLoc = emulators[12].Location;
             games[154].Meta.GameType = gameTypes[16];
             games[154].emulator();
             
@@ -1432,8 +1194,6 @@ namespace WindowsFormsApp1
             //---XBOX 360---
 
             games[155].Meta.Name = "Sonic the Hedgehog (2006)";
-            games[155].EmulatorName = emulators[13].Name;
-            games[155].EmulatorLoc = emulators[13].Location;
             games[155].ModLoaderName = ModLoaders[12].Name;
             games[155].ModLoaderLoc = ModLoaders[12].Location;
             games[155].Meta.GameType = gameTypes[17];
@@ -1443,8 +1203,6 @@ namespace WindowsFormsApp1
 
 
             games[156].Meta.Name = "Sonic Unleashed";
-            games[156].EmulatorName = emulators[13].Name;
-            games[156].EmulatorLoc = emulators[13].Location;
             games[156].ModLoaderName = ModLoaders[13].Name;
             games[156].ModLoaderLoc = ModLoaders[13].Location;
             games[156].Meta.GameType = gameTypes[17];
@@ -1454,120 +1212,90 @@ namespace WindowsFormsApp1
 
 
             games[157].Meta.Name = "Sonic Generations";
-            games[157].EmulatorName = emulators[13].Name;
-            games[157].EmulatorLoc = emulators[13].Location;
             games[157].Meta.GameType = gameTypes[17];
             games[157].emulator();
             
 
 
             games[158].Meta.Name = "Sonic the Hedgehog 4 Episode I";
-            games[158].EmulatorName = emulators[13].Name;
-            games[158].EmulatorLoc = emulators[13].Location;
             games[158].Meta.GameType = gameTypes[17];
             games[158].emulator();
             
 
 
             games[159].Meta.Name = "Sonic the Hedgehog 4 Episode II";
-            games[159].EmulatorName = emulators[13].Name;
-            games[159].EmulatorLoc = emulators[13].Location;
             games[159].Meta.GameType = gameTypes[17];
             games[159].emulator();
             
 
 
             games[160].Meta.Name = "Sonic Free Riders";
-            games[160].EmulatorName = emulators[13].Name;
-            games[160].EmulatorLoc = emulators[13].Location;
             games[160].Meta.GameType = gameTypes[17];
             games[160].emulator();
             
 
 
             games[161].Meta.Name = "Sonic && Sega All-Stars Racing";
-            games[161].EmulatorName = emulators[13].Name;
-            games[161].EmulatorLoc = emulators[13].Location;
             games[161].Meta.GameType = gameTypes[17];
             games[161].emulator();
             
 
 
             games[162].Meta.Name = "Sonic & All-Stars Racing Transformed";
-            games[162].EmulatorName = emulators[13].Name;
-            games[162].EmulatorLoc = emulators[13].Location;
             games[162].Meta.GameType = gameTypes[17];
             games[162].emulator();
             
 
 
             games[163].Meta.Name = "Sega Superstars Tennis";
-            games[163].EmulatorName = emulators[13].Name;
-            games[163].EmulatorLoc = emulators[13].Location;
             games[163].Meta.GameType = gameTypes[17];
             games[163].emulator();
             
 
 
             games[164].Meta.Name = "Sonic the Hedgehog (XBLA)";
-            games[164].EmulatorName = emulators[13].Name;
-            games[164].EmulatorLoc = emulators[13].Location;
             games[164].Meta.GameType = gameTypes[17];
             games[164].emulator();
             
 
 
             games[165].Meta.Name = "Sonic the Hedgehog 2 (XBLA)";
-            games[165].EmulatorName = emulators[13].Name;
-            games[165].EmulatorLoc = emulators[13].Location;
             games[165].Meta.GameType = gameTypes[17];
             games[165].emulator();
             
 
 
             games[166].Meta.Name = "Sonic the Hedgehog CD (2011)";
-            games[166].EmulatorName = emulators[13].Name;
-            games[166].EmulatorLoc = emulators[13].Location;
             games[166].Meta.GameType = gameTypes[17];
             games[166].emulator();
             
 
 
             games[167].Meta.Name = "Sonic the Hedgehog 3 (XBLA)";
-            games[167].EmulatorName = emulators[13].Name;
-            games[167].EmulatorLoc = emulators[13].Location;
             games[167].Meta.GameType = gameTypes[17];
             games[167].emulator();
             
 
 
             games[168].Meta.Name = "Sonic && Knuckles (XBLA)";
-            games[168].EmulatorName = emulators[13].Name;
-            games[168].EmulatorLoc = emulators[13].Location;
             games[168].Meta.GameType = gameTypes[17];
             games[168].emulator();
             
 
 
             games[169].Meta.Name = "Sonic the Fighters";
-            games[169].EmulatorName = emulators[13].Name;
-            games[169].EmulatorLoc = emulators[13].Location;
             games[169].Meta.GameType = gameTypes[17];
             games[169].emulator();
             
 
 
             games[170].Meta.Name = "Sonic Adventure";
-            games[170].EmulatorName = emulators[13].Name;
-            games[170].EmulatorLoc = emulators[13].Location;
             games[170].Meta.GameType = gameTypes[17];
             games[170].emulator();
             
 
 
             games[171].Meta.Name = "Sonic Adventure 2";
-            games[171].EmulatorName = emulators[13].Name;
-            games[171].EmulatorLoc = emulators[13].Location;
             games[171].Meta.GameType = gameTypes[17];
             games[171].emulator();
             
@@ -1576,8 +1304,6 @@ namespace WindowsFormsApp1
             //---NEO GEO POCKET---
 
             games[172].Meta.Name = "Sonic the Hedgehog Pocket Adventure";
-            games[172].EmulatorName = emulators[14].Name;
-            games[172].EmulatorLoc = emulators[14].Location;
             games[172].Meta.GameType = gameTypes[18];
             games[172].emulator();
             
@@ -1586,64 +1312,48 @@ namespace WindowsFormsApp1
             //---GBA---
 
             games[173].Meta.Name = "Sonic Advance";
-            games[173].EmulatorName = emulators[15].Name;
-            games[173].EmulatorLoc = emulators[15].Location;
             games[173].Meta.GameType = gameTypes[19];
             games[173].emulator();
             
 
 
             games[174].Meta.Name = "Sonic Advance 2";
-            games[174].EmulatorName = emulators[15].Name;
-            games[174].EmulatorLoc = emulators[15].Location;
             games[174].Meta.GameType = gameTypes[19];
             games[174].emulator();
             
 
 
             games[175].Meta.Name = "Sonic Battle";
-            games[175].EmulatorName = emulators[15].Name;
-            games[175].EmulatorLoc = emulators[15].Location;
             games[175].Meta.GameType = gameTypes[19];
             games[175].emulator();
             
 
 
             games[176].Meta.Name = "Sonic Advance 3";
-            games[176].EmulatorName = emulators[15].Name;
-            games[176].EmulatorLoc = emulators[15].Location;
             games[176].Meta.GameType = gameTypes[19];
             games[176].emulator();
             
 
 
             games[177].Meta.Name = "Sonic Pinball Party";
-            games[177].EmulatorName = emulators[15].Name;
-            games[177].EmulatorLoc = emulators[15].Location;
             games[177].Meta.GameType = gameTypes[19];
             games[177].emulator();
             
 
 
             games[178].Meta.Name = "Tiny Chao Garden";
-            games[178].EmulatorName = emulators[15].Name;
-            games[178].EmulatorLoc = emulators[15].Location;
             games[178].Meta.GameType = gameTypes[19];
             games[178].emulator();
             
 
 
             games[179].Meta.Name = "Sonic X: A Super Sonic Hero";
-            games[179].EmulatorName = emulators[15].Name;
-            games[179].EmulatorLoc = emulators[15].Location;
             games[179].Meta.GameType = gameTypes[19];
             games[179].emulator();
             
 
 
             games[180].Meta.Name = "Sonic the Hedgehog Genesis";
-            games[180].EmulatorName = emulators[15].Name;
-            games[180].EmulatorLoc = emulators[15].Location;
             games[180].Meta.GameType = gameTypes[19];
             games[180].emulator();
             
@@ -1652,72 +1362,54 @@ namespace WindowsFormsApp1
             //---DS---
 
             games[181].Meta.Name = "Sonic Rush";
-            games[181].EmulatorName = emulators[16].Name;
-            games[181].EmulatorLoc = emulators[16].Location;
             games[181].Meta.GameType = gameTypes[20];
             games[181].emulator();
             
 
 
             games[182].Meta.Name = "Sonic Rush Adventure";
-            games[182].EmulatorName = emulators[16].Name;
-            games[182].EmulatorLoc = emulators[16].Location;
             games[182].Meta.GameType = gameTypes[20];
             games[182].emulator();
             
 
 
             games[183].Meta.Name = "Sonic Colors";
-            games[183].EmulatorName = emulators[16].Name;
-            games[183].EmulatorLoc = emulators[16].Location;
             games[183].Meta.GameType = gameTypes[20];
             games[183].emulator();
             
 
 
             games[184].Meta.Name = "Sonic Chronicles: The Dark Brotherhood";
-            games[184].EmulatorName = emulators[16].Name;
-            games[184].EmulatorLoc = emulators[16].Location;
             games[184].Meta.GameType = gameTypes[20];
             games[184].emulator();
             
 
 
             games[185].Meta.Name = "Sega Superstars Tennis";
-            games[185].EmulatorName = emulators[16].Name;
-            games[185].EmulatorLoc = emulators[16].Location;
             games[185].Meta.GameType = gameTypes[20];
             games[185].emulator();
             
 
 
             games[186].Meta.Name = "Sonic && Sega All-Stars Racing";
-            games[186].EmulatorName = emulators[16].Name;
-            games[186].EmulatorLoc = emulators[16].Location;
             games[186].Meta.GameType = gameTypes[20];
             games[186].emulator();
             
 
 
             games[187].Meta.Name = "Mario && Sonic at the Olympic Games";
-            games[187].EmulatorName = emulators[16].Name;
-            games[187].EmulatorLoc = emulators[16].Location;
             games[187].Meta.GameType = gameTypes[20];
             games[187].emulator();
             
 
 
             games[188].Meta.Name = "Mario && Sonic at the Olympic Winter Games";
-            games[188].EmulatorName = emulators[16].Name;
-            games[188].EmulatorLoc = emulators[16].Location;
             games[188].Meta.GameType = gameTypes[20];
             games[188].emulator();
             
 
 
             games[189].Meta.Name = "Sonic Classic Collection";
-            games[189].EmulatorName = emulators[16].Name;
-            games[189].EmulatorLoc = emulators[16].Location;
             games[189].Meta.GameType = gameTypes[20];
             games[189].emulator();
             
@@ -1726,144 +1418,108 @@ namespace WindowsFormsApp1
             //---3DS---
 
             games[190].Meta.Name = "Sonic Generations";
-            games[190].EmulatorName = emulators[17].Name;
-            games[190].EmulatorLoc = emulators[17].Location;
             games[190].Meta.GameType = gameTypes[21];
             games[190].emulator();
             
 
 
             games[191].Meta.Name = "Sonic Lost World";
-            games[191].EmulatorName = emulators[17].Name;
-            games[191].EmulatorLoc = emulators[17].Location;
             games[191].Meta.GameType = gameTypes[21];
             games[191].emulator();
             
 
 
             games[192].Meta.Name = "Sonic Boom: Shattered Crystal";
-            games[192].EmulatorName = emulators[17].Name;
-            games[192].EmulatorLoc = emulators[17].Location;
             games[192].Meta.GameType = gameTypes[21];
             games[192].emulator();
             
 
 
             games[193].Meta.Name = "Sonic Boom: Fire and Ice";
-            games[193].EmulatorName = emulators[17].Name;
-            games[193].EmulatorLoc = emulators[17].Location;
             games[193].Meta.GameType = gameTypes[21];
             games[193].emulator();
             
 
 
             games[194].Meta.Name = "Sonic && All-Stars Racing Transformed";
-            games[194].EmulatorName = emulators[17].Name;
-            games[194].EmulatorLoc = emulators[17].Location;
             games[194].Meta.GameType = gameTypes[21];
             games[194].emulator();
             
 
 
             games[195].Meta.Name = "Mario && Sonic at the London 2012 Olympic Games";
-            games[195].EmulatorName = emulators[17].Name;
-            games[195].EmulatorLoc = emulators[17].Location;
             games[195].Meta.GameType = gameTypes[21];
             games[195].emulator();
             
 
 
             games[196].Meta.Name = "Mario && Sonic - London 2012 Virtual Card Album";
-            games[196].EmulatorName = emulators[17].Name;
-            games[196].EmulatorLoc = emulators[17].Location;
             games[196].Meta.GameType = gameTypes[21];
             games[196].emulator();
             
 
 
             games[197].Meta.Name = "Mario & Sonic at the Rio 2016 Olympic Games";
-            games[197].EmulatorName = emulators[17].Name;
-            games[197].EmulatorLoc = emulators[17].Location;
             games[197].Meta.GameType = gameTypes[21];
             games[197].emulator();
             
 
 
             games[198].Meta.Name = "3D Sonic the Hedgehog";
-            games[198].EmulatorName = emulators[17].Name;
-            games[198].EmulatorLoc = emulators[17].Location;
             games[198].Meta.GameType = gameTypes[21];
             games[198].emulator();
             
 
 
             games[199].Meta.Name = "3D Sonic the Hedgehog 2";
-            games[199].EmulatorName = emulators[17].Name;
-            games[199].EmulatorLoc = emulators[17].Location;
             games[199].Meta.GameType = gameTypes[21];
             games[199].emulator();
             
 
 
             games[200].Meta.Name = "Sonic the Hedgehog (8-bit) (VC)";
-            games[200].EmulatorName = emulators[17].Name;
-            games[200].EmulatorLoc = emulators[17].Location;
             games[200].Meta.GameType = gameTypes[21];
             games[200].emulator();
             
 
 
             games[201].Meta.Name = "Sonic the Hedgehog 2 (8-bit) (VC)";
-            games[201].EmulatorName = emulators[17].Name;
-            games[201].EmulatorLoc = emulators[17].Location;
             games[201].Meta.GameType = gameTypes[21];
             games[201].emulator();
             
 
 
             games[202].Meta.Name = "Sonic the Hedgehog Triple Trouble (VC)";
-            games[202].EmulatorName = emulators[17].Name;
-            games[202].EmulatorLoc = emulators[17].Location;
             games[202].Meta.GameType = gameTypes[21];
             games[202].emulator();
             
 
 
             games[203].Meta.Name = "Sonic Blast (VC)";
-            games[203].EmulatorName = emulators[17].Name;
-            games[203].EmulatorLoc = emulators[17].Location;
             games[203].Meta.GameType = gameTypes[21];
             games[203].emulator();
             
 
 
             games[204].Meta.Name = "Sonic Labyrinth (VC)";
-            games[204].EmulatorName = emulators[17].Name;
-            games[204].EmulatorLoc = emulators[17].Location;
             games[204].Meta.GameType = gameTypes[21];
             games[204].emulator();
             
 
 
             games[205].Meta.Name = "Sonic Drift 2 (VC)";
-            games[205].EmulatorName = emulators[17].Name;
-            games[205].EmulatorLoc = emulators[17].Location;
             games[205].Meta.GameType = gameTypes[21];
             games[205].emulator();
             
 
 
             games[206].Meta.Name = "Dr. Robotnik's Mean Bean Machine (8-bit) (VC)";
-            games[206].EmulatorName = emulators[17].Name;
-            games[206].EmulatorLoc = emulators[17].Location;
             games[206].Meta.GameType = gameTypes[21];
             games[206].emulator();
             
 
 
             games[207].Meta.Name = "Tails' Adventures (VC)";
-            games[207].EmulatorName = emulators[17].Name;
-            games[207].EmulatorLoc = emulators[17].Location;
             games[207].Meta.GameType = gameTypes[21];
             games[207].emulator();
             
@@ -1872,24 +1528,18 @@ namespace WindowsFormsApp1
             //---PSP---
 
             games[208].Meta.Name = "Sonic Rivals";
-            games[208].EmulatorName = emulators[18].Name;
-            games[208].EmulatorLoc = emulators[18].Location;
             games[208].Meta.GameType = gameTypes[22];
             games[208].emulator();
             
 
 
             games[209].Meta.Name = "Sonic Rivals 2";
-            games[209].EmulatorName = emulators[18].Name;
-            games[209].EmulatorLoc = emulators[18].Location;
             games[209].Meta.GameType = gameTypes[22];
             games[209].emulator();
             
 
 
             games[210].Meta.Name = "Sega Genesis Collection";
-            games[210].EmulatorName = emulators[18].Name;
-            games[210].EmulatorLoc = emulators[18].Location;
             games[210].Meta.GameType = gameTypes[22];
             games[210].emulator();
             
@@ -1898,8 +1548,6 @@ namespace WindowsFormsApp1
             //Stuff I missed
 
             games[211].Meta.Name = "Shadow the Hedgehog"; //gamecube
-            games[211].EmulatorName = emulators[6].Name;
-            games[211].EmulatorLoc = emulators[6].Location;
             games[211].ModLoaderName = ModLoaders[10].Name;
             games[211].ModLoaderLoc = ModLoaders[10].Location;
             games[211].Meta.GameType = gameTypes[10];
@@ -1907,15 +1555,13 @@ namespace WindowsFormsApp1
             
 
             games[212].Meta.Name = "Blue Spheres"; //mega drive  
-            games[212].EmulatorName = emulators[0].Name;
-            games[212].EmulatorLoc = emulators[0].Location;
             games[212].Meta.GameType = gameTypes[3];
             games[212].emulator();
 
 
 
             checkActives();
-
+            
 
         }
 
@@ -1931,96 +1577,10 @@ namespace WindowsFormsApp1
         {
             for (int i = 0; i < games.Length;i++)
             {
-                string emuNa = games[i].EmulatorName;
-
-                switch (emuNa)
-                {
-                    case "Mega Drive"          :
-                        games[i].EmulatorLoc = emulators[0].Location;
-                        break;
-
-                    case "Master System"       :
-                        games[i].EmulatorLoc = emulators[1].Location;
-                        break;
-
-                    case "Game Gear"           :
-                        games[i].EmulatorLoc = emulators[2].Location;
-                        break;
-
-                    case "Sega Saturn"         :
-                        games[i].EmulatorLoc = emulators[3].Location;
-                        break;
-
-                    case "Dreamcast"           :
-                        games[i].EmulatorLoc = emulators[4].Location;
-                        break;
-
-                    case "Arcade (MAME)"       :
-                        games[i].EmulatorLoc = emulators[5].Location;
-                        break;
-
-                    case "GameCube"            :
-                        games[i].EmulatorLoc = emulators[6].Location;
-                        break;
-
-                    case "Wii"                 :
-                        games[i].EmulatorLoc = emulators[7].Location;
-                        break;
-
-                    case "Wii U"               :
-                        games[i].EmulatorLoc = emulators[8].Location;
-                        break;
-
-                    case "Switch"              :
-                        games[i].EmulatorLoc = emulators[9].Location;
-                        break;
-
-                    case "PS2"                 :
-                        games[i].EmulatorLoc = emulators[10].Location;
-                        break;
-
-                    case "PS3"                 :
-                        games[i].EmulatorLoc = emulators[11].Location;
-                        break;
-
-                    case "XBox"                :
-                        games[i].EmulatorLoc = emulators[12].Location;
-                        break;
-
-                    case "XBox 360"            :
-                        games[i].EmulatorLoc = emulators[13].Location;
-                        break;
-
-                    case "Neo Geo Pocket Color":
-                        games[i].EmulatorLoc = emulators[14].Location;
-                        break;
-
-                    case "Game Boy Advance"    :
-                        games[i].EmulatorLoc = emulators[15].Location;
-                        break;
-
-                    case "DS"                  :
-                        games[i].EmulatorLoc = emulators[16].Location;
-                        break;
-
-                    case "3DS"                 :
-                        games[i].EmulatorLoc = emulators[17].Location;
-                        break;
-
-                    case "PSP"                 :
-                        games[i].EmulatorLoc = emulators[18].Location;
-                        break;
-
-                    case "Sega PC Reloaded"    :
-                        games[i].EmulatorLoc = emulators[19].Location;
-                        break;
-
-                    case "Sega AM2"            :
-                        games[i].EmulatorLoc = emulators[20].Location;
-                        break;
-                }
-
+                games[i].Meta.resetEmu();
             }
+
+            addEmus();
         }
 
         public ProgramInfo getEmulFromGame(string name, string type)
@@ -2029,11 +1589,11 @@ namespace WindowsFormsApp1
 
             for (int i = 0; i < games.Length; i++)
             {
-                if (games[i].GameName == name && games[i].GameType == type)
+                if (games[i].Meta.Name == name && games[i].Meta.GameType == type)
                 {
                     for (int j = 0; j < emulators.Length; j++)
                     {
-                        if (emulators[j].Name == games[i].EmulatorName)
+                        if (emulators[j].Name == games[i].Meta.Emus[games[i].Meta.SelectedIndex].Name)
                             info = emulators[j];
                     }
                 }
@@ -2046,7 +1606,7 @@ namespace WindowsFormsApp1
         {
             for (int i = 0;i < games.Length;i++)
             {
-                if (games[i].EmulatorName == emulName)
+                if (games[i].Meta.Emus[games[i].Meta.SelectedIndex].Name == emulName)
                     games[i].EmuArgs = args;
             }
         }
@@ -2206,7 +1766,7 @@ namespace WindowsFormsApp1
                 {
                     for (int j = 0; j < launcher.GameTypes.Length; j++)
                     {
-                        if (launcher.GameTypes[j] == launcher.Games[i].GameType)
+                        if (launcher.GameTypes[j] == launcher.Games[i].Meta.GameType)
                         {
                             spot = j;
                             break;
