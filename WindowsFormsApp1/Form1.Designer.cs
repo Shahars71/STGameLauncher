@@ -73,6 +73,8 @@
             this.tabPage21 = new System.Windows.Forms.TabPage();
             this.flowLayoutPanel21 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.SortLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -108,6 +110,7 @@
             // 
             // games
             // 
+            this.games.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.games.Location = new System.Drawing.Point(700, 52);
             this.games.Name = "games";
             this.games.Size = new System.Drawing.Size(127, 68);
@@ -118,6 +121,9 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
@@ -478,8 +484,9 @@
             // 
             // flowLayoutPanel18
             // 
+            this.flowLayoutPanel18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.flowLayoutPanel18.AutoScroll = true;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel18.Location = new System.Drawing.Point(3, -9);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
             this.flowLayoutPanel18.Size = new System.Drawing.Size(643, 380);
             this.flowLayoutPanel18.TabIndex = 3;
@@ -543,6 +550,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(700, 151);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 68);
@@ -551,11 +559,36 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "By Year...",
+            "By Name..."});
+            this.comboBox1.Location = new System.Drawing.Point(700, 257);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // SortLabel
+            // 
+            this.SortLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SortLabel.AutoSize = true;
+            this.SortLabel.Location = new System.Drawing.Point(700, 238);
+            this.SortLabel.Name = "SortLabel";
+            this.SortLabel.Size = new System.Drawing.Size(79, 13);
+            this.SortLabel.TabIndex = 6;
+            this.SortLabel.Text = "Sorting Options";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 452);
+            this.Controls.Add(this.SortLabel);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.games);
@@ -587,6 +620,7 @@
             this.tabPage20.ResumeLayout(false);
             this.tabPage21.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -636,6 +670,8 @@
         private System.Windows.Forms.TabPage tabPage21;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label SortLabel;
     }
 }
 

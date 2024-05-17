@@ -140,13 +140,14 @@ namespace WindowsFormsApp1
             games[0].Meta.Name = "Sonic && Sega All Star Racing";
             games[0].ExeLoc = "steam://rungameid/34190";
             games[0].Meta.GameType = gameTypes[0];
+            games[0].Meta.Year = 2010;
             
 
 
             games[1].Meta.Name = "Sega Mega Drive && Genesis Classics";
             games[1].ExeLoc = "steam://rungameid/34270";
             games[1].Meta.GameType = gameTypes[0];
-            
+            games[1].Meta.Year = 2010;
 
 
             games[2].Meta.Name = "Sonic the Hedgehog CD";
@@ -155,7 +156,7 @@ namespace WindowsFormsApp1
             games[2].ModLoaderName = modLoaders[4].Name;
             games[2].Meta.GameType = gameTypes[0];
             games[2].modLoader();
-            
+            games[2].Meta.Year = 2012;
 
 
             games[3].Meta.Name = "Sonic Adventure DX";
@@ -164,7 +165,7 @@ namespace WindowsFormsApp1
             games[3].ModLoaderName = modLoaders[1].Name;
             games[3].Meta.GameType = gameTypes[0];
             games[3].modLoader();
-            
+            games[3].Meta.Year = 2011;
 
 
             games[4].Meta.Name = "Sonic Adventure 2 Battle";
@@ -173,7 +174,7 @@ namespace WindowsFormsApp1
             games[4].ModLoaderName = modLoaders[2].Name;
             games[4].Meta.GameType = gameTypes[0];
             games[4].modLoader();
-            
+            games[4].Meta.Year = 2012;
 
 
             games[5].Meta.Name = "Sonic Generations";
@@ -182,7 +183,7 @@ namespace WindowsFormsApp1
             games[5].ModLoaderName = modLoaders[0].Name;
             games[5].Meta.GameType = gameTypes[0];
             games[5].modLoader();
-            
+            games[5].Meta.Year = 2011;
 
 
             games[6].Meta.Name = "Sonic the Hedgehog 4 Episode 1";
@@ -191,7 +192,7 @@ namespace WindowsFormsApp1
             games[6].ModLoaderName = modLoaders[5].Name;
             games[6].Meta.GameType = gameTypes[0];
             games[6].modLoader();
-            
+            games[6].Meta.Year = 2012;
 
 
             games[7].Meta.Name = "Sonic the Hedgehog 4 Episode 2";
@@ -200,13 +201,13 @@ namespace WindowsFormsApp1
             games[7].ModLoaderName = modLoaders[6].Name;
             games[7].Meta.GameType = gameTypes[0];
             games[7].modLoader();
-            
+            games[7].Meta.Year = 2012;
 
 
             games[8].Meta.Name = "Sonic && All Stars Racing Transformed";
             games[8].ExeLoc = "steam://rungameid/212480";
             games[8].Meta.GameType = gameTypes[0];
-            
+            games[8].Meta.Year = 2013;
 
 
             games[9].Meta.Name = "Sonic Lost World";
@@ -215,7 +216,7 @@ namespace WindowsFormsApp1
             games[9].ModLoaderName = modLoaders[0].Name;
             games[9].Meta.GameType = gameTypes[0];
             games[9].modLoader();
-            
+            games[9].Meta.Year = 2015;
 
 
             games[10].Meta.Name = "Sonic Mania";
@@ -224,7 +225,7 @@ namespace WindowsFormsApp1
             games[10].ModLoaderName = modLoaders[3].Name;
             games[10].Meta.GameType = gameTypes[0];
             games[10].modLoader();
-            
+            games[10].Meta.Year = 2017;
 
 
             games[11].Meta.Name = "Sonic Forces";
@@ -233,13 +234,13 @@ namespace WindowsFormsApp1
             games[11].ModLoaderName = modLoaders[0].Name;
             games[11].Meta.GameType = gameTypes[0];
             games[11].modLoader();
-            
+            games[11].Meta.Year = 2017;
 
 
             games[12].Meta.Name = "Team Sonic Racing";
             games[12].ExeLoc = "steam://rungameid/785260";
             games[12].Meta.GameType = gameTypes[0];
-            
+            games[12].Meta.Year = 2019;
 
 
             games[13].Meta.Name = "Sonic Colors: Ultimate";
@@ -248,7 +249,7 @@ namespace WindowsFormsApp1
             games[13].ModLoaderName = modLoaders[0].Name;
             games[13].Meta.GameType = gameTypes[0];
             games[13].modLoader();
-            
+            games[13].Meta.Year = 2023;
 
 
             games[14].Meta.Name = "Sonic Origins";
@@ -257,7 +258,8 @@ namespace WindowsFormsApp1
             games[14].ModLoaderName = modLoaders[0].Name;
             games[14].Meta.GameType = gameTypes[0];
             games[14].modLoader();
-            
+            games[14].Meta.Year = 2022;
+
 
 
             games[15].Meta.Name = "Sonic Frontiers";
@@ -266,13 +268,15 @@ namespace WindowsFormsApp1
             games[15].ModLoaderName = modLoaders[0].Name;
             games[15].Meta.GameType = gameTypes[0];
             games[15].modLoader();
-            
+            games[15].Meta.Year = 2022;
+
 
 
             games[16].Meta.Name = "The Murder of Sonic The Hedgehog";
             games[16].ExeLoc = "steam://rungameid/2324650";
             games[16].Meta.GameType = gameTypes[0];
-            
+            games[16].Meta.Year = 2023;
+
 
 
             games[17].Meta.Name = "Sonic Superstars";
@@ -281,7 +285,8 @@ namespace WindowsFormsApp1
             games[17].ModLoaderName = modLoaders[11].Name;
             games[17].Meta.GameType = gameTypes[0];
             games[17].modLoader();
-            
+            games[17].Meta.Year = 2023;
+
 
             //---EPIC GAMES STORE---
 
@@ -292,7 +297,8 @@ namespace WindowsFormsApp1
             games[18].ModLoaderName= modLoaders[0].Name;
             games[18].Meta.GameType = gameTypes[1];
             games[18].modLoader();
-            
+            games[18].Meta.Year = 2021;
+
 
 
             games[19].Meta.Name = "Sonic Origins";
@@ -301,7 +307,8 @@ namespace WindowsFormsApp1
             games[19].ModLoaderName = modLoaders[0].Name;
             games[19].Meta.GameType = gameTypes[1];
             games[19].modLoader();
-            
+            games[19].Meta.Year = 2022;
+
 
 
             games[20].Meta.Name = "Sonic Mania";
@@ -310,7 +317,8 @@ namespace WindowsFormsApp1
             games[20].ModLoaderName = modLoaders[3].Name;
             games[20].Meta.GameType = gameTypes[1];
             games[20].modLoader();
-            
+            games[20].Meta.Year = 2021;
+
 
 
             games[21].Meta.Name = "Sonic Frontiers";
@@ -319,7 +327,8 @@ namespace WindowsFormsApp1
             games[21].ModLoaderName = modLoaders[0].Name;
             games[21].Meta.GameType = gameTypes[1];
             games[21].modLoader();
-            
+            games[21].Meta.Year = 2023;
+
 
 
             games[22].Meta.Name = "Sonic Superstars";
@@ -328,7 +337,8 @@ namespace WindowsFormsApp1
             games[22].ModLoaderName = modLoaders[11].Name;
             games[22].Meta.GameType = gameTypes[1];
             games[22].modLoader();
-            
+            games[22].Meta.Year = 2023;
+
 
 
             //---DRM FREE---
@@ -338,7 +348,8 @@ namespace WindowsFormsApp1
             games[23].ModLoaderName = modLoaders[9].Name;
             games[23].ModLoaderLoc = modLoaders[9].Location;
             games[23].modLoader();
-            
+            games[23].Meta.Year = 2013;
+
 
 
             games[24].Meta.Name = "Sonic The Hedgehog 2 (Decompilation)";
@@ -346,31 +357,36 @@ namespace WindowsFormsApp1
             games[24].ModLoaderName = modLoaders[9].Name;
             games[24].ModLoaderLoc = modLoaders[9].Location;
             games[24].modLoader();
-            
+            games[24].Meta.Year = 2013;
+
 
 
             games[25].Meta.Name = "Sonic The Hedgehog CD";
             games[25].Meta.GameType = gameTypes[2];
-            
+            games[25].Meta.Year = 1996;
+
 
 
             games[26].Meta.Name = "Sonic CD (Sega PC Reloaded)";
             games[26].Meta.GameType = gameTypes[23];
             games[26].EmuArgs = "/launch 2 \"SONICCD.EXE\"";
             games[26].emulator();
-            
+            games[26].Meta.Year = 1996;
+
 
             games[27].Meta.Name = "Sonic The Hedgehog CD (Decompilation)";
             games[27].Meta.GameType = gameTypes[2];
             games[27].ModLoaderName = modLoaders[9].Name;
             games[27].ModLoaderLoc = modLoaders[9].Location;
             games[27].modLoader();
-            
+            games[27].Meta.Year = 2011;
+
 
 
             games[28].Meta.Name = "Sonic && Knuckles Collection";
             games[28].Meta.GameType = gameTypes[2];
-            
+            games[28].Meta.Year = 1997;
+
 
 
             games[29].Meta.Name = "Sonic && Knuckles Collection (Sega PC Reloaded)";
@@ -380,19 +396,22 @@ namespace WindowsFormsApp1
             games[29].EmuArgs = "/launch 3 \"SONIC3K.EXE\"";
             games[29].modLoader();
             games[29].emulator();
-            
+            games[29].Meta.Year = 1997;
+
 
 
             games[30].Meta.Name = "Sonic 3D Blast";
             games[30].Meta.GameType = gameTypes[2];
-            
+            games[30].Meta.Year = 1997;
+
 
 
             games[31].Meta.Name = "Sonic 3D Blast (Sega PC Reloaded)";
             games[31].Meta.GameType = gameTypes[23];
             games[31].EmuArgs = "/launch 4 \"PCSONIC.EXE\"";
             games[31].emulator();
-            
+            games[31].Meta.Year = 1997;
+
 
 
             games[32].Meta.Name = "Sonic R";
@@ -400,7 +419,8 @@ namespace WindowsFormsApp1
             games[32].ModLoaderName = modLoaders[7].Name;
             games[32].ModLoaderLoc = modLoaders[7].Location;
             games[32].modLoader();
-            
+            games[32].Meta.Year = 1998;
+
 
 
             games[33].Meta.Name = "Sonic Adventure DX";
@@ -408,7 +428,8 @@ namespace WindowsFormsApp1
             games[33].ModLoaderName = modLoaders[1].Name;
             games[33].ModLoaderLoc = modLoaders[1].Location;
             games[33].modLoader();
-            
+            games[33].Meta.Year = 2003;
+
 
 
             games[34].Meta.Name = "Sonic Heroes";
@@ -416,12 +437,13 @@ namespace WindowsFormsApp1
             games[34].ModLoaderName = modLoaders[10].Name;
             games[34].ModLoaderLoc = modLoaders[10].Location;
             games[34].modLoader();
-            
+            games[34].Meta.Year = 2004;
+
 
 
             games[35].Meta.Name = "Sonic Mega Collection Plus";
             games[35].Meta.GameType = gameTypes[2];
-            
+            games[35].Meta.Year = 2007;
 
 
             games[36].Meta.Name = "Sonic Riders";
@@ -429,7 +451,7 @@ namespace WindowsFormsApp1
             games[36].ModLoaderName = modLoaders[10].Name;
             games[36].ModLoaderLoc = modLoaders[10].Location;
             games[36].modLoader();
-            
+            games[36].Meta.Year = 2006;
 
 
             games[37].Meta.Name = "Sonic Mania (Decompilation)";
@@ -437,7 +459,7 @@ namespace WindowsFormsApp1
             games[37].ModLoaderName = modLoaders[9].Name;
             games[37].ModLoaderLoc = modLoaders[9].Location;
             games[37].modLoader();
-            
+            games[37].Meta.Year = 2017;
 
 
 
@@ -448,79 +470,86 @@ namespace WindowsFormsApp1
             games[38].Meta.Name = "Sonic the Hedgehog";             
             games[38].Meta.GameType = gameTypes[3];
             games[38].emulator();
+            games[38].Meta.Year = 1991; 
             
 
 
             games[39].Meta.Name = "Sonic the Hedgehog 2";
             games[39].Meta.GameType = gameTypes[3];
             games[39].emulator();
+            games[39].Meta.Year = 1992;
             
 
 
             games[40].Meta.Name = "Sonic the Hedgehog CD";
             games[40].Meta.GameType = gameTypes[3];
             games[40].emulator();
+            games[40].Meta.Year = 1993;
             
 
 
             games[41].Meta.Name = "Sonic the Hedgehog 3";
             games[41].Meta.GameType = gameTypes[3];
             games[41].emulator();
+            games[41].Meta.Year = 1994;
             
 
 
             games[42].Meta.Name = "Sonic && Knuckles";
             games[42].Meta.GameType = gameTypes[3];
             games[42].emulator();
-            
+            games[42].Meta.Year = 1994;
 
 
             games[43].Meta.Name = "Sonic the Hedgehog 3 && Knuckles";
             games[43].Meta.GameType = gameTypes[3];
             games[43].emulator();
+            games[43].Meta.Year = 1994;
             
 
 
             games[44].Meta.Name = "Sonic Spinball";
             games[44].Meta.GameType = gameTypes[3];
             games[44].emulator();
-            
+            games[44].Meta.Year = 1993;
 
 
             games[45].Meta.Name = "Dr. Robotnik's Mean Bean Machine";
             games[45].Meta.GameType = gameTypes[3];
             games[45].emulator();
+            games[45].Meta.Year = 1993;
             
 
 
             games[46].Meta.Name = "Knuckles' Chaotix";
             games[46].Meta.GameType = gameTypes[3];
             games[46].emulator();
-            
+            games[46].Meta.Year = 1995;
 
 
             games[47].Meta.Name = "Knuckles in Sonic 2";
             games[47].Meta.GameType = gameTypes[3];
             games[47].emulator();
+            games[47].Meta.Year = 1994;
             
 
 
             games[48].Meta.Name = "Sonic 3D Blast";
             games[48].Meta.GameType = gameTypes[3];
             games[48].emulator();
-            
+            games[48].Meta.Year = 1996;
 
 
             games[49].Meta.Name = "Sonic Eraser";
             games[49].Meta.GameType = gameTypes[3];
             games[49].emulator();
-            
+            games[49].Meta.Year = 1991;
 
 
             games[50].Meta.Name = "Sonic Crackers";
             games[50].Meta.GameType = gameTypes[3];
             games[50].emulator();
-            
+            games[50].Meta.Year = 1994;
 
 
 
@@ -529,43 +558,44 @@ namespace WindowsFormsApp1
             games[51].Meta.Name = "Sonic The Hedgehog (8-bit)";
             games[51].Meta.GameType = gameTypes[4];
             games[51].emulator();
-            
+            games[51].Meta.Year = 1991;
 
 
             games[52].Meta.Name = "Sonic The Hedgehog 2 (8-bit)";
             games[52].Meta.GameType = gameTypes[4];
             games[52].emulator();
-            
+            games[52].Meta.Year = 1992;
 
 
             games[53].Meta.Name = "Sonic Chaos";
             games[53].Meta.GameType = gameTypes[4];
             games[53].emulator();
-            
+            games[53].Meta.Year = 1993;
 
 
             games[54].Meta.Name = "Sonic Blast";
             games[54].Meta.GameType = gameTypes[4];
             games[54].emulator();
-            
+            games[54].Meta.Year = 1997;
 
 
             games[55].Meta.Name = "Sonic Spinball (8-bit)";
             games[55].Meta.GameType = gameTypes[4];
             games[55].emulator();
+            games[55].Meta.Year = 1994;
             
 
 
             games[56].Meta.Name = "Dr. Robotnik's Mean Bean Machine (8-bit)";
             games[56].Meta.GameType = gameTypes[4];
             games[56].emulator();
-            
+            games[56].Meta.Year = 1994;
 
 
             games[57].Meta.Name = "Sonic Edusoft";
             games[57].Meta.GameType = gameTypes[4];
             games[57].emulator();
-            
+            games[57].Meta.Year = 1991;
 
 
 
@@ -574,73 +604,74 @@ namespace WindowsFormsApp1
             games[57].Meta.Name = "Sonic The Hedgehog (8-bit)";
             games[57].Meta.GameType = gameTypes[5];
             games[57].emulator();
-            
+            games[57].Meta.Year = 1991;
 
 
             games[58].Meta.Name = "Sonic The Hedgehog 2 (8-bit)";
             games[58].Meta.GameType = gameTypes[5];
             games[58].emulator();
-            
+            games[58].Meta.Year = 1992;
 
 
             games[59].Meta.Name = "Sonic Chaos";
             games[59].Meta.GameType = gameTypes[5];
             games[59].emulator();
+            games[59].Meta.Year = 1993;
             
 
 
             games[60].Meta.Name = "Sonic Blast";
             games[60].Meta.GameType = gameTypes[5];
             games[60].emulator();
-            
+            games[60].Meta.Year = 1996;
 
 
             games[61].Meta.Name = "Sonic Spinball (8-bit)";
             games[61].Meta.GameType = gameTypes[5];
             games[61].emulator();
-            
+            games[61].Meta.Year = 1994;
 
 
             games[62].Meta.Name = "Dr. Robotnik's Mean Bean Machine (8-bit)";
             games[62].Meta.GameType = gameTypes[5];
             games[62].emulator();
-            
+            games[62].Meta.Year = 1993;
 
 
             games[63].Meta.Name = "Sonic Triple Trouble";
             games[63].Meta.GameType = gameTypes[5];
             games[63].emulator();
-            
+            games[63].Meta.Year = 1994;
 
 
             games[64].Meta.Name = "Sonic Labyrinth";
             games[64].Meta.GameType = gameTypes[5];
             games[64].emulator();
-            
+            games[64].Meta.Year = 1995;
 
 
             games[65].Meta.Name = "Sonic Drift";
             games[65].Meta.GameType = gameTypes[5];
             games[65].emulator();
-            
+            games[65].Meta.Year = 1994;
 
 
             games[66].Meta.Name = "Sonic Drift 2";
             games[66].Meta.GameType = gameTypes[5];
             games[66].emulator();
-            
+            games[66].Meta.Year = 1995;
 
 
             games[67].Meta.Name = "Tails' Adventure";
             games[67].Meta.GameType = gameTypes[5];
             games[67].emulator();
-            
+            games[67].Meta.Year = 1995;
 
 
             games[68].Meta.Name = "Tails' Skypatrol";
             games[68].Meta.GameType = gameTypes[5];
             games[68].emulator();
-            
+            games[68].Meta.Year = 1995;
 
 
             //---ARCADE---
@@ -1126,6 +1157,7 @@ namespace WindowsFormsApp1
             games[144].Meta.Name = "Sonic the Hedgehog CD (2011)";
             games[144].Meta.GameType = gameTypes[15];
             games[144].emulator();
+            games[144].Meta.Year = 2011;
             
 
 
@@ -1268,6 +1300,7 @@ namespace WindowsFormsApp1
             games[166].Meta.Name = "Sonic the Hedgehog CD (2011)";
             games[166].Meta.GameType = gameTypes[17];
             games[166].emulator();
+            games[166].Meta.Year = 2011;
             
 
 

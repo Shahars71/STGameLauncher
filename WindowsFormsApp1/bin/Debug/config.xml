@@ -1564,107 +1564,133 @@
     </ModLoader>
     <Emulator>
       <Name>Kega Fusion</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Genesis Plus GX</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>PicoDrive</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>ares</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Emulicious</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Yabause</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Mednafen</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Kronos</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Flycast</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Redream</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>MAME</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Model 2 Emulator</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Dolphin</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Cemu</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Yuzu</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Ryujinx</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>PCSX2</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>RPCS3</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Xemu</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Xenia</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>mGBA</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Visual Boy Advance</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>DeSmuMe</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>melonDS</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Citra</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>PPSSPP</Name>
-      <Path />
+      <Path>
+    </Path>
     </Emulator>
     <Emulator>
       <Name>Sega PC Reloaded</Name>

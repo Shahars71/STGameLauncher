@@ -26,8 +26,6 @@ namespace WindowsFormsApp1
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-us");
             showFlags = new int[tabControl1.TabCount];
             pages = new TabPage[tabControl1.TabCount];
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -114,16 +112,7 @@ namespace WindowsFormsApp1
             LaunchContainer.incrementGameTypes();
             gameTypesToTabs();
 
-            for (int i = 0; i < gameList.Length; i++)
-            {
-                GameButton b = new GameButton(gameList[i]);
-
-                if (LaunchContainer.launcher.ActiveGames[i])
-                {
-                    addButtonToSpecificTab(b);
-                }
-            }
-
+            handleButtonSorting(gameList);
 
 
             if (pages != null)
@@ -168,102 +157,126 @@ namespace WindowsFormsApp1
 
         }
 
-        private void addButtonToSpecificTab(GameButton b)
+        private int addButtonToSpecificTab(GameButton b)
         {
             var gameType = b.assignedGame.Meta.GameType;
+            int o_tabPosition = 0;
 
             switch (gameType)
             {
                 case "Steam":
                     flowLayoutPanel1.Controls.Add(b);
+                    o_tabPosition = 0;
                     break;
 
                 case "Epic Games Store":
                     flowLayoutPanel2.Controls.Add(b);
+                    o_tabPosition = 1;
                     break;
 
                 case "Sega PC Reloaded":
                 case "DRM Free":
                     flowLayoutPanel3.Controls.Add(b);
+                    o_tabPosition = 2;
                     break;
 
                 case "Sega Mega Drive":
                     flowLayoutPanel4.Controls.Add(b);
+                    o_tabPosition = 3;
                     break;
 
                 case "Sega Master System":
                     flowLayoutPanel5.Controls.Add(b);
+                    o_tabPosition = 4;
                     break;
 
                 case "Sega Game Gear":
                     flowLayoutPanel6.Controls.Add(b);
+                    o_tabPosition = 5;
                     break;
 
                 case "Sega Saturn":
                     flowLayoutPanel7.Controls.Add(b);
+                    o_tabPosition = 6;
                     break;
 
                 case "Sega Dreamcast":
                     flowLayoutPanel8.Controls.Add(b);
+                    o_tabPosition = 7;
                     break;
 
                 case "Arcade (MAME)":
                 case "Arcade (Sega AM2)":
                     flowLayoutPanel9.Controls.Add(b);
+                    o_tabPosition = 8;
                     break;
 
                 case "Nintendo GameCube":
                     flowLayoutPanel10.Controls.Add(b);
+                    o_tabPosition = 9;
                     break;
 
                 case "Nintendo Wii":
                     flowLayoutPanel11.Controls.Add(b);
+                    o_tabPosition = 10;
                     break;
 
                 case "Nintendo Wii U":
                     flowLayoutPanel12.Controls.Add(b);
+                    o_tabPosition = 11;
                     break;
 
                 case "Nintendo Switch":
                     flowLayoutPanel13.Controls.Add(b);
+                    o_tabPosition = 12;
                     break;
 
                 case "Sony PlayStation 2":
                     flowLayoutPanel14.Controls.Add(b);
+                    o_tabPosition = 13;
                     break;
 
                 case "Sony Playstation 3":
                     flowLayoutPanel15.Controls.Add(b);
+                    o_tabPosition = 14;
                     break;
 
                 case "Microsoft XBox":
                     flowLayoutPanel16.Controls.Add(b);
+                    o_tabPosition = 15;
                     break;
 
                 case "Microsoft XBox 360":
                     flowLayoutPanel17.Controls.Add(b);
+                    o_tabPosition = 16;
                     break;
 
                 case "Game Boy Advance":
                     flowLayoutPanel18.Controls.Add(b);
+                    o_tabPosition = 17;
                     break;
 
                 case "Nintendo DS":
                     flowLayoutPanel19.Controls.Add(b);
+                    o_tabPosition = 18;
                     break;
 
                 case "Nintendo 3DS":
                     flowLayoutPanel20.Controls.Add(b);
+                    o_tabPosition = 19;
                     break;
 
                 case "Neo Geo Pocket Color":
                 case "PlayStation Portable":
                     flowLayoutPanel21.Controls.Add(b);
+                    o_tabPosition = 20;
                     break;
 
 
                 default: break;
             }
+
+            return o_tabPosition;
         }
         
         private void buttonTickPos(GameButton b)
@@ -609,12 +622,140 @@ namespace WindowsFormsApp1
             
         }
 
-        /*
-        protected override void OnLoad(EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            base.OnLoad(e);
-            //handleButtons();
+            {
+                flowLayoutPanel1.Controls.Clear();
+                flowLayoutPanel2.Controls.Clear();
+                flowLayoutPanel3.Controls.Clear();
+                flowLayoutPanel4.Controls.Clear();
+                flowLayoutPanel5.Controls.Clear();
+                flowLayoutPanel6.Controls.Clear();
+                flowLayoutPanel7.Controls.Clear();
+                flowLayoutPanel8.Controls.Clear();
+                flowLayoutPanel9.Controls.Clear();
+                flowLayoutPanel10.Controls.Clear();
+                flowLayoutPanel11.Controls.Clear();
+                flowLayoutPanel12.Controls.Clear();
+                flowLayoutPanel13.Controls.Clear();
+                flowLayoutPanel14.Controls.Clear();
+                flowLayoutPanel15.Controls.Clear();
+                flowLayoutPanel16.Controls.Clear();
+                flowLayoutPanel17.Controls.Clear();
+                flowLayoutPanel18.Controls.Clear();
+                flowLayoutPanel19.Controls.Clear();
+                flowLayoutPanel20.Controls.Clear();
+                flowLayoutPanel21.Controls.Clear();
+            }
+
+            handleButtonSorting(LaunchContainer.launcher.Games);
         }
-        */
+
+        private string getComboBoxCurrentValue()
+        {
+            return comboBox1.Text;
+        }
+
+        delegate void listSorter(List<GameButton> list);
+
+        private void handleButtonSorting(Game[] gameList)
+        {
+            string sortCondition = getComboBoxCurrentValue();
+
+            listSorter sorter = null;
+
+            switch (sortCondition)
+            {
+                case "By Year...":
+                    sorter += YearlyButtonSort;
+                    break;
+                case "By Name...":
+                    sorter += AlphabeticalButtonSort;
+                    break;
+                default:
+
+                    break;
+            }
+            
+            if (sortCondition == "") 
+            {
+                DefaultButtonSort(gameList);
+            }
+            else
+            {
+                List<List<GameButton>> gamesListByType = new List<List<GameButton>>();
+                int gameTabPos = 0;
+
+                for (int i = 0; i < pages.Count(); i++)
+                {
+                    gamesListByType.Add(new List<GameButton>());
+                }
+
+                for (int i = 0; i < gameList.Length; i++)
+                {
+                    GameButton b = new GameButton(gameList[i]);
+
+                    if (LaunchContainer.launcher.ActiveGames[i])
+                    {
+                        gameTabPos = addButtonToSpecificTab(b);
+                        gamesListByType[gameTabPos].Add(b);
+                    }
+                }
+
+                for (int i =0; i<gamesListByType.Count;i++)
+                {
+                    List<GameButton> l = gamesListByType[i];
+
+                    if (l.Count > 0)
+                    {
+                        sorter.Invoke(l);
+
+                        foreach (GameButton b in l)
+                        {
+                            int temp = addButtonToSpecificTab(b);
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+        private void DefaultButtonSort(Game[] gameList)
+        {
+
+            for (int i = 0; i < gameList.Length; i++)
+            {
+                GameButton b = new GameButton(gameList[i]);
+
+                if (LaunchContainer.launcher.ActiveGames[i])
+                {
+                    addButtonToSpecificTab(b);
+                }
+            }
+
+        }
+
+        private void AlphabeticalButtonSort(List<GameButton> buttons)
+        {
+            buttons.Sort(CompareNames);
+        }
+
+        private int CompareNames(GameButton x, GameButton y)
+        {
+            return x.assignedGame.Meta.Name.CompareTo(y.assignedGame.Meta.Name);
+        }
+
+        private void YearlyButtonSort(List<GameButton> buttons)
+        {
+            buttons.Sort(CompareYears);
+        }
+
+        private int CompareYears(GameButton x, GameButton y)
+        {
+            return (x.assignedGame.Meta.Year.CompareTo(y.assignedGame.Meta.Year));
+        }
+
     }
 }
