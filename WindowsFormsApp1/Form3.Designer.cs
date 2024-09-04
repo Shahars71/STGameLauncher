@@ -36,12 +36,13 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(177, 26);
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.MaximumSize = new System.Drawing.Size(1000, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(380, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ComponentButton
             // 
@@ -85,7 +86,6 @@
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

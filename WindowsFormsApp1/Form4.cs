@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Forms;
 using Microsoft.WindowsAPICodePack.Dialogs;
@@ -23,6 +24,8 @@ namespace WindowsFormsApp1
         private void Form4_Load(object sender, EventArgs e)
         {
             initListView();
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -568,6 +571,7 @@ namespace WindowsFormsApp1
                     try
                     {
                         LaunchContainer.launcher.ModLoaders[index].Location = (string)getProgFilePath(dataGridView2.CurrentRow);
+                        LaunchContainer.launcher.updateModLoaders();
                     }
                     catch 
                     {
@@ -685,6 +689,74 @@ namespace WindowsFormsApp1
         private void Form4_Enter(object sender, EventArgs e)
         {
             //refreshGrid();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            SearchDataGridView(dataGridView1, comboBox1, textBox1);
+
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            textBox1.Text = "Search...";
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            textBox2.Text = "";
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            textBox2.Text = "Search...";
+        }
+
+        private void SearchDataGridView(DataGridView dgv, System.Windows.Forms.ComboBox cb, System.Windows.Forms.TextBox tb)
+        {
+            int searchPos = 0;
+
+            switch (cb.SelectedIndex)
+            {
+                case 0:
+                    searchPos = 0; break;
+                case 1:
+                    searchPos = 1; break;
+            }
+
+
+            foreach (DataGridViewRow row in dgv.Rows)
+            {
+                if (row.Cells[searchPos].Value != null)
+                {
+                    if (tb.Text != "" && tb.Text != "Search...")
+                    {
+                        if ((row.Cells[searchPos].Value).ToString().ToLower().Contains(tb.Text.ToLower()))
+                        {
+                            dgv.Rows[row.Index].Visible = true;
+                        }
+                        else
+                        {
+                            dgv.CurrentCell = null;
+                            dgv.Rows[row.Index].Visible = false;
+                        }
+                    }
+                    else
+                    {
+                        dgv.Rows[row.Index].Visible = true;
+                    }
+                }
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            SearchDataGridView(dataGridView2, comboBox2, textBox2);
         }
     }
 }

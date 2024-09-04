@@ -35,6 +35,8 @@ namespace WindowsFormsApp1
                 pages[i] = tabControl1.TabPages[i];
             }
 
+            comboBox1.SelectedIndex = 0;
+
             SaveHandler.Load();
             handleButtons();
         }
@@ -646,7 +648,7 @@ namespace WindowsFormsApp1
                 flowLayoutPanel19.Controls.Clear();
                 flowLayoutPanel20.Controls.Clear();
                 flowLayoutPanel21.Controls.Clear();
-            }
+            } ///Clear flp's
 
             handleButtonSorting(LaunchContainer.launcher.Games);
         }
